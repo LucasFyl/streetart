@@ -61,6 +61,8 @@ $( document ).ready(function() {
 	$('section.city').on('click', '#friends', friendsFirst);
 	function mainFirst(e) {
 		e.preventDefault();
+		$('.event ul li').removeClass('selected');
+		$(this).parent('li').addClass('selected');
 		var friends = $('.eventSlider-wrap.friends');
 		var main = $('.eventSlider-wrap.main');
 		friends.removeClass('onTop').addClass('onBottom');
@@ -68,6 +70,8 @@ $( document ).ready(function() {
 	}
 	function friendsFirst(e) {
 		e.preventDefault();
+		$('.event ul li').removeClass('selected');
+		$(this).parent('li').addClass('selected');
 		var friends = $('.eventSlider-wrap.friends');
 		var main = $('.eventSlider-wrap.main');
 		main.removeClass('onTop').addClass('onBottom');
@@ -86,8 +90,12 @@ $( document ).ready(function() {
 		var introSection = $('.cityIntro');
 		var eventSection = $('.eventSlider-wrap');
 		var article = $('.eventSlider-wrap article');
+		var tabBar = $('section.event ul');
+    	var windowW = $(window).width();
+
 	    TweenLite.to(introSection, 0, {width:windowW, height:newWindowH});
 	    TweenLite.to(eventSection, 0, {width:windowW, height:newWindowH});
+	    TweenLite.to(tabBar, 0, {width:windowW});
 	    TweenLite.to(article, 0, {height:newWindowH});
 	}
 
