@@ -98,47 +98,31 @@ textarea {
    Font Face
    ========================================================================== */
 
-@font-face {
-    font-family: 'ProximaNova-Regular';
-    src: 
-        url('../fonts/ProximaNova-Regular.eot'),
-        url('../fonts/ProximaNova-Regular.woff') format('woff'),
-        url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
-}
-@font-face {
-    font-family: 'ProximaNova-Bold';
-    src: 
-        url('../fonts/ProximaNova-Bold.eot'),
-        url('../fonts/ProximaNova-Bold.woff') format('woff'),
-        url('../fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
-}
-@font-face {
-    font-family: 'ProximaNova-Light';
-    src: 
-        url('../fonts/ProximaNova-Light.eot'),
-        url('../fonts/ProximaNova-Light.woff') format('woff'),
-        url('../fonts/ProximaNova-Light.svg#ProximaNova-Light') format('svg');
-}
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
 /**** Helper class ****/
-.transition() {
+.transition {
     -webkit-transition: all .5s ease;
        -moz-transition: all .5s ease;
         -ms-transition: all .5s ease;
          -o-transition: all .5s ease;
             transition: all .5s ease;
 }
+.box-sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 @black: #000;
-@yellow: #e0c45a;
+@yellow: #f39c12;
 
 
 body {
-    font-family: 'ProximaNova-Regular', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
     font-size: 16px;
     font-size: 100%;
     color: white;
@@ -162,7 +146,7 @@ header {
     display: block;
     width: 100%;
     height: 0px;
-    background: white;
+    background: rgba(0, 0, 0, .5);
     font-size: 1.3em;
     clear: both;
     position: absolute;
@@ -177,7 +161,7 @@ header {
         vertical-align: baseline;
         text-align: left;  
         font-size: 1em;
-        margin-left: 50px;
+        margin-left: 20px;
         padding-top: 10px; 
         height: 75px;
         padding-left: 50px;
@@ -186,8 +170,8 @@ header {
 
         a {
             display: block;
-            font-family: 'ProximaNova-Regular', sans-serif;
-            color: @black;
+            font-family: 'Source Sans Pro', sans-serif;
+            color: white;
             text-transform: uppercase;
             text-decoration: none; 
             letter-spacing: 1px;
@@ -202,12 +186,12 @@ header {
 
     > a {
         float: right;
-        margin-right: 50px;
+        margin-right: 20px;
         line-height: 75px;
         color: white;
         text-decoration: none;
         font-size: .8em;
-        color: @black;
+        color: white;
     }
 
 }
@@ -222,220 +206,266 @@ div#home {
     padding: 0; margin: 0;
     position: fixed;
     overflow: none;
-    section#paris {
-        background: url('../img/paris.jpg') no-repeat;
-        top: 0; left: 0;
-    }
-    section#berlin {
-        background: url('../img/berlin.jpg') no-repeat;
-        top: 0; right: 0;
-    }
-    section#newyork {
-        background: url('../img/ny.jpg') no-repeat;
-        bottom: 0; left: 0;
-    }
-    section#london {
-        background: url('../img/london.jpg') no-repeat center bottom;
-        bottom: 0; right: 0;
-    }    
+}
 
-    section.city {
-        position: absolute;
-        z-index: 9;
-        background-size: 120% !important;
-        background-position: center center;
-        cursor: pointer;
+section#paris {
+    background: url('../img/paris.jpg') no-repeat;
+    top: 0; left: 0;
+}
+section#berlin {
+    background: url('../img/berlin.jpg') no-repeat;
+    top: 0; right: 0;
+}
+section#newyork {
+    background: url('../img/ny.jpg') no-repeat;
+    bottom: 0; left: 0;
+}
+section#london {
+    background: url('../img/london.jpg') no-repeat center bottom;
+    bottom: 0; right: 0;
+}    
 
-        > a {
-            font-family: 'ProximaNova-Regular', sans-serif;
-            color: white;
-            font-size: 2.4em;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            text-align: center;
-            text-decoration: none;
-        }
+section.city {
+    position: absolute;
+    z-index: 9;
+    background-size: 120% !important;
+    background-position: center center;
+    cursor: pointer;
+
+    > a {
+        font-family: 'Source Sans Pro', sans-serif;
+        color: white;
+        font-size: 2.4em;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: none;
     }
-    
-    
-    section.city.active {
-        z-index: 99;
-        background-size: 100% !important;
-        cursor: default;
+}
 
-        > section {
+
+
+section.city.active {
+    z-index: 99;
+    background-size: 100% !important;
+    cursor: default;
+
+    > section {
+        display: block;
+        width: 100%;
+        height: 50%;
+    }
+
+    div#sidebar {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 75px;
+        width: 0px;
+        height: 100%;
+        background: rgba(0, 0, 0, .5);
+        //background-color: @black;
+        position: relative;
+        float: left;
+
+        div#sidebarBtn {
             display: block;
-            width: 100%;
-            height: 50%;
-        }
+            width: 50px;
+            height: 100px;
+            position: absolute;
+            top: 17.5%; left: 100%;
+            margin-top: -25px;
+            background: @yellow;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            z-index: 9999;
+            cursor: pointer;
 
-        div#sidebar {
-            display: inline-block;
-            vertical-align: top;
-            margin-top: 75px;
-            width: 0px;
-            height: 100%;
-            //background: rgba(0, 0, 0, .5);
-            background-color: @black;
-            position: relative;
-            float: left;
-
-            div#sidebarBtn {
+            img {
                 display: block;
-                width: 50px;
-                height: 100px;
-                position: absolute;
-                top: 17.5%; left: 100%;
-                margin-top: -25px;
-                background: black;
-                z-index: 9999;
-                cursor: pointer;
-
-                img {
-                    display: block;
-                    margin: 0;
-                }
-            }
-
-            p {
-                padding: 5%;
-                width: 85%;
-                display: none;
-                color: lightgray;
-                font-size: .9em;
-            }
-        }
-        
-
-        section.cityIntro {
-            position: relative;
-            margin-top: 75px;
-
-            h2 {
-                display: block;
-                width: auto; height: 60px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                margin: auto;
-                font-family: 'ProximaNova-Light', sans-serif;
-                text-transform: uppercase;
-                font-size: 3em;
-                text-align: center;
-                letter-spacing: 5px;
-            }
-        }
-
-        section.event {
-            display: block;
-            width: 0px;
-            position: relative;
-
-            ul {
-                list-style-type: none;
-                position: absolute;
-                height: 25px;
-                width: 200px;
-                padding: 10px;
-                bottom: 100%;
                 margin: 0;
+            }
+        }
 
-                li, a {
-                    display: block;
-                    height: 35px; width: 100px; 
-                    float: left;
+        p {
+            padding: 5%;
+            width: 85%;
+            display: none;
+            color: lightgray;
+            font-size: .9em;
+        }
+    }
+    
+
+    section.cityIntro {
+        position: relative;
+        margin-top: 75px;
+        .box-sizing();
+
+        h2 {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 300;   
+            text-transform: uppercase;
+            font-size: 1.875em;
+            color: @yellow;
+            text-align: center;
+            padding-top: 80px;
+            position: relative;
+            
+            &:after {
+                content: " ";
+                width: 250px; height: 2px;
+                background-color: white;
+                display: block;
+                position: absolute;
+                top: 109%; left: 50%; margin-left: -125px;
+            }
+        }
+    }
+
+    section.event {
+        display: block;
+        width: 0px;
+        position: relative;
+        .box-sizing();
+
+        ul {
+            list-style-type: none;
+            position: absolute;
+            background-color: @black;
+            bottom: 100%;
+            margin: 0;
+            padding: 0;
+            .box-sizing();
+
+            li {
+                display: block;
+                width: 120px; 
+                height: 45px;
+                padding: 10px;
+                float: left;
+                .box-sizing();
+            }
+            a {
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: 400;
+                color: white;
+                width: 100%;
+                height: 100%;
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                &:hover {
+                    
+                }
+                &:visited {
+                    color: white;
                 }
             }
+            li.selected {
+                border-bottom: 3px solid @yellow;
+            }
+            #create {
+                float: right;
+            }
+        }
 
-            div.eventSlider-wrap {
-                overflow-x: scroll;
-                overflow-y: none !important;
-                border-top: solid 3px @yellow;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 10;
+        div.eventSlider-wrap {
+            overflow-x: scroll;
+            overflow-y: none !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
 
-                div.eventSlider {
-                    width: 1000%;
-                    article {
-                        width: 360px; 
+            div.eventSlider {
+                width: 1000%;
+                article {
+                    width: 360px; 
+                    height: 100%;
+                    display: inline-block;
+                    vertical-align: top;
+                    float: left;
+                    overflow: hidden;
+                    position: relative;
+                    img {
+                        width: 100%; height: 100%;
+                        position: absolute;
+                        top: 0;left: 0; right: 0; bottom: 0;
+                        margin: auto;
+                        z-index: 98;
+                    }
+                    .onHover {
+                        width: 100%;
                         height: 100%;
-                        display: inline-block;
-                        vertical-align: top;
-                        float: left;
-                        overflow: hidden;
-                        position: relative;
-                        img {
-                            width: 100%; height: 100%;
-                            position: absolute;
-                            top: 0;left: 0; right: 0; bottom: 0;
-                            margin: auto;
-                            z-index: 98;
+                        background-color: @black;
+                        position: absolute; top: 0; left: 0;
+                        z-index: 99;
+
+                        h3 {
+                            font-family: 'Source Sans Pro', sans-serif;
+                            font-weight: 400;
+                            text-transform: uppercase;
+                            text-align: center;
+                            font-size: 1.5em;
+                            margin-bottom: 0;
+                            position: relative;
+                                
+                            &:before {
+                                content:" ";
+                                width: 100px;
+                                height: 1px;
+                                background-color: @yellow;
+                                position: absolute;
+                                left: 0;
+                                top: 48%;
+                            }
+                            &:after {
+                                content:" ";
+                                width: 100px;
+                                height: 1px;
+                                background-color: @yellow;
+                                position: absolute;
+                                right: 0;
+                                top: 48%;
+                            }
+
                         }
-                        .onHover {
-                            width: 100%;
-                            height: 100%;
-                            background-color: @black;
-                            position: absolute; top: 0; left: 0;
-                            z-index: 99;
-
-                            h3 {
-                                font-family: 'ProximaNova-Regular', sans-serif;
-                                text-transform: uppercase;
-                                text-align: center;
-                                font-size: 1.5em;
-                                margin-bottom: 0;
-                                position: relative;
-                                    
-                                &:before {
-                                    content:" ";
-                                    width: 100px;
-                                    height: 1px;
-                                    background-color: @yellow;
-                                    position: absolute;
-                                    left: 0;
-                                    top: 48%;
-                                }
-                                &:after {
-                                    content:" ";
-                                    width: 100px;
-                                    height: 1px;
-                                    background-color: @yellow;
-                                    position: absolute;
-                                    right: 0;
-                                    top: 48%;
-                                }
-
-                            }
-                            p.date {
-                                font-family: 'ProximaNova-Light', sans-serif;
-                                font-size: .8em;
-                                color: @yellow;
-                                text-align: center;
-                                margin-top: 0;
-                            }
-                            p.infos {
-                                width: 80%;
-                                display: block;
-                                margin: 0 auto;
-                                font-size: 1em;
-                                color: lightgrey;
-                            }
+                        p.date {
+                            font-family: 'Source Sans Pro', sans-serif;
+                            font-weight: 300;
+                            font-size: .8em;
+                            color: @yellow;
+                            text-align: center;
+                            margin-top: 0;
+                        }
+                        p.infos {
+                            width: 80%;
+                            display: block;
+                            margin: 0 auto;
+                            font-size: 1em;
+                            color: lightgrey;
                         }
                     }
                 }
             }
-            div.eventSlider-wrap.onTop {
-                 z-index: 10;
-            }  
-            div.eventSlider-wrap.onBottom {
-                z-index: 1;
-            }
+        }
+        div.eventSlider-wrap.onTop {
+             z-index: 10;
+        }  
+        div.eventSlider-wrap.onBottom {
+            z-index: 1;
         }
     }
+}
+
+.darken {
+    content:" ";
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    top: 0; left: 0; 
+    background-color: rgba(0, 0, 0, 0.60);
+    opacity: 0;
 }
 
 
