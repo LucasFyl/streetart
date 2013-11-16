@@ -49,6 +49,7 @@ $( document ).ready(function() {
                 $('section.active').html(data);
     			childSectionSize();
     			manageHover();
+    			imgSize();
             }	
         });
 	}
@@ -138,6 +139,22 @@ $( document ).ready(function() {
 			var content = $(this).find('.onHover');
 			$(content).hide();
 		});
+	}
+
+	function imgSize() {
+		var image = $('.eventSlider article img');
+		var imgW = image.parent('article').width();
+		var imgH = image.parent('article').height();
+
+		console.log('tarace');
+
+		if ( image.width() > image.height() ) {
+		    TweenLite.to(image, 0, {height:imgH,width:'auto'});
+		} 
+		else if ( image.width() < image.height() ) {
+		    TweenLite.to(image, 0, {width:imgW,height:'auto'});
+		}
+
 	}
 
 });
