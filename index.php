@@ -14,6 +14,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/less/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -22,15 +23,23 @@
         <![endif]-->
 
         <header>
-            <h1><a href=""><!-- World Wide <span>Writters</span> --></a></h1>
+            <h1><a href="">&nbsp<!-- World Wide <span>Writters</span> --></a></h1>
             <a href="">Artist of the week</a>
         </header>
     
         <div id="home">
-                <section class="city" id="paris" ><a href="#">paris</a> </section>
-                <section class="city" id="berlin" ><a href="#">berlin</a> </section>
-                <section class="city" id="newyork" ><a href="#">new-york</a> </section>
-                <section class="city" id="london" ><a href="#">london</a> </section>
+                <section class="city" id="paris" >
+                    <a href="#">paris</a> 
+                </section>
+                <section class="city" id="berlin" >
+                    <a href="#">berlin</a> 
+                </section>
+                <section class="city" id="newyork" >
+                    <a href="#">new-york</a>
+                 </section>
+                <section class="city" id="london" >
+                    <a href="#">london</a> 
+                </section>
         </div>
         
 
