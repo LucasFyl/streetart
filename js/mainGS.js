@@ -114,7 +114,6 @@ $( document ).ready(function() {
 		friends.removeClass('onBottom').addClass('onTop');
 	}
 
-<<<<<<< HEAD
 	// to give accurate size to each section
 	function giveSize(){
 		var section = $('section.city');
@@ -136,8 +135,6 @@ $( document ).ready(function() {
 	    TweenLite.to(article, 0, {height:newWindowH});
 	}
 
-=======
->>>>>>> events
 
 	// to open the sidebar
 	function openSidebar() {
@@ -181,6 +178,7 @@ $( document ).ready(function() {
 		});
 	}
 
+	// to give accurate size to event's images
 	function imgSize() {
 		var image = $('.eventSlider article img');
 		var imgW = image.parent('article').width();
