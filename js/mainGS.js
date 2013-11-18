@@ -150,9 +150,8 @@ $( document ).ready(function() {
 		    TweenLite.to(sidebar, 0.25, {width:'0px', ease:Power2.easeIn});
 		    TweenLite.to(content, 0, {css:{display:'none'}, ease:Power2.easeIn, delay:0.15});
 		}
-		// $(sidebar).on('mouseout', function(){
-		// 	setTimeout(closeIt, 1000)
-		// });
+
+		// if statements séparés en deux pour la fluidité de l'animation
 		if( $(sidebar).width() == 0 ) {
 		    TweenLite.to(title, 0.25, {left:"+=350px", ease:Power2.easeIn});
 		    TweenLite.to(eventSlider, 0.25, {left:"+=350px", ease:Power2.easeIn});
@@ -161,7 +160,6 @@ $( document ).ready(function() {
 		    TweenLite.to(title, 0.25, {left:"-=350px", ease:Power2.easeIn});
 		    TweenLite.to(eventSlider, 0.25, {left:"-=350px", ease:Power2.easeIn});
 		}
-		// if statements séparés en deux pour la fluidité de l'animation
 	}	
 
 	// to manage hover on each event
@@ -170,12 +168,12 @@ $( document ).ready(function() {
 		TweenLite.set(hoverContent, {opacity:0});
 		$('.eventSlider-wrap article').on('mouseover', function(){
 			var thisContent = $(this).find('.onHover');
-			TweenLite.to(thisContent, 0.25, {opacity:1, ease:Power2.easeInOut});
+			TweenLite.to(thisContent, 0, {opacity:1});
 		});
 
 		$('.eventSlider-wrap article').on('mouseout', function(){
 			var thisContent = $(this).find('.onHover');
-			TweenLite.to(thisContent, 0.25, {opacity:0, ease:Power2.easeInOut});
+			TweenLite.to(thisContent, 0, {opacity:0});
 		});
 	}
 
