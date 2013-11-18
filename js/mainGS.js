@@ -166,32 +166,38 @@ $( document ).ready(function() {
 
 	// to manage hover on each event
 	function manageHover() {
-		$('.onHover').hide();
+		var hoverContent = $('.onHover'); 
+		TweenLite.set(hoverContent, {opacity:0});
 		$('.eventSlider-wrap article').on('mouseover', function(){
-			var content = $(this).find('.onHover');
-			$(content).show();
+			var thisContent = $(this).find('.onHover');
+			TweenLite.to(thisContent, 0.25, {opacity:1, ease:Power2.easeInOut});
 		});
 
 		$('.eventSlider-wrap article').on('mouseout', function(){
-			var content = $(this).find('.onHover');
-			$(content).hide();
+			var thisContent = $(this).find('.onHover');
+			TweenLite.to(thisContent, 0.25, {opacity:0, ease:Power2.easeInOut});
 		});
 	}
 
-	// to give accurate size to event's images
+	// to give accurate size to event's images if width is bigger or if height is bigger
 	function imgSize() {
 		var image = $('.eventSlider article img');
-		var imgW = image.parent('article').width();
-		var imgH = image.parent('article').height();
 
-		console.log('tarace');
+		image.each(function(){
+			var _this = $(this);
 
-		if ( image.width() > image.height() ) {
-		    TweenLite.to(image, 0, {height:imgH,width:'auto'});
-		} 
-		else if ( image.width() < image.height() ) {
-		    TweenLite.to(image, 0, {width:imgW,height:'auto'});
-		}
+			_this.load(function(){
+				var imageW = _this.width();
+				var imageH = _this.height();
+
+				if ( imageW > imageH ) {
+					_this.addClass('height');
+				}
+				else if ( imageH > imageW ) {
+					_this.addClass('width');
+				}
+			});
+		});
 
 	}
 
