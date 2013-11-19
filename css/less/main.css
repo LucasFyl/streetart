@@ -459,16 +459,9 @@ section#form form #description {
   height: 230px;
   margin-bottom: 50px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< Updated upstream
+
 section#form form #formLeft {
-=======
-section#form #leftSide {
->>>>>>> fd04ef1fd86d40e9b1a6901d6ad1ac50ac64281e
-=======
-section#form #leftSide {
->>>>>>> fd04ef1fd86d40e9b1a6901d6ad1ac50ac64281e
+
   width: 890px;
   float: left;
 }
@@ -490,8 +483,7 @@ section#form #rightSide input.addPict {
   border-radius: 30px;
   margin: 0 10px 10px 0;
 }
-=======
->>>>>>> Stashed changes
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
