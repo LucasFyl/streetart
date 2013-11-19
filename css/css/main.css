@@ -459,19 +459,27 @@ section#form form #description {
   height: 230px;
   margin-bottom: 50px;
 }
-section#form form #formLeft {
+section#form #leftSide {
   width: 890px;
+  float: left;
 }
-section#form form #formRight {
+section#form #rightSide {
   width: 490px;
   float: right;
 }
-section#form form #formRight .addPict {
-  height: 130px;
-  width: 130px;
+section#form #rightSide span {
+  margin-right: 250px;
+  line-height: 3em;
 }
-section#form form #formRight input.addPict {
-  color: blue;
+section#form #rightSide .addPict {
+  height: 120px;
+  width: 120px;
+  padding: 10px;
+}
+section#form #rightSide input.addPict {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  margin: 0 10px 10px 0;
 }
 /* ==========================================================================
    Helper classes
