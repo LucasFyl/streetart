@@ -14,6 +14,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/less/main.css">
+        <link href="css/css/font-awesome.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -28,34 +29,39 @@
         </header>
     
         <section id='form'>
+
+            <a href="" class="close"></a>
             <h2>Add new event</h2>
             <div id="leftSide">
-            <form action="" method="post">
-                <label for="eventName">Name of the event:</label>
-                    <input type="text" id="eventName"><br/>
-                <label for="description">Description:</label>
-                    <input type="textarea" id="description"><br/>
-                <label for="adress">Adress:</label>
-                    <input type="text" id="adress"><br/>
-                <label for="date">Date:</label>
-                    <input type="text" id="date"><br/>
-                <label for="website">Website:</label>
-                    <input type="text" id="website"><br/>
+                <form action="" method="post">
+                    <label for="eventName">Name of the event:</label>
+                        <input type="text" id="eventName"><br/>
+                    <label for="description">Description:</label>
+                        <input type="textarea" id="description"><br/>
+                    <label for="adress">Adress:</label>
+                        <input type="text" id="adress"><br/>
+                    <label for="date">Date:</label>
+                        <input type="text" id="date"><br/>
+                    <label for="website">Website:</label>
+                        <input type="text" id="website"><br/>
+                </form>
+            </div>
+
+            <div id="rightSide">
+
+                <h3>Gallerie photo:</h3>
+                
+                <div class="submitFile">
+                    <input type="file" name="pic" size="0" accept="image/jpeg" placeholder="" />
+                </div>
+                <div class="submitFile">
+                    <input type="file" name="pic" size="0" accept="image/jpeg" placeholder="" />
+                </div>
+                <div class="submitFile">
+                    <input type="file" name="pic" size="0" accept="image/jpeg" placeholder="" />
                 </div>
 
-                <div id="rightSide">
-                    <span>Gallerie photo:</span>
-                    <input class="addPict" type="file" name="pic" size="40" accept="image/jpeg">
-                    <input class="addPict" type="file" name="pic" size="40" accept="image/jpeg">
-                    <input class="addPict" type="file" name="pic" size="40" accept="image/jpeg">
-                    <input class="addPict" type="file" name="pic" size="40" accept="image/jpeg">
-                    <input class="addPict" type="file" name="pic" size="40" accept="image/jpeg">
-                    <input class="addPict" type="file" name="pic" size="40" accept="image/jpeg">
-                    <input class="addPict" type="file" name="pic" size="40" accept="image/jpeg">
-                    <input class="addPict" type="file" name="pic" size="40" accept="image/jpeg">
-                    <input class="addPict" type="file" name="pic" size="40" accept="image/jpeg">
-                </div>
-            </form>
+            </div>
         </section>
         
 
@@ -64,8 +70,20 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/vendor/jquery.hoverIntent7.js"></script>
-<!--        <script src="js/plugins.js"></script>
+        <!--<script src="js/plugins.js"></script>
         <script src="js/main.js"></script><-->
+        <script type="text/javascript">
+
+        $( document ).ready(function() {
+
+            var windowH = $(window).height();
+            var form = $('#form');
+
+            TweenMax.set(form, {height:windowH});
+
+        });
+
+        </script>
         <script src="js/mainGS.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>

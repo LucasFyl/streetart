@@ -473,63 +473,95 @@ section.city.active {
 
 /** SUBMIT-EVENT **/
 section#form{
-    width: 100%;
-    max-width: 1440px;
-    height: 830px;
+    width: 100%; height: 100%;
+    padding-top: 75px; 
     background: url('../../images/back-form.jpg');
     
     h2{
-        margin-left: 55px;
-        padding-top: 60px;
+        font-weight: 300px;
+        font-size: 26px;
+        margin-left: 50px;
     }
     
-    form{
-        margin-left: 65px;
+    #leftSide{
+        display: inline-block;
+        vertical-align: top;
+        float: left;
+        
+            form{
+                margin-left: 65px;
+                overflow: auto;
+                display: inline-block;
+                vertical-align: top;
 
-        label{
-            float: left;
-            width: 220px;
-        }
+                label{
+                    float: left;
+                    width: 170px;
+                }
 
-        input{
-            width: 565px;
-            height: 35px;
-            border-radius: 30px;
-            background: rgba(255, 255, 255, 0.5);
-            margin-bottom: 20px;
-            margin-right: 30px;
-        }
-
-        #description{
-            height: 230px;
-            margin-bottom: 50px;
-        }
+                input{
+                    width: 400px;
+                    height: 35px;
+                    border-radius: 5px;
+                    background: rgba(255, 255, 255, 0.5);
+                    border: none;
+                    margin-bottom: 20px;
+                    margin-right: 30px;
+                }
+                input[type="textarea"] {
+                    height: 230px;
+                    line-height: 1em;
+                    margin-bottom: 20px;            
+                }
+            }
     }
-        #leftSide{
-            width: 890px;
-            float: left;
-        }
+    
 
     #rightSide{
-        width: 490px;
-        float: right;
+        display: inline-block;
+        vertical-align: top;
+        width: 40%;
+        h3 {padding-left: 10px;}
 
         span{
             margin-right: 250px;
             line-height: 3em;
         }
 
-        .addPict{
+        div.submitFile {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
             height: 120px;
             width: 120px;
-            padding: 10px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.5);   
+            margin: 10px;
+            cursor: pointer ;
+
+            input { 
+                height: 100px;
+                width: 100px;
+                margin: 10px;
+                opacity: 0;
+                cursor: pointer ;
+            }
+
+            &:before {
+                content: "\f067";
+                font-family:'FontAwesome';
+                font-size: 26px;
+                line-height: 26px;
+                display: block;
+                color: @yellow;
+                position: absolute;
+                width: 22px; height: 26px;
+                top: 0; left: 0; bottom: 0; right: 0;
+                margin: auto;
+            }
         }
 
-        input.addPict{
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 30px;
-            margin: 0 10px 10px 0;
-        }   
+
     }
 }
 

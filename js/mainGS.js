@@ -23,10 +23,12 @@ $( document ).ready(function() {
 	$('section.city').on('click', '#friends', friendsFirst);
 
 	// Give accurate size even when window is resized
-	// $(window).on('resize', function () {
-	// 	var sectionActive = $('section.active');
-	//     TweenLite.to(sectionActive, 0, {width:windowW, height:windowH});
-	// });
+	$(window).on('resize', function () {
+		var section = $('section.active');
+		var windowH = $(window).height();
+	    var windowW = $(window).width();
+	    TweenLite.to(section, 0, {width:windowW, height:windowH});
+	});
 
 	// to give accurate size to each section
 	function giveSize(){
@@ -64,6 +66,7 @@ $( document ).ready(function() {
                 $('section.active').html(data);
                 darken();
     			childSectionSize();
+    			makeitAppear();
     			manageHover();
     			imgSize();
             }	
@@ -81,7 +84,7 @@ $( document ).ready(function() {
 	
 	// Give half of the height without header to each section inside city.active
 	function childSectionSize(){
-		var newWindowH = ($(window).height() - '75') / 2 + 'px'
+		var newWindowH = ($(window).height() - '75') / 2 + 'px';
 		var introSection = $('.cityIntro');
 		var eventSection = $('.eventSlider-wrap');
 		var article = $('.eventSlider-wrap article');
@@ -94,6 +97,22 @@ $( document ).ready(function() {
 	    TweenLite.to(article, 0, {height:newWindowH});
 	}
 	
+	function makeitAppear() {
+		var tabsBar = $('.event ul');
+		var eventSection = $('.eventSlider-wrap');
+		var sidebarBtn = $('#sidebarBtn');
+
+		TweenMax.fromTo(eventSection, 1, 
+			{y:400, ease:Power4.easeInOut}, 
+			{y:0, ease:Power4.easeOut, delay: 0.5});
+		TweenMax.fromTo(tabsBar, 1, 
+			{y:400, ease:Power4.easeInOut}, 
+			{y:0, ease:Power4.easeOut, delay: 0.5});
+		TweenMax.fromTo(sidebarBtn, 1, 
+			{x:-100, ease:Power4.easeInOut}, 
+			{x:0, ease:Power4.easeOut, delay: 1});
+  	}
+
 	// 2 function to switch tabs on city.active
 	function mainFirst(e) {
 		e.preventDefault();
@@ -150,9 +169,8 @@ $( document ).ready(function() {
 		    TweenLite.to(sidebar, 0.25, {width:'0px', ease:Power2.easeIn});
 		    TweenLite.to(content, 0, {css:{display:'none'}, ease:Power2.easeIn, delay:0.15});
 		}
-		// $(sidebar).on('mouseout', function(){
-		// 	setTimeout(closeIt, 1000)
-		// });
+
+		// if statements séparés en deux pour la fluidité de l'animation
 		if( $(sidebar).width() == 0 ) {
 		    TweenLite.to(title, 0.25, {left:"+=350px", ease:Power2.easeIn});
 		    TweenLite.to(eventSlider, 0.25, {left:"+=350px", ease:Power2.easeIn});
@@ -161,7 +179,6 @@ $( document ).ready(function() {
 		    TweenLite.to(title, 0.25, {left:"-=350px", ease:Power2.easeIn});
 		    TweenLite.to(eventSlider, 0.25, {left:"-=350px", ease:Power2.easeIn});
 		}
-		// if statements séparés en deux pour la fluidité de l'animation
 	}	
 
 	// to manage hover on each event
@@ -170,12 +187,12 @@ $( document ).ready(function() {
 		TweenLite.set(hoverContent, {opacity:0});
 		$('.eventSlider-wrap article').on('mouseover', function(){
 			var thisContent = $(this).find('.onHover');
-			TweenLite.to(thisContent, 0.25, {opacity:1, ease:Power2.easeInOut});
+			TweenLite.to(thisContent, 0, {opacity:1});
 		});
 
 		$('.eventSlider-wrap article').on('mouseout', function(){
 			var thisContent = $(this).find('.onHover');
-			TweenLite.to(thisContent, 0.25, {opacity:0, ease:Power2.easeInOut});
+			TweenLite.to(thisContent, 0, {opacity:0});
 		});
 	}
 
