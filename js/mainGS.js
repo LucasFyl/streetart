@@ -111,7 +111,11 @@ $( document ).ready(function() {
 		TweenMax.fromTo(sidebarBtn, 1, 
 			{x:-100, ease:Power4.easeInOut}, 
 			{x:0, ease:Power4.easeOut, delay: 1});
+<<<<<<< HEAD
 	}
+=======
+  	}
+>>>>>>> martin
 
 	// 2 function to switch tabs on city.active
 	function mainFirst(e) {

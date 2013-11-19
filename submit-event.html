@@ -28,20 +28,41 @@
             <a href="">Artist of the week</a>
         </header>
     
-        <div id="home">
-                <section class="city" id="paris" >
-                    <a href="#">paris</a> 
-                </section>
-                <section class="city" id="berlin" >
-                    <a href="#">berlin</a> 
-                </section>
-                <section class="city" id="newyork" >
-                    <a href="#">new-york</a>
-                 </section>
-                <section class="city" id="london" >
-                    <a href="#">london</a> 
-                </section>
-        </div>
+        <section id='form'>
+
+            <a href="" class="close"></a>
+            <h2>Add new event</h2>
+            <div id="leftSide">
+                <form action="" method="post">
+                    <label for="eventName">Name of the event:</label>
+                        <input type="text" id="eventName"><br/>
+                    <label for="description">Description:</label>
+                        <input type="textarea" id="description"><br/>
+                    <label for="adress">Adress:</label>
+                        <input type="text" id="adress"><br/>
+                    <label for="date">Date:</label>
+                        <input type="text" id="date"><br/>
+                    <label for="website">Website:</label>
+                        <input type="text" id="website"><br/>
+                </form>
+            </div>
+
+            <div id="rightSide">
+
+                <h3>Gallerie photo:</h3>
+                
+                <div class="submitFile">
+                    <input type="file" name="pic" size="0" accept="image/jpeg" placeholder="" />
+                </div>
+                <div class="submitFile">
+                    <input type="file" name="pic" size="0" accept="image/jpeg" placeholder="" />
+                </div>
+                <div class="submitFile">
+                    <input type="file" name="pic" size="0" accept="image/jpeg" placeholder="" />
+                </div>
+
+            </div>
+        </section>
         
 
         <!--CDN link for the latest TweenMax-->
@@ -49,8 +70,20 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/vendor/jquery.hoverIntent7.js"></script>
-<!--        <script src="js/plugins.js"></script>
+        <!--<script src="js/plugins.js"></script>
         <script src="js/main.js"></script><-->
+        <script type="text/javascript">
+
+        $( document ).ready(function() {
+
+            var windowH = $(window).height();
+            var form = $('#form');
+
+            TweenMax.set(form, {height:windowH});
+
+        });
+
+        </script>
         <script src="js/mainGS.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>
