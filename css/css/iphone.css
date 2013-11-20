@@ -1,0 +1,8 @@
+body {
+  width: 100%;
+}
+body #home .city {
+  position: relative;
+  height: 120px !important;
+  width: 100% !important;
+}
