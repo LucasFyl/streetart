@@ -1,5 +1,5 @@
 div#sidebarBtn{
-	margin-top: -105px !important;
+	display: none !important;
 }
 
 section.event{
@@ -10,8 +10,9 @@ section.event{
 
 		li{
 
-			#create{
-				right: 0;
+			li#create{
+				position: relative;
+				color: red;
 			}
 		}
 	}
@@ -34,11 +35,43 @@ section.event{
 
 		article{
 			clear: left;
+			width: 100%;
 		}		
 	}
 }
 
 div.eventSlider{
-	width: auto !important;
+	width: 100% !important;
 }
 
+section.city.active{
+	width: 100%;
+	
+	article{
+		width: 100% !important;
+	}
+}
+
+#berlin{
+	section.cityIntro{
+		background: url('../img/berlin.jpg');
+	}
+}
+
+#paris{
+	section.cityIntro{
+		background: url('../img/paris.jpg');
+	}
+}
+
+#london{
+	section.cityIntro{
+		background: url('../img/london.jpg');
+	}
+}
+
+#newyork{
+	section.cityIntro{
+		background: url('../img/NY.jpg');
+	}
+}
