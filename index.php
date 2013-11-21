@@ -14,11 +14,9 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/less/main.css">
-<<<<<<< HEAD
+
         <link href="css/css/font-awesome.css" rel="stylesheet">
-=======
         <link rel="stylesheet" href='css/less/iphone.css' media='screen and (min-width: 320px) and (max-width: 640px)'/>
->>>>>>> events
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -49,11 +47,11 @@
         </div>
         
 
-        <!--CDN link for the latest TweenMax-->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/vendor/jquery.hoverIntent7.js"></script>
+        
+        <!--CDN link for the latest TweenMax-->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 <!--        <script src="js/plugins.js"></script>
         <script src="js/main.js"></script><-->
         <script src="js/mainGS.js"></script>

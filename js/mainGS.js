@@ -22,18 +22,23 @@ $( document ).ready(function() {
 	$('section.city').on('click', '#main', mainFirst);
 	$('section.city').on('click', '#friends', friendsFirst);
 
+	// open submit form
+	$('section.city').on('click', "#create", openForm); 
+	$('section.city').on('click', "#closeForm ", openForm); 
+
+
 	// Give accurate size even when window is resized
-	$(window).on('resize', function () {
-		var section = $('section.active');
-		var windowH = $(window).height();
-	    var windowW = $(window).width();
-	    TweenLite.to(section, 0, {width:windowW, height:windowH});
-	});
+	// $(window).on('resize', function () {
+	// 	var section = $('section.active');
+	// 	var windowH = $(window).height();
+	//     var windowW = $(window).width();
+	//     TweenLite.to(section, 0, {width:windowW, height:windowH});
+	// });
 
 	// to give accurate size to each section
 	function giveSize(){
 		var section = $('section.city');
-	    TweenLite.to(section, 0, {width:halfW, height:halfH});
+	    TweenLite.set(section, {width:halfW, height:halfH});
 	}
 
 	// Animation to open city 
@@ -79,7 +84,6 @@ $( document ).ready(function() {
 		sidebar.before('<div class="darken"></div>');
 		cityDark = $('div.darken');	
 		TweenLite.to(cityDark, 1.5, {opacity: 1, ease:Power2.easeOut});
-
 	}
 	
 	// Give half of the height without header to each section inside city.active
@@ -217,16 +221,48 @@ $( document ).ready(function() {
 		});
 	}
 
-	function importFbSDK() {
-		$.ajaxSetup({ cache: true });
-		$.getScript('//connect.facebook.net/en_UK/all.js', function(){
-		  FB.init({
-		    appId: 'YOUR_APP_ID',
-		  });     
-		  $('#loginbutton,#feedbutton').removeAttr('disabled');
-		  FB.getLoginStatus(updateStatusCallback);
-		});
+	// function importFbSDK() {
+	// 	$.ajaxSetup({ cache: true });
+	// 	$.getScript('//connect.facebook.net/en_UK/all.js', function(){
+	// 	  FB.init({
+	// 	    appId: 'YOUR_APP_ID',
+	// 	  });     
+	// 	  $('#loginbutton,#feedbutton').removeAttr('disabled');
+	// 	  FB.getLoginStatus(updateStatusCallback);
+	// 	});
+	// }
+
+	// to open the submit form
+	function openForm(e) {
+		e.preventDefault();
+		var form = $('#form');
+		form.toggleClass('hidden');
 	}
+
+
+	// lorsque je soumets le formulaire
+    $('section.city').on('submit','#eventForm',function(e) {
+ 		e.preventDefault();
+		console.log($(this).serialize());
+ 		return;
+        // je récupère les valeurs
+        var eventName = $('#eventName').val();
+        var description = $('#description').val();
+        var location = $('#address').val();
+        var date = $('#date').val();
+
+            // appel Ajax
+        $.ajax({
+            url: $(this).attr('action'), // le nom du fichier indiqué dans le formulaire
+            type: $(this).attr('method'), // la méthode indiquée dans le formulaire (get ou post)
+            data: $(this).serialize(), // je sérialise les données (voir plus loin), ici les $_POST
+            success: function(html) { // je récupère la réponse du fichier PHP
+                alert(html); // j'affiche cette réponse
+            }
+        });
+
+        return false; // j'empêche le navigateur de soumettre lui-même le formulaire
+    });
 
 });
 
