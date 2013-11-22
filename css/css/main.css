@@ -481,6 +481,45 @@ section#form #rightSide input.addPict {
   border-radius: 30px;
   margin: 0 10px 10px 0;
 }
+/** ARTIST OF THE WEEK **/
+.weeklyartist {
+  background: url('../img/back_artist.jpg') no-repeat;
+  background-color: #000000;
+  height: 1000px;
+  width: 100%;
+  padding: 65px 0 0 155px;
+  background-size: 100%;
+}
+.weeklyartist h2 {
+  color: #f39c12;
+}
+.weeklyartist article img {
+  margin-top: 10px;
+  float: left;
+}
+.weeklyartist article .onHover {
+  max-width: 890px;
+  padding-left: 230px;
+  padding-right: 200px;
+}
+.weeklyartist article .onHover h3 {
+  margin-top: 65px;
+}
+.weeklyartist article .onHover #social {
+  color: #f39c12;
+}
+.weeklyartist article .onHover #social ul {
+  color: #fff;
+  float: left;
+  margin: 0;
+  padding: 0;
+  margin-left: 130px;
+  margin-top: -7px;
+}
+.weeklyartist article .onHover #social ul li {
+  float: left;
+  margin-right: 6px;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
