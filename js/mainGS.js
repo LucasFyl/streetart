@@ -74,6 +74,7 @@ $( document ).ready(function() {
     			makeitAppear();
     			manageHover();
     			imgSize();
+    			horizontalScroll();
             }	
         });
 	}
@@ -232,7 +233,6 @@ $( document ).ready(function() {
 	// lorsque je soumets le formulaire
     $('section.city').on('submit','#eventForm',function(e) {
  		e.preventDefault();
-		// console.log($(this).serialize());
 
         // je récupère les valeurs
         var eventName = $('#eventName').val();
@@ -269,6 +269,16 @@ $( document ).ready(function() {
 
         return false; // j'empêche le navigateur de soumettre lui-même le formulaire
     });
+
+	function horizontalScroll() {
+		$(".eventSlider-wrap").mousewheel(function(event, delta) {
+
+	      this.scrollLeft -= (delta * 2);
+	    
+	      event.preventDefault();
+
+	    });
+	}
 
 });
 
