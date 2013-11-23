@@ -10,7 +10,7 @@ $( document ).ready(function() {
 	giveSize();
 
 	// Gives each section the good size even when resizing 
-	$(window).on('resize', giveSize());
+	// $(window).on('resize', giveSize());
 
 	// attach event on section when clicked
 	$(section).on('click', openCity);
@@ -28,12 +28,12 @@ $( document ).ready(function() {
 
 
 	// Give accurate size even when window is resized
-	// $(window).on('resize', function () {
-	// 	var section = $('section.active');
-	// 	var windowH = $(window).height();
-	//     var windowW = $(window).width();
-	//     TweenLite.to(section, 0, {width:windowW, height:windowH});
-	// });
+	$(window).on('resize', function () {
+		var section = $('section.active');
+		var windowH = $(window).height();
+	    var windowW = $(window).width();
+	    TweenLite.to(section, 0, {width:windowW, height:windowH});
+	});
 
 	// to give accurate size to each section
 	function giveSize(){
@@ -221,17 +221,6 @@ $( document ).ready(function() {
 		});
 	}
 
-	// function importFbSDK() {
-	// 	$.ajaxSetup({ cache: true });
-	// 	$.getScript('//connect.facebook.net/en_UK/all.js', function(){
-	// 	  FB.init({
-	// 	    appId: 'YOUR_APP_ID',
-	// 	  });     
-	// 	  $('#loginbutton,#feedbutton').removeAttr('disabled');
-	// 	  FB.getLoginStatus(updateStatusCallback);
-	// 	});
-	// }
-
 	// to open the submit form
 	function openForm(e) {
 		e.preventDefault();
@@ -250,6 +239,10 @@ $( document ).ready(function() {
         var description = $('#description').val();
         var location = $('#address').val();
         var date = $('#date').val();
+        var startTime = $('#start_time').val();
+        var endTime = $('#end_time').val();
+
+        console.log(date);
 
         // appel Ajax
         $.ajax({
@@ -257,14 +250,15 @@ $( document ).ready(function() {
             type: $(this).attr('method'), // la méthode indiquée dans le formulaire (get ou post)
             data: $(this).serialize(), // je sérialise les données (voir plus loin), ici les $_POST
             success: function(html) { // je récupère la réponse du fichier PHP
-                var event = {  
-				    name: 'Name of your event', 
-				    description: 'Description of your event',
-				    location: 'Location of event',                        
-				    start_time: Math.round(new Date().getTime()/1000.0), // Example Start Date
-				    end_time: Math.round(new Date().getTime()/1000.0)+86400 // Example End Date
+                var event = {
+				    access_token: "CAABvO7bVoBYBAHJ4d2JlCynvXdhkalmk6CCJfbJW0FQJVFbd5yUVo1ZAoDK8V9rrxhKnZAt5VNBIlLqxd7R79jDoxATSRJ9R30KgPb9VZAUq4L5PyWIvcUttjsy6rEjaZCFiAszQUS3VXOEidVWfRODOVGtbFmKFZCBElenaT73fsOjL9wW2ZAtHNA4xHU0KoZD",
+				    name: eventName, 
+				    description: description,
+				    location: location,
+				    date: date,                        
+				    start_time: startTime, // Example Start Date
+				    end_time: endTime // Example End Date
 				};
-
 
 				FB.api('/122302261207062/events', 'post', event, function (result) {
 				    console.log(result); 
