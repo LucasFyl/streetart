@@ -159,6 +159,16 @@ header > a {
   font-size: .8em;
   color: white;
 }
+/** SECTION SINGLE EVENT **/
+.cadre-noir
+{
+  margin-top:18.8%;
+  position:absolute;
+  height:50%;
+  width: 100%;
+  background-color:#2a2b2a;
+}
+
 /** SECTION HOME **/
 div#home {
   width: 100%;
