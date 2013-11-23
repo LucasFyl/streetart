@@ -796,6 +796,9 @@ section#form #rightSide input[type="submit"]:hover {
   width: 100px !important;
   margin: 0 20px;
 }
+#participez #form-wrap .formInnerWrap .popularArtist {
+  display: none;
+}
 #participez #form-wrap input[type="submit"] {
   border: none;
   display: inline-block;
