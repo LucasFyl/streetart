@@ -40,3 +40,48 @@ section.city.active article {
 #newyork section.cityIntro {
   background: url('../img/NY.jpg');
 }
+.weeklyartist {
+  background: #000;
+  height: 1000px;
+  width: 100%;
+  background-size: 100%;
+}
+.weeklyartist img.avatar {
+  border: 5px solid #fff;
+  border-radius: 110px;
+  margin: 0 auto;
+}
+.weeklyartist .onHover {
+  max-width: 890px;
+  padding-left: 230px;
+  padding-right: 200px;
+}
+.weeklyartist .onHover h3 {
+  clear: left;
+  font-weight: 300;
+  font-size: 1.5em;
+  margin-left: -170px;
+  padding-top: 20px;
+}
+.weeklyartist .onHover p {
+  width: 400px;
+  margin-left: -310px;
+}
+.weeklyartist .onHover #social {
+  color: #f39c12;
+  position: absolute;
+  left: 50%;
+  margin-left: -170px;
+  margin-top: 20px;
+}
+.weeklyartist .onHover #social ul {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  margin-left: 130px;
+  margin-top: -33px;
+}
+.weeklyartist .onHover #social ul li {
+  float: left;
+  margin-right: 6px;
+}

@@ -492,10 +492,15 @@ section#form #rightSide input.addPict {
 }
 .weeklyartist h2 {
   color: #f39c12;
+  font-weight: 300;
 }
 .weeklyartist article img {
   margin-top: 10px;
   float: left;
+}
+.weeklyartist article img.avatar {
+  border: 5px solid #fff;
+  border-radius: 110px;
 }
 .weeklyartist article .onHover {
   max-width: 890px;
@@ -504,17 +509,17 @@ section#form #rightSide input.addPict {
 }
 .weeklyartist article .onHover h3 {
   margin-top: 65px;
+  font-weight: 300;
 }
 .weeklyartist article .onHover #social {
   color: #f39c12;
 }
 .weeklyartist article .onHover #social ul {
   color: #fff;
-  float: left;
   margin: 0;
   padding: 0;
   margin-left: 130px;
-  margin-top: -7px;
+  margin-top: -33px;
 }
 .weeklyartist article .onHover #social ul li {
   float: left;
