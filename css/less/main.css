@@ -179,21 +179,29 @@ section#paris {
   background: url('../img/paris.jpg') no-repeat;
   top: 0;
   left: 0;
+  border-right: 1px solid #f39c12;
+  border-bottom: 1px solid #f39c12;
 }
 section#berlin {
   background: url('../img/berlin.jpg') no-repeat;
   top: 0;
   right: 0;
+  border-left: 1px solid #f39c12;
+  border-bottom: 1px solid #f39c12;
 }
 section#newyork {
   background: url('../img/ny.jpg') no-repeat;
   bottom: 0;
   left: 0;
+  border-right: 1px solid #f39c12;
+  border-top: 1px solid #f39c12;
 }
 section#london {
   background: url('../img/london.jpg') no-repeat center bottom;
   bottom: 0;
   right: 0;
+  border-left: 1px solid #f39c12;
+  border-top: 1px solid #f39c12;
 }
 section.city {
   position: absolute;
@@ -205,16 +213,25 @@ section.city {
 section.city > a {
   font-family: 'Source Sans Pro', sans-serif;
   color: white;
-  font-size: 2.4em;
-  letter-spacing: 4px;
+  font-size: 2.065em;
+  height: 32px;
+  line-height: 32px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 section.city.active {
   z-index: 99;
   background-size: 100% !important;
   cursor: default;
+  border: none !important;
 }
 section.city.active > section {
   display: block;
@@ -401,19 +418,21 @@ section.city.active section.event div.eventSlider-wrap div.eventSlider article .
   content: " ";
   width: 120px;
   height: 1px;
+  display: block;
   background-color: #f39c12;
   position: absolute;
   left: 100%;
-  top: 8px;
+  top: 5px;
 }
 section.city.active section.event div.eventSlider-wrap div.eventSlider article .onHover p.date:after {
   content: " ";
   width: 120px;
   height: 1px;
+  display: block;
   background-color: #f39c12;
   position: absolute;
   right: 100%;
-  top: 8px;
+  top: 5px;
 }
 section.city.active section.event div.eventSlider-wrap div.eventSlider article .onHover p.infos {
   width: 80%;
@@ -585,6 +604,65 @@ section#form #rightSide input[type="submit"]:hover {
   -ms-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
+}
+/* page single-artist */
+.weeklyartist {
+  background: url('../img/back_artist.jpg') no-repeat;
+  background-color: #000000;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  padding-top: 75px;
+}
+.weeklyartist h2 {
+  color: #f39c12;
+  font-weight: 300;
+  display: block;
+  margin: 50px;
+  font-size: 1.67em;
+}
+.weeklyartist article.artist {
+  width: 1000px;
+  margin: 0 auto;
+}
+.weeklyartist article.artist img.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: top;
+  border: 5px solid #fff;
+  margin-right: 50px;
+}
+.weeklyartist article.artist .artist-details {
+  width: 750px;
+  display: inline-block;
+  vertical-align: top;
+}
+.weeklyartist article.artist .artist-details h3 {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-weight: 300;
+  font-size: 1.67em;
+}
+.weeklyartist article.artist .artist-details p {
+  font-size: .85em;
+  margin-bottom: 40px;
+}
+.weeklyartist article.artist .artist-details #social {
+  color: #f39c12;
+}
+.weeklyartist article.artist .artist-details #social ul {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  margin-left: 130px;
+  margin-top: -25px;
+  list-style-type: none;
+}
+.weeklyartist article.artist .artist-details #social ul li {
+  float: left;
+  margin-right: 6px;
 }
 /* ==========================================================================
    Helper classes

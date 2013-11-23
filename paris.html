@@ -26,9 +26,9 @@
                     <input type="date" max="2014-12-31" min="2013-01-01" id="date" name="date" required="required" val="<?php echo date('Y-m-d'); ?>"><br/>
                     
                     <label for="">Start Time</label>
-                    <input type="time" name="start_time" id="start_time" value="<?php echo date('Y-m-d H:i:s'); ?>" />
+                    <input type="time" name="start_time" id="start_time" value="<?php echo date('Y-m-d H:i:s'); ?>" /><br/>
                     <label for="end_time">End Time</label>
-                    <input type="time" name="end_time" id="end_time" value="<?php echo date('Y-m-d H:i:s', mktime(0, 0, 0, date("m")  , date("d")+1, date("Y"))); ?>" />
+                    <input type="time" name="end_time" id="end_time" value="<?php echo date('Y-m-d H:i:s'); ?>" /><br/>
                     <input type="submit" value="send" />
                 </form>
             </div>
