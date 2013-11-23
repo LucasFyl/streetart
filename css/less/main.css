@@ -674,6 +674,9 @@ section#form #rightSide input[type="submit"]:hover {
   margin-bottom: 40px;
   font-weight: 300;
   font-size: 1.67em;
+  line-height: 1em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 .single-artist article.artist .artist-details p {
   font-size: .85em;
