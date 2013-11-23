@@ -5,6 +5,47 @@
             </div>
             <p>Like many other European countries we can see that the United Kingdom at first made parts heavily influenced by the New York school, however in 1983, a large community of graffiti artists was formed particularly in Bristol and London.<br/>However, it quickly became difficult graffer in the capital since it is extremely secure and absolutely consistently. This has not prevented the development of displays and the famous Banksy stencil particular.</p>
         </div>
+         
+        <section id='form' class="hidden">
+            <a href="#" class="close" id="closeForm"></a>
+            <h2>Add new event</h2>
+            <div id="leftSide">
+                <form id="eventForm" action="submit.php" method="post">
+                    <label for="eventName">Name of the event:</label>
+                    <input type="text" id="eventName" name="eventName" required="required"><br/>
+                    
+                    <label for="description">Description:</label>
+                    <input type="textarea" id="description" name="description" required="required"><br/>
+                    
+                    <label for="location">Adress:</label>
+                    <input type="text" id="address" name="location" required="required"><br/>
+                    
+                    <label for="date">Date:</label>
+                    <input type="date" max="2014-12-31" min="2013-01-01" id="date" name="date" required="required" val="<?php echo date('Y-m-d'); ?>"><br/>
+                    
+                    <label for="">Start Time</label>
+                    <input type="time" name="start_time" id="start_time" value="<?php echo date('Y-m-d H:i:s'); ?>" /><br/>
+                    <label for="end_time">End Time</label>
+                    <input type="time" name="end_time" id="end_time" value="<?php echo date('Y-m-d H:i:s'); ?>" /><br/>
+                    <input type="submit" value="send" />
+                </form>
+            </div>
+
+            <div id="rightSide">
+
+                <h3>Gallerie photo:</h3>
+                
+                <div class="submitFile">
+                    <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                </div>
+                <div class="submitFile">
+                    <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                </div>
+                <div class="submitFile">
+                    <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                </div>
+            </div>
+        </section>
         
         <section class="cityIntro">
             <h2>your events, in your city, </br> with your friends</h2>
