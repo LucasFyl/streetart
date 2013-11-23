@@ -689,6 +689,162 @@ section#form #rightSide input[type="submit"]:hover {
   float: left;
   margin-right: 6px;
 }
+/* PARTICIPEZ */#participez {
+  width: 100%;
+  height: 1000px;
+  padding-top: 75px;
+}
+#participez header {
+  background: #000000;
+}
+#participez .button {
+  width: 150px;
+  background: #f39c12;
+  padding: 10px 0;
+  color: #fff;
+  margin: 50px auto;
+  display: block;
+  text-align: center;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#participez input {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border-radius: 3px;
+}
+#participez #description {
+  width: 300px;
+  height: 200px;
+}
+#participez .info-wrap {
+  width: 100%;
+  background: #000000;
+}
+#participez .info-wrap .info {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: auto;
+  background: #000000;
+}
+#participez .info-wrap .info h1 {
+  color: #f39c12;
+  font-weight: 200;
+}
+#participez .info-wrap .info p {
+  line-height: 1.5;
+  font-size: .85em;
+}
+#participez #form-wrap {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  background: #181818;
+}
+#participez #form-wrap .form {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: auto;
+}
+#participez #form-wrap .form h2 {
+  padding-top: 50px;
+  color: #f39c12;
+  font-weight: 200;
+}
+#participez #form-wrap form {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  vertical-align: top;
+}
+#participez #form-wrap .formInnerWrap {
+  float: left;
+  width: 580px;
+  display: inline-block;
+}
+#participez #form-wrap .formInnerWrap label {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 160px;
+  height: 30px;
+  font-size: 0.85em;
+}
+#participez #form-wrap .formInnerWrap label[for="description"] {
+  vertical-align: top;
+}
+#participez #form-wrap .formInnerWrap input:not([type="submit"]) {
+  border: none;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 350px;
+  background: rgba(255, 255, 255, 0.5);
+  margin-left: 0;
+}
+#participez #form-wrap .formInnerWrap ul {
+  padding-left: 0px;
+}
+#participez #form-wrap .formInnerWrap ul li {
+  padding-left: 0;
+  list-style-type: none;
+  display: inline-block;
+}
+#participez #form-wrap .formInnerWrap ul li:first-child {
+  margin-right: 60px;
+}
+#participez #form-wrap .formInnerWrap ul li input {
+  width: 100px !important;
+  margin: 0 20px;
+}
+#participez #form-wrap input[type="submit"] {
+  border: none;
+  display: inline-block;
+  float: right;
+}
+#participez #form-wrap #img-right {
+  width: 387px;
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+}
+#participez #form-wrap div.submitFile {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 120px;
+  width: 120px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 0 10px 10px;
+  cursor: pointer ;
+}
+#participez #form-wrap div.submitFile:first-child,
+#participez #form-wrap div.submitFile:nth-child(4) {
+  margin-left: 0;
+}
+#participez #form-wrap div.submitFile input {
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  opacity: 0;
+  cursor: pointer ;
+}
+#participez #form-wrap div.submitFile:before {
+  content: "\f067";
+  font-family: 'FontAwesome';
+  font-size: 26px;
+  line-height: 26px;
+  display: block;
+  color: #f39c12;
+  position: absolute;
+  width: 22px;
+  height: 26px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
