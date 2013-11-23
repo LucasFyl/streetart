@@ -633,26 +633,28 @@ section#form #rightSide input[type="submit"]:hover {
   transition: all .5s ease;
 }
 /* page single-artist */
-.weeklyartist {
+.single-artist {
   background: url('../img/back_artist.jpg') no-repeat;
   background-color: #000000;
   background-size: 100%;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  position: fixed;
   padding-top: 75px;
 }
-.weeklyartist h2 {
+.single-artist h2 {
   color: #f39c12;
   font-weight: 300;
   display: block;
   margin: 50px;
+  margin-left: 0;
   font-size: 1.67em;
 }
-.weeklyartist article.artist {
+.single-artist article.artist {
   width: 1000px;
   margin: 0 auto;
 }
-.weeklyartist article.artist img.avatar {
+.single-artist article.artist img.avatar {
   width: 180px;
   height: 180px;
   border-radius: 100%;
@@ -661,25 +663,25 @@ section#form #rightSide input[type="submit"]:hover {
   border: 5px solid #fff;
   margin-right: 50px;
 }
-.weeklyartist article.artist .artist-details {
+.single-artist article.artist .artist-details {
   width: 750px;
   display: inline-block;
   vertical-align: top;
 }
-.weeklyartist article.artist .artist-details h3 {
+.single-artist article.artist .artist-details h3 {
   margin-top: 0;
   margin-bottom: 40px;
   font-weight: 300;
   font-size: 1.67em;
 }
-.weeklyartist article.artist .artist-details p {
+.single-artist article.artist .artist-details p {
   font-size: .85em;
   margin-bottom: 40px;
 }
-.weeklyartist article.artist .artist-details #social {
+.single-artist article.artist .artist-details #social {
   color: #f39c12;
 }
-.weeklyartist article.artist .artist-details #social ul {
+.single-artist article.artist .artist-details #social ul {
   color: #fff;
   margin: 0;
   padding: 0;
@@ -687,9 +689,33 @@ section#form #rightSide input[type="submit"]:hover {
   margin-top: -25px;
   list-style-type: none;
 }
-.weeklyartist article.artist .artist-details #social ul li {
+.single-artist article.artist .artist-details #social ul li {
   float: left;
-  margin-right: 6px;
+  margin-right: 10px;
+}
+.single-artist #gallery {
+  width: 1000px;
+}
+.single-artist #gallery ul {
+  display: block;
+  list-style-type: none;
+  height: 120px;
+  width: 1000px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  margin-left: -500px;
+}
+.single-artist #gallery ul li {
+  display: block;
+  width: 120px;
+  height: 120px;
+  float: left;
+}
+.single-artist #gallery ul li img {
+  width: 100%;
+  height: 100%;
 }
 /* ==========================================================================
    Helper classes

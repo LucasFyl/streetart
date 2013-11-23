@@ -697,11 +697,12 @@ section#form{
 
 /* page single-artist */
 
-.weeklyartist{
+.single-artist{
     background: url('../img/back_artist.jpg') no-repeat;
     background-color: rgba(0,0,0,1);
     background-size: 100%;
-    width: 100%; height: 100%;
+    width: 100%; min-height: 100%;
+    position: fixed;
     padding-top: 75px;
 
     h2 {
@@ -709,6 +710,7 @@ section#form{
         font-weight: 300;
         display: block;
         margin: 50px;
+        margin-left: 0;
         font-size: 1.67em;
     }
 
@@ -729,16 +731,14 @@ section#form{
             width: 750px;
             display: inline-block;
             vertical-align: top;
-            
 
-            h3{
+            h3 {
                 margin-top: 0;
                 margin-bottom: 40px;
                 font-weight: 300;
                 font-size: 1.67em;
             }
-
-            p{
+            p {
                 font-size: .85em;
                 margin-bottom: 40px;
             }
@@ -756,14 +756,43 @@ section#form{
 
                     li{
                         float: left;
-                        margin-right: 6px;
+                        margin-right: 10px;
                     }
                 }
             }
         }
-    }
-}
+    } //  /.artist
+    #gallery {
+        width: 1000px;
 
+        ul {
+            display: block;
+            list-style-type: none;
+            height: 120px;
+            width: 1000px;
+            overflow: hidden;
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            margin-left: -500px;
+
+            li {
+                display: block;
+                width: 120px; height: 120px;
+                float: left;
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                    
+                }
+
+                
+            }
+        }
+
+    }
+} // /.single-artist
 
 
 

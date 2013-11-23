@@ -12,26 +12,32 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/less/main.css">
-        <link rel="stylesheet" href='css/less/iphone.css' media='screen and (min-width: 320px) and (max-width: 640px)'/>
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/less/main.css">
+        <link rel="stylesheet" href='../css/less/iphone.css' media='screen and (min-width: 320px) and (max-width: 640px)'/>
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../css/jquery.fancybox-1.3.1.css">
+        <link rel="stylesheet" type="text/css" href="../css/jquery.fancyPhotoset.css">
+
+        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <header>
-            <h1><a href="">&nbsp<!-- World Wide <span>Writters</span> --></a></h1>
-            <a href="">Artist of the week</a>
-        </header>
     
-        <div class="weeklyartist">
-        <h2>Artist presentation</h2>
+        <div class="single-artist" style="overfow:none;">
+
+            <header style="opacity:1;height:75px;">
+                <h1><a href="">&nbsp<!-- World Wide <span>Writters</span> --></a></h1>
+                <a href="">Artist of the week</a>
+            </header>
+
             <article class="artist">
-                <img src="images/artists/banksy.jpg" alt="artist picture" class="avatar">
+            <h2>Artist presentation</h2>
+                <img src="../images/artists/banksy.jpg" alt="artist picture" class="avatar">
                 <div class="artist-details">
                     <h3>Banksy</h3>
                     <p class="description">Banksy est l'artiste de rue le plus célèbre de Grande-Bretagne. Ses pochoirs, à l'ironie sarcastique, constituent une critique en règle contre ce monde qui  ne tourne pas rond. La cupidité, la corruption, la folie de la consommation sont les thèmes récurrents de ses œuvres. Banksy est l'artiste de rue le plus célèbre de Grande-Bretagne. Ses pochoirs, à l'ironie sarcastique, constituent une critique en règle contre ce monde qui  ne tourne pas rond. La cupidité, la corruption, la folie de la consommation sont les thèmes récurrents de ses œuvres...Banksy est l'artiste de rue le plus célèbre de Grande-Bretagne. Ses pochoirs, à l'ironie sarcastique, constituent une critique en règle contre ce monde qui  ne tourne pas rond. La cupidité, la corruption, la folie de la consommation sont les thèmes récurrents de ses œuvres. Banksy est l'artiste de rue le plus célèbre de Grande-Bretagne. Ses pochoirs, à l'ironie sarcastique, constituent une critique en règle contre ce monde qui  ne tourne pas rond. La cupidité, la corruption, la folie de la consommation sont les thèmes récurren.</p>
@@ -39,45 +45,46 @@
                     <div id="social">
                         <span>Follow Banksy on:</span>
                         <ul>
-                            <li><a href="#"><img src="images/social/fbIcon.png" alt="facebook"></a></li>
-                            <li><a href="#"><img src="images/social/flickrIcon.png" alt="flickr"></a></li>
-                            <li><a href="#"><img src="images/social/twitterIcon.png" alt="twitter"></a></li>
-                            <li><a href="#"><img src="images/social/pinterestIcon.png" alt="pinterest"></a></li>
+                            <li><a href="#"><img src="../images/social/fbIcon.png" alt="facebook"></a></li>
+                            <li><a href="#"><img src="../images/social/flickrIcon.png" alt="flickr"></a></li>
+                            <li><a href="#"><img src="../images/social/twitterIcon.png" alt="twitter"></a></li>
+                            <li><a href="#"><img src="../images/social/pinterestIcon.png" alt="pinterest"></a></li>
                         </ul>
                     </div>
                 </div>
             </article>
+
+            <div id="gallery"></div>
         </div>
 
         <!--CDN link for the latest TweenMax-->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/vendor/jquery.hoverIntent7.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="../js/mainGS.js"></script>
+        <script type="text/javascript" src="../js/jquery.fancybox-1.3.1.pack.js"></script>
+        <script type="text/javascript" src="../js/jquery.fancy-photoset.min.js"></script>
 <!--        <script src="js/plugins.js"></script>
         <script src="js/main.js"></script><-->
         <script type="text/javascript">
+            $( document ).ready(function() {
+                var windowH = $(window).height();
+                var artist = $('.single-artist');
+                TweenMax.set(artist, {height:windowH});
 
-        $( document ).ready(function() {
+                $(function() {
 
-            var windowH = $(window).height();
-            var form = $('.weeklyartist');
+                  var options = {
+                    user_id: '106947505@N06',
+                    photosetId: '72157637976862006',
+                    apiKey: '811ec88d533eb1b1661b28e3b243caa4',
+                    captions: false,
+                  };
 
-            TweenMax.set(form, {height:windowH});
-
-        });
+                  $('#gallery').fancyPhotoset(options);
+                });
+            });
 
         </script>
-        <script src="js/mainGS.js"></script>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-        -->
     </body>
 </html>
