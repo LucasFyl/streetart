@@ -243,21 +243,33 @@ $( document ).ready(function() {
 	// lorsque je soumets le formulaire
     $('section.city').on('submit','#eventForm',function(e) {
  		e.preventDefault();
-		console.log($(this).serialize());
- 		return;
+		// console.log($(this).serialize());
+
         // je récupère les valeurs
         var eventName = $('#eventName').val();
         var description = $('#description').val();
         var location = $('#address').val();
         var date = $('#date').val();
 
-            // appel Ajax
+        // appel Ajax
         $.ajax({
             url: $(this).attr('action'), // le nom du fichier indiqué dans le formulaire
             type: $(this).attr('method'), // la méthode indiquée dans le formulaire (get ou post)
             data: $(this).serialize(), // je sérialise les données (voir plus loin), ici les $_POST
             success: function(html) { // je récupère la réponse du fichier PHP
-                alert(html); // j'affiche cette réponse
+                var event = {  
+				    name: 'Name of your event', 
+				    description: 'Description of your event',
+				    location: 'Location of event',                        
+				    start_time: Math.round(new Date().getTime()/1000.0), // Example Start Date
+				    end_time: Math.round(new Date().getTime()/1000.0)+86400 // Example End Date
+				};
+
+
+				FB.api('/122302261207062/events', 'post', event, function (result) {
+				    console.log(result); 
+				});
+                // alert(html); j'affiche cette réponse
             }
         });
 
