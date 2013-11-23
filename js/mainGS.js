@@ -1,0 +1,288 @@
+$( document ).ready(function() {
+
+	var windowH = $(window).height();
+    var windowW = $(window).width();
+    var halfH = ($(window).height())/2;
+    var halfW = ($(window).width())/2;
+	var section = $('section.city');
+
+	// Gives each section the good size before expanding
+	giveSize();
+
+	// Gives each section the good size even when resizing 
+	// $(window).on('resize', giveSize());
+
+	// attach event on section when clicked
+	$(section).on('click', openCity);
+
+	// Open / Close Sidebar
+	$('section.city').on('click', '#sidebarBtn', openSidebar);
+
+	// tabs on main page
+	$('section.city').on('click', '#main', mainFirst);
+	$('section.city').on('click', '#friends', friendsFirst);
+
+	// open submit form
+	$('section.city').on('click', "#create", openForm); 
+	$('section.city').on('click', "#closeForm ", openForm); 
+
+
+	// Give accurate size even when window is resized
+	$(window).on('resize', function () {
+		var section = $('section.active');
+		var windowH = $(window).height();
+	    var windowW = $(window).width();
+	    TweenLite.to(section, 0, {width:windowW, height:windowH});
+	});
+
+	// to give accurate size to each section
+	function giveSize(){
+		var section = $('section.city');
+	    TweenLite.set(section, {width:halfW, height:halfH});
+	}
+
+	// Animation to open city 
+	function openCity(event) {
+		event.preventDefault(); 
+
+		$('section.city').off('click', openCity);
+
+		var section = $(this);
+		var header = $('header');
+		$(section).addClass('active');
+		$('section.active a').fadeOut(0.35);
+		$('#home').addClass('opened');
+
+	    TweenLite.to(section, 0.35, {width:windowW, ease:Power2.easeInOut});
+	    TweenLite.to(section, 0.35, {height:windowH, ease:Power2.easeInOut, delay:0.35});
+	    TweenLite.to(header, 0.25, {height:'75px', opacity: 1, ease:Power2.easeIn, delay:0.70});
+	    TweenLite.to(section, 0, {css:{backgroundPosition:'0px 10px !important'}, delay:0.95});
+		
+		setTimeout(loadCity, 950);
+	}
+
+
+	// to load each city html with ajax
+	function loadCity() {
+		var city = $('section.active a').text() + '.html';
+		$.ajax({
+            url: city,
+            success: function(data){
+                $('section.active').html(data);
+                darken();
+    			childSectionSize();
+    			makeitAppear();
+    			manageHover();
+    			imgSize();
+    			horizontalScroll();
+            }	
+        });
+	}
+
+	// to darken city.active background
+	function darken() {
+		sidebar = $('#sidebar');
+		sidebar.before('<div class="darken"></div>');
+		cityDark = $('div.darken');	
+		TweenLite.to(cityDark, 1.5, {opacity: 1, ease:Power2.easeOut});
+	}
+	
+	// Give half of the height without header to each section inside city.active
+	function childSectionSize(){
+		var newWindowH = ($(window).height() - '75') / 2 + 'px';
+		var introSection = $('.cityIntro');
+		var eventSection = $('.eventSlider-wrap');
+		var article = $('.eventSlider-wrap article');
+		var tabBar = $('section.event ul');
+    	var windowW = $(window).width();
+
+	    TweenLite.to(introSection, 0, {width:windowW, height:newWindowH});
+	    TweenLite.to(eventSection, 0, {width:windowW, height:newWindowH});
+	    TweenLite.to(tabBar, 0, {width:windowW});
+	    TweenLite.to(article, 0, {height:newWindowH});
+	}
+	
+	function makeitAppear() {
+		var tabsBar = $('.event ul');
+		var eventSection = $('.eventSlider-wrap');
+		var sidebarBtn = $('#sidebarBtn');
+
+		TweenMax.fromTo(eventSection, 1, 
+			{y:400, ease:Power4.easeInOut}, 
+			{y:0, ease:Power4.easeOut, delay: 0.5});
+		TweenMax.fromTo(tabsBar, 1, 
+			{y:400, ease:Power4.easeInOut}, 
+			{y:0, ease:Power4.easeOut, delay: 0.5});
+		TweenMax.fromTo(sidebarBtn, 1, 
+			{x:-100, ease:Power4.easeInOut}, 
+			{x:0, ease:Power4.easeOut, delay: 1});
+  	}
+
+	// 2 function to switch tabs on city.active
+	function mainFirst(e) {
+		e.preventDefault();
+		$('.event ul li').removeClass('selected');
+		$(this).parent('li').addClass('selected');
+		var friends = $('.eventSlider-wrap.friends');
+		var main = $('.eventSlider-wrap.main');
+		friends.removeClass('onTop').addClass('onBottom');
+		main.removeClass('onBottom').addClass('onTop');
+	}
+	function friendsFirst(e) {
+		e.preventDefault();
+		$('.event ul li').removeClass('selected');
+		$(this).parent('li').addClass('selected');
+		var friends = $('.eventSlider-wrap.friends');
+		var main = $('.eventSlider-wrap.main');
+		main.removeClass('onTop').addClass('onBottom');
+		friends.removeClass('onBottom').addClass('onTop');
+	}
+
+	// to give accurate size to each section
+	function giveSize(){
+		var section = $('section.city');
+	    TweenLite.to(section, 0, {width:halfW, height:halfH});
+	}
+
+	// Give half of the height without header to each section inside active city
+	function childSectionSize(){
+		var newWindowH = ($(window).height() - '75') / 2 + 'px'
+		var introSection = $('.cityIntro');
+		var eventSection = $('.eventSlider-wrap');
+		var article = $('.eventSlider-wrap article');
+		var tabBar = $('section.event ul');
+    	var windowW = $(window).width();
+
+	    TweenLite.to(introSection, 0, {width:windowW, height:newWindowH});
+	    TweenLite.to(eventSection, 0, {width:windowW, height:newWindowH});
+	    TweenLite.to(tabBar, 0, {width:windowW});
+	    TweenLite.to(article, 0, {height:newWindowH});
+	}
+
+
+	// to open the sidebar
+	function openSidebar() {
+		var sidebar = $('#sidebar');
+		var content = $('#sidebar p');
+		var title = $('section.cityIntro h2');
+		var eventSlider = $('section.event');
+		if( $(sidebar).width() == 0 ) {
+		    TweenLite.to(sidebar, 0.25, {width:'350px', ease:Power2.easeIn});
+		    TweenLite.to(content, 0, {css:{display:'block'}, ease:Power2.easeIn, delay:0.15});
+		}
+		else {
+		    TweenLite.to(sidebar, 0.25, {width:'0px', ease:Power2.easeIn});
+		    TweenLite.to(content, 0, {css:{display:'none'}, ease:Power2.easeIn, delay:0.15});
+		}
+
+		// if statements séparés en deux pour la fluidité de l'animation
+		if( $(sidebar).width() == 0 ) {
+		    TweenLite.to(title, 0.25, {left:"+=350px", ease:Power2.easeIn});
+		    TweenLite.to(eventSlider, 0.25, {left:"+=350px", ease:Power2.easeIn});
+		}
+		else {
+		    TweenLite.to(title, 0.25, {left:"-=350px", ease:Power2.easeIn});
+		    TweenLite.to(eventSlider, 0.25, {left:"-=350px", ease:Power2.easeIn});
+		}
+	}	
+
+	// to manage hover on each event
+	function manageHover() {
+		var hoverContent = $('.onHover'); 
+		TweenLite.set(hoverContent, {opacity:0});
+		$('.eventSlider-wrap article').on('mouseover', function(){
+			var thisContent = $(this).find('.onHover');
+			TweenLite.to(thisContent, 0, {opacity:1});
+		});
+
+		$('.eventSlider-wrap article').on('mouseout', function(){
+			var thisContent = $(this).find('.onHover');
+			TweenLite.to(thisContent, 0, {opacity:0});
+		});
+	}
+
+	// to give accurate size to event's images if width is bigger or if height is bigger
+	function imgSize() {
+		var image = $('.eventSlider article img');
+
+		image.each(function(){
+			var _this = $(this);
+
+			_this.load(function(){
+				var imageW = _this.width();
+				var imageH = _this.height();
+
+				if ( imageW > imageH ) {
+					_this.addClass('height');
+				}
+				else if ( imageH > imageW ) {
+					_this.addClass('width');
+				}
+			});
+		});
+	}
+
+	// to open the submit form
+	function openForm(e) {
+		e.preventDefault();
+		var form = $('#form');
+		form.toggleClass('hidden');
+	}
+
+
+	// lorsque je soumets le formulaire
+    $('section.city').on('submit','#eventForm',function(e) {
+ 		e.preventDefault();
+
+        // je récupère les valeurs
+        var eventName = $('#eventName').val();
+        var description = $('#description').val();
+        var location = $('#address').val();
+        var date = $('#date').val();
+        var startTime = $('#start_time').val();
+        var endTime = $('#end_time').val();
+
+        console.log(date);
+
+        // appel Ajax
+        $.ajax({
+            url: $(this).attr('action'), // le nom du fichier indiqué dans le formulaire
+            type: $(this).attr('method'), // la méthode indiquée dans le formulaire (get ou post)
+            data: $(this).serialize(), // je sérialise les données (voir plus loin), ici les $_POST
+            success: function(html) { // je récupère la réponse du fichier PHP
+                var event = {
+				    access_token: "CAABvO7bVoBYBAHJ4d2JlCynvXdhkalmk6CCJfbJW0FQJVFbd5yUVo1ZAoDK8V9rrxhKnZAt5VNBIlLqxd7R79jDoxATSRJ9R30KgPb9VZAUq4L5PyWIvcUttjsy6rEjaZCFiAszQUS3VXOEidVWfRODOVGtbFmKFZCBElenaT73fsOjL9wW2ZAtHNA4xHU0KoZD",
+				    name: eventName, 
+				    description: description,
+				    location: location,
+				    date: date,                        
+				    start_time: startTime, // Example Start Date
+				    end_time: endTime // Example End Date
+				};
+
+				FB.api('/122302261207062/events', 'post', event, function (result) {
+				    console.log(result); 
+				});
+                // alert(html); j'affiche cette réponse
+            }
+        });
+
+        return false; // j'empêche le navigateur de soumettre lui-même le formulaire
+    });
+
+	function horizontalScroll() {
+		$(".eventSlider-wrap").mousewheel(function(event, delta) {
+
+	      this.scrollLeft -= (delta * 2);
+	    
+	      event.preventDefault();
+
+	    });
+	}
+
+});
+
+
+
+
+

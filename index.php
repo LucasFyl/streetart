@@ -87,6 +87,7 @@
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 <!--        <script src="js/plugins.js"></script>
         <script src="js/main.js"></script><-->
+        <script src="js/jquery.mousewheel.js"></script>
         <script src="js/mainGS.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>

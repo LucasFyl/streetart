@@ -206,8 +206,8 @@ header {
 section.single-event
 {
   background:url('images/paris/events/event-1/flickr.jpg');
-  color:blue;
-  display:inline-block;
+  color: blue;
+  display: inline-block;
 }
 .titre_event
 {
@@ -233,7 +233,6 @@ section.single-event
 display: inline-block;
 height: 49.9%;
 width:29.6%;
-
    
 }
 /** SECTION HOME **/
@@ -317,7 +316,6 @@ section.city.active {
         width: 0px;
         height: 100%;
         background: rgba(0, 0, 0, .5);
-        //background-color: @black;
         position: relative;
         float: left;
 
@@ -445,16 +443,12 @@ section.city.active {
                     position: relative;
 
                     img {
+                        display: block;
+                        width: auto;
                         position: absolute;
                         top: 0; left: 0; right: 0;
                         margin: 0 auto;
                         z-index: 98;
-                        // position: absolute;
-                        // top: 0;
-                        // left: 0;
-                        // display: block;
-                        // margin: 0 auto;
-                        // left: -15%;
                     }
                     .height {
                         height: 100%;
@@ -483,6 +477,8 @@ section.city.active {
                             font-family: 'Source Sans Pro', sans-serif;
                             font-weight: 300;
                             font-size: .8em;
+                            height: 20px;
+                            line-height: 20px;
                             color: @yellow;
                             text-align: center;
                             margin-top: 0;
@@ -498,7 +494,7 @@ section.city.active {
                                 background-color: @yellow;
                                 position: absolute;
                                 left: 100%;
-                                top: 5px;
+                                top: 9px;
                             }
                             &:after {
                                 content:" ";
@@ -508,7 +504,7 @@ section.city.active {
                                 background-color: @yellow;
                                 position: absolute;
                                 right: 100%;
-                                top: 5px;
+                                top: 9px;
                             }
                         }
                         p.infos {
@@ -619,12 +615,21 @@ section#form{
                 border: none;
                 margin-bottom: 20px;
                 margin-right: 30px;
+<<<<<<< HEAD
             }
             input[type="textarea"] {
                 height: 230px;
                 line-height: 1em;
                 margin-bottom: 20px;            
             }
+=======
+            }
+            input[type="textarea"] {
+                height: 230px;
+                line-height: 1em;
+                margin-bottom: 20px;            
+            }
+>>>>>>> master
         }
     }
     
@@ -695,13 +700,18 @@ section#form{
 }
 
 
+<<<<<<< HEAD
 
 /* page single-artist */
 .weeklyartist{
+=======
+.single-artist{
+>>>>>>> master
     background: url('../img/back_artist.jpg') no-repeat;
     background-color: rgba(0,0,0,1);
     background-size: 100%;
-    width: 100%; height: 100%;
+    width: 100%; min-height: 100%;
+    position: fixed;
     padding-top: 75px;
 
     h2 {
@@ -709,6 +719,7 @@ section#form{
         font-weight: 300;
         display: block;
         margin: 50px;
+        margin-left: 0;
         font-size: 1.67em;
     }
 
@@ -729,16 +740,17 @@ section#form{
             width: 750px;
             display: inline-block;
             vertical-align: top;
-            
 
-            h3{
+            h3 {
                 margin-top: 0;
                 margin-bottom: 40px;
                 font-weight: 300;
                 font-size: 1.67em;
+                line-height: 1em;
+                text-transform: uppercase;
+                letter-spacing: 3px;
             }
-
-            p{
+            p {
                 font-size: .85em;
                 margin-bottom: 40px;
             }
@@ -756,14 +768,103 @@ section#form{
 
                     li{
                         float: left;
-                        margin-right: 6px;
+                        margin-right: 10px;
                     }
                 }
             }
         }
-    }
-}
+    } //  /.artist
+    #gallery {
+        width: 1000px;
 
+        ul {
+            display: block;
+            list-style-type: none;
+            height: 120px;
+            width: 1000px;
+            overflow: hidden;
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            margin-left: -500px;
+
+            li {
+                display: block;
+                width: 120px; height: 120px;
+                float: left;
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                    
+                }
+
+                
+            }
+        }
+
+    }
+} // /.single-artist
+
+
+/* PARTICIPEZ */ 
+#participez {
+    width:100%;
+    height:1000px;
+    padding-top: 75px;
+
+    header {
+        background: @black;
+    }
+    
+    .button {
+        width:150px;
+        background: @yellow;
+        padding: 10px 0;
+        color:#fff;
+        margin: 50px auto;
+        display:block;
+        text-align: center;
+        border-radius: 3px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    input {
+        margin-bottom: 20px;
+        margin-left:20px;
+        border-radius: 3px;
+    }
+
+    #description {
+        width:300px;
+        height:200px;
+    }
+
+
+    .info-wrap {
+        width: 100%;
+        background: @black;
+        
+        .info {
+            width:1000px;
+            margin: 0 auto;
+            overflow: auto;
+            background: @black;
+
+            h1 {
+                color: @yellow;
+                font-weight:200;
+            }
+            p {
+                line-height: 1.5;
+                font-size: .85em;
+            }
+        }
+    }
+    
+
+<<<<<<< HEAD
 /* PARTICIPEZ */ 
 
 #participez {
@@ -822,11 +923,14 @@ section#form{
     }
     
 
+=======
+>>>>>>> master
     #form-wrap {
         width:100%;
         height:auto;
         overflow: auto;
         background: #181818;
+<<<<<<< HEAD
 
         .form {
             width:1000px;
@@ -863,6 +967,44 @@ section#form{
                 vertical-align: top;
             }
 
+=======
+
+        .form {
+            width:1000px;
+            margin: 0 auto;  
+            overflow: auto;
+
+            h2  {
+                padding-top:50px;
+                color: @yellow;
+                font-weight: 200;
+            }  
+        }
+        
+        form {
+            width:1000px;
+            height:100%;
+            margin: 0 auto;
+            vertical-align:top;
+        }
+
+        .formInnerWrap {
+            float: left;
+            width: 580px;
+            display:inline-block;
+
+            label {
+                display: inline-block;
+                vertical-align: baseline;
+                width: 160px;
+                height: 30px;
+                font-size: 0.85em;
+            }
+            label[for="description"] {
+                vertical-align: top;
+            }
+
+>>>>>>> master
             input:not([type="submit"]) {
                 border: none;
                 display: inline-block;
@@ -890,10 +1032,13 @@ section#form{
                     }
                 }
             }
+<<<<<<< HEAD
 
             .popularArtist {
                display:none;
             }
+=======
+>>>>>>> master
         }
 
         input[type="submit"] {
@@ -1143,4 +1288,5 @@ section#form{
     h3 {
         page-break-after: avoid;
     }
+
 }
