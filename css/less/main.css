@@ -396,6 +396,8 @@ section.city.active section.event div.eventSlider-wrap div.eventSlider article {
   position: relative;
 }
 section.city.active section.event div.eventSlider-wrap div.eventSlider article img {
+  display: block;
+  width: auto;
   position: absolute;
   top: 0;
   left: 0;
@@ -633,64 +635,6 @@ section#form #rightSide input[type="submit"]:hover {
   transition: all .5s ease;
 }
 .single-artist {
-  /* page single-artist */
-
-  /* PARTICIPEZ */
-  /* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-  /*
- * Image replacement
- */
-
-  /*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
-  /*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-  /*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-  /*
- * Hide visually and from screenreaders, but maintain layout
- */
-
-  /*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-  /*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-  /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-  /* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-
-}
-.single-artist .weeklyartist {
   background: url('../img/back_artist.jpg') no-repeat;
   background-color: #000000;
   background-size: 100%;
@@ -699,7 +643,7 @@ section#form #rightSide input[type="submit"]:hover {
   position: fixed;
   padding-top: 75px;
 }
-.single-artist .weeklyartist h2 {
+.single-artist h2 {
   color: #f39c12;
   font-weight: 300;
   display: block;
@@ -707,11 +651,11 @@ section#form #rightSide input[type="submit"]:hover {
   margin-left: 0;
   font-size: 1.67em;
 }
-.single-artist .weeklyartist article.artist {
+.single-artist article.artist {
   width: 1000px;
   margin: 0 auto;
 }
-.single-artist .weeklyartist article.artist img.avatar {
+.single-artist article.artist img.avatar {
   width: 180px;
   height: 180px;
   border-radius: 100%;
@@ -720,25 +664,25 @@ section#form #rightSide input[type="submit"]:hover {
   border: 5px solid #fff;
   margin-right: 50px;
 }
-.single-artist .weeklyartist article.artist .artist-details {
+.single-artist article.artist .artist-details {
   width: 750px;
   display: inline-block;
   vertical-align: top;
 }
-.single-artist .weeklyartist article.artist .artist-details h3 {
+.single-artist article.artist .artist-details h3 {
   margin-top: 0;
   margin-bottom: 40px;
   font-weight: 300;
   font-size: 1.67em;
 }
-.single-artist .weeklyartist article.artist .artist-details p {
+.single-artist article.artist .artist-details p {
   font-size: .85em;
   margin-bottom: 40px;
 }
-.single-artist .weeklyartist article.artist .artist-details #social {
+.single-artist article.artist .artist-details #social {
   color: #f39c12;
 }
-.single-artist .weeklyartist article.artist .artist-details #social ul {
+.single-artist article.artist .artist-details #social ul {
   color: #fff;
   margin: 0;
   padding: 0;
@@ -746,14 +690,14 @@ section#form #rightSide input[type="submit"]:hover {
   margin-top: -25px;
   list-style-type: none;
 }
-.single-artist .weeklyartist article.artist .artist-details #social ul li {
+.single-artist article.artist .artist-details #social ul li {
   float: left;
   margin-right: 10px;
 }
-.single-artist .weeklyartist #gallery {
+.single-artist #gallery {
   width: 1000px;
 }
-.single-artist .weeklyartist #gallery ul {
+.single-artist #gallery ul {
   display: block;
   list-style-type: none;
   height: 120px;
@@ -764,25 +708,25 @@ section#form #rightSide input[type="submit"]:hover {
   left: 50%;
   margin-left: -500px;
 }
-.single-artist .weeklyartist #gallery ul li {
+.single-artist #gallery ul li {
   display: block;
   width: 120px;
   height: 120px;
   float: left;
 }
-.single-artist .weeklyartist #gallery ul li img {
+.single-artist #gallery ul li img {
   width: 100%;
   height: 100%;
 }
-.single-artist #participez {
+/* PARTICIPEZ */#participez {
   width: 100%;
   height: 1000px;
   padding-top: 75px;
 }
-.single-artist #participez header {
+#participez header {
   background: #000000;
 }
-.single-artist #participez .button {
+#participez .button {
   width: 150px;
   background: #f39c12;
   padding: 10px 0;
@@ -794,71 +738,71 @@ section#form #rightSide input[type="submit"]:hover {
   text-transform: uppercase;
   text-decoration: none;
 }
-.single-artist #participez input {
+#participez input {
   margin-bottom: 20px;
   margin-left: 20px;
   border-radius: 3px;
 }
-.single-artist #participez #description {
+#participez #description {
   width: 300px;
   height: 200px;
 }
-.single-artist #participez .info-wrap {
+#participez .info-wrap {
   width: 100%;
   background: #000000;
 }
-.single-artist #participez .info-wrap .info {
+#participez .info-wrap .info {
   width: 1000px;
   margin: 0 auto;
   overflow: auto;
   background: #000000;
 }
-.single-artist #participez .info-wrap .info h1 {
+#participez .info-wrap .info h1 {
   color: #f39c12;
   font-weight: 200;
 }
-.single-artist #participez .info-wrap .info p {
+#participez .info-wrap .info p {
   line-height: 1.5;
   font-size: .85em;
 }
-.single-artist #participez #form-wrap {
+#participez #form-wrap {
   width: 100%;
   height: auto;
   overflow: auto;
   background: #181818;
 }
-.single-artist #participez #form-wrap .form {
+#participez #form-wrap .form {
   width: 1000px;
   margin: 0 auto;
   overflow: auto;
 }
-.single-artist #participez #form-wrap .form h2 {
+#participez #form-wrap .form h2 {
   padding-top: 50px;
   color: #f39c12;
   font-weight: 200;
 }
-.single-artist #participez #form-wrap form {
+#participez #form-wrap form {
   width: 1000px;
   height: 100%;
   margin: 0 auto;
   vertical-align: top;
 }
-.single-artist #participez #form-wrap .formInnerWrap {
+#participez #form-wrap .formInnerWrap {
   float: left;
   width: 580px;
   display: inline-block;
 }
-.single-artist #participez #form-wrap .formInnerWrap label {
+#participez #form-wrap .formInnerWrap label {
   display: inline-block;
   vertical-align: baseline;
   width: 160px;
   height: 30px;
   font-size: 0.85em;
 }
-.single-artist #participez #form-wrap .formInnerWrap label[for="description"] {
+#participez #form-wrap .formInnerWrap label[for="description"] {
   vertical-align: top;
 }
-.single-artist #participez #form-wrap .formInnerWrap input:not([type="submit"]) {
+#participez #form-wrap .formInnerWrap input:not([type="submit"]) {
   border: none;
   display: inline-block;
   vertical-align: baseline;
@@ -866,33 +810,33 @@ section#form #rightSide input[type="submit"]:hover {
   background: rgba(255, 255, 255, 0.5);
   margin-left: 0;
 }
-.single-artist #participez #form-wrap .formInnerWrap ul {
+#participez #form-wrap .formInnerWrap ul {
   padding-left: 0px;
 }
-.single-artist #participez #form-wrap .formInnerWrap ul li {
+#participez #form-wrap .formInnerWrap ul li {
   padding-left: 0;
   list-style-type: none;
   display: inline-block;
 }
-.single-artist #participez #form-wrap .formInnerWrap ul li:first-child {
+#participez #form-wrap .formInnerWrap ul li:first-child {
   margin-right: 60px;
 }
-.single-artist #participez #form-wrap .formInnerWrap ul li input {
+#participez #form-wrap .formInnerWrap ul li input {
   width: 100px !important;
   margin: 0 20px;
 }
-.single-artist #participez #form-wrap input[type="submit"] {
+#participez #form-wrap input[type="submit"] {
   border: none;
   display: inline-block;
   float: right;
 }
-.single-artist #participez #form-wrap #img-right {
+#participez #form-wrap #img-right {
   width: 387px;
   display: inline-block;
   vertical-align: top;
   float: right;
 }
-.single-artist #participez #form-wrap div.submitFile {
+#participez #form-wrap div.submitFile {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -903,18 +847,18 @@ section#form #rightSide input[type="submit"]:hover {
   margin: 0 0 10px 10px;
   cursor: pointer ;
 }
-.single-artist #participez #form-wrap div.submitFile:first-child,
-.single-artist #participez #form-wrap div.submitFile:nth-child(4) {
+#participez #form-wrap div.submitFile:first-child,
+#participez #form-wrap div.submitFile:nth-child(4) {
   margin-left: 0;
 }
-.single-artist #participez #form-wrap div.submitFile input {
+#participez #form-wrap div.submitFile input {
   height: 100px;
   width: 100px;
   margin: 10px;
   opacity: 0;
   cursor: pointer ;
 }
-.single-artist #participez #form-wrap div.submitFile:before {
+#participez #form-wrap div.submitFile:before {
   content: "\f067";
   font-family: 'FontAwesome';
   font-size: 26px;
@@ -930,7 +874,13 @@ section#form #rightSide input[type="submit"]:hover {
   right: 0;
   margin: auto;
 }
-.single-artist .ir {
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
   background-color: transparent;
   border: 0;
   overflow: hidden;
@@ -938,17 +888,23 @@ section#form #rightSide input[type="submit"]:hover {
 
   *text-indent: -9999px;
 }
-.single-artist .ir:before {
+.ir:before {
   content: "";
   display: block;
   width: 0;
   height: 150%;
 }
-.single-artist .hidden {
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
   display: none !important;
   visibility: hidden;
 }
-.single-artist .visuallyhidden {
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -958,8 +914,12 @@ section#form #rightSide input[type="submit"]:hover {
   position: absolute;
   width: 1px;
 }
-.single-artist .visuallyhidden.focusable:active,
-.single-artist .visuallyhidden.focusable:focus {
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -967,11 +927,25 @@ section#form #rightSide input[type="submit"]:hover {
   position: static;
   width: auto;
 }
-.single-artist .invisible {
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
   visibility: hidden;
 }
-.single-artist .clearfix:before,
-.single-artist .clearfix:after {
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
   content: " ";
   /* 1 */
 
@@ -979,32 +953,33 @@ section#form #rightSide input[type="submit"]:hover {
   /* 2 */
 
 }
-.single-artist .clearfix:after {
+.clearfix:after {
   clear: both;
 }
-.single-artist .clearfix {
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
   *zoom: 1;
 }
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
 @media only screen and (min-width: 35em) {
-  .single-artist {
-    /* Style adjustments for viewports that meet the condition */
-  
-  }
+  /* Style adjustments for viewports that meet the condition */
 }
 @media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  .single-artist {
-    /* Style adjustments for high resolution devices */
-  
-  }
+  /* Style adjustments for high resolution devices */
 }
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
 @media print {
-  .single-artist {
-    /*
-       * Don't show links for images, or javascript/internal links
-       */
-  
-  }
-  .single-artist * {
+  * {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
@@ -1012,49 +987,52 @@ section#form #rightSide input[type="submit"]:hover {
     box-shadow: none !important;
     text-shadow: none !important;
   }
-  .single-artist a,
-  .single-artist a:visited {
+  a,
+  a:visited {
     text-decoration: underline;
   }
-  .single-artist a[href]:after {
+  a[href]:after {
     content: " (" attr(href) ")";
   }
-  .single-artist abbr[title]:after {
+  abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  .single-artist .ir a:after,
-  .single-artist a[href^="javascript:"]:after,
-  .single-artist a[href^="#"]:after {
+  /*
+       * Don't show links for images, or javascript/internal links
+       */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
     content: "";
   }
-  .single-artist pre,
-  .single-artist blockquote {
+  pre,
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-  .single-artist thead {
+  thead {
     display: table-header-group;
     /* h5bp.com/t */
   
   }
-  .single-artist tr,
-  .single-artist img {
+  tr,
+  img {
     page-break-inside: avoid;
   }
-  .single-artist img {
+  img {
     max-width: 100% !important;
   }
   @page  {
     margin: 0.5cm;
   }
-  .single-artist p,
-  .single-artist h2,
-  .single-artist h3 {
+  p,
+  h2,
+  h3 {
     orphans: 3;
     widows: 3;
   }
-  .single-artist h2,
-  .single-artist h3 {
+  h2,
+  h3 {
     page-break-after: avoid;
   }
 }
