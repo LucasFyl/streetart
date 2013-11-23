@@ -632,151 +632,36 @@ section#form #rightSide input[type="submit"]:hover {
   -o-transition: all .5s ease;
   transition: all .5s ease;
 }
-/* page single-artist */
 .single-artist {
-  background: url('../img/back_artist.jpg') no-repeat;
-  background-color: #000000;
-  background-size: 100%;
-  width: 100%;
-  min-height: 100%;
-  position: fixed;
-  padding-top: 75px;
-}
-.single-artist h2 {
-  color: #f39c12;
-  font-weight: 300;
-  display: block;
-  margin: 50px;
-  margin-left: 0;
-  font-size: 1.67em;
-}
-.single-artist article.artist {
-  width: 1000px;
-  margin: 0 auto;
-}
-.single-artist article.artist img.avatar {
-  width: 180px;
-  height: 180px;
-  border-radius: 100%;
-  display: inline-block;
-  vertical-align: top;
-  border: 5px solid #fff;
-  margin-right: 50px;
-}
-.single-artist article.artist .artist-details {
-  width: 750px;
-  display: inline-block;
-  vertical-align: top;
-}
-.single-artist article.artist .artist-details h3 {
-  margin-top: 0;
-  margin-bottom: 40px;
-  font-weight: 300;
-  font-size: 1.67em;
-}
-.single-artist article.artist .artist-details p {
-  font-size: .85em;
-  margin-bottom: 40px;
-}
-.single-artist article.artist .artist-details #social {
-  color: #f39c12;
-}
-.single-artist article.artist .artist-details #social ul {
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  margin-left: 130px;
-  margin-top: -25px;
-  list-style-type: none;
-}
-.single-artist article.artist .artist-details #social ul li {
-  float: left;
-  margin-right: 10px;
-}
-.single-artist #gallery {
-  width: 1000px;
-}
-.single-artist #gallery ul {
-  display: block;
-  list-style-type: none;
-  height: 120px;
-  width: 1000px;
-  overflow: hidden;
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  margin-left: -500px;
-}
-.single-artist #gallery ul li {
-  display: block;
-  width: 120px;
-  height: 120px;
-  float: left;
-}
-.single-artist #gallery ul li img {
-  width: 100%;
-  height: 100%;
-}
-/* ==========================================================================
+  /* page single-artist */
+
+  /* PARTICIPEZ */
+  /* ==========================================================================
    Helper classes
    ========================================================================== */
-/*
+
+  /*
  * Image replacement
  */
-.ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-  /* IE 6/7 fallback */
 
-  *text-indent: -9999px;
-}
-.ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 150%;
-}
-/*
+  /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-.hidden {
-  display: none !important;
-  visibility: hidden;
-}
-/*
+
+  /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-/*
+
+  /*
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-/*
+
+  /*
  * Hide visually and from screenreaders, but maintain layout
  */
-.invisible {
-  visibility: hidden;
-}
-/*
+
+  /*
  * Clearfix: contain floats
  *
  * For modern browsers
@@ -787,8 +672,306 @@ section#form #rightSide input[type="submit"]:hover {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before,
-.clearfix:after {
+
+  /*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+  /* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+  /* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+}
+.single-artist .weeklyartist {
+  background: url('../img/back_artist.jpg') no-repeat;
+  background-color: #000000;
+  background-size: 100%;
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  padding-top: 75px;
+}
+.single-artist .weeklyartist h2 {
+  color: #f39c12;
+  font-weight: 300;
+  display: block;
+  margin: 50px;
+  margin-left: 0;
+  font-size: 1.67em;
+}
+.single-artist .weeklyartist article.artist {
+  width: 1000px;
+  margin: 0 auto;
+}
+.single-artist .weeklyartist article.artist img.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: top;
+  border: 5px solid #fff;
+  margin-right: 50px;
+}
+.single-artist .weeklyartist article.artist .artist-details {
+  width: 750px;
+  display: inline-block;
+  vertical-align: top;
+}
+.single-artist .weeklyartist article.artist .artist-details h3 {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-weight: 300;
+  font-size: 1.67em;
+}
+.single-artist .weeklyartist article.artist .artist-details p {
+  font-size: .85em;
+  margin-bottom: 40px;
+}
+.single-artist .weeklyartist article.artist .artist-details #social {
+  color: #f39c12;
+}
+.single-artist .weeklyartist article.artist .artist-details #social ul {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  margin-left: 130px;
+  margin-top: -25px;
+  list-style-type: none;
+}
+.single-artist .weeklyartist article.artist .artist-details #social ul li {
+  float: left;
+  margin-right: 10px;
+}
+.single-artist .weeklyartist #gallery {
+  width: 1000px;
+}
+.single-artist .weeklyartist #gallery ul {
+  display: block;
+  list-style-type: none;
+  height: 120px;
+  width: 1000px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  margin-left: -500px;
+}
+.single-artist .weeklyartist #gallery ul li {
+  display: block;
+  width: 120px;
+  height: 120px;
+  float: left;
+}
+.single-artist .weeklyartist #gallery ul li img {
+  width: 100%;
+  height: 100%;
+}
+.single-artist #participez {
+  width: 100%;
+  height: 1000px;
+  padding-top: 75px;
+}
+.single-artist #participez header {
+  background: #000000;
+}
+.single-artist #participez .button {
+  width: 150px;
+  background: #f39c12;
+  padding: 10px 0;
+  color: #fff;
+  margin: 50px auto;
+  display: block;
+  text-align: center;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.single-artist #participez input {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border-radius: 3px;
+}
+.single-artist #participez #description {
+  width: 300px;
+  height: 200px;
+}
+.single-artist #participez .info-wrap {
+  width: 100%;
+  background: #000000;
+}
+.single-artist #participez .info-wrap .info {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: auto;
+  background: #000000;
+}
+.single-artist #participez .info-wrap .info h1 {
+  color: #f39c12;
+  font-weight: 200;
+}
+.single-artist #participez .info-wrap .info p {
+  line-height: 1.5;
+  font-size: .85em;
+}
+.single-artist #participez #form-wrap {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  background: #181818;
+}
+.single-artist #participez #form-wrap .form {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: auto;
+}
+.single-artist #participez #form-wrap .form h2 {
+  padding-top: 50px;
+  color: #f39c12;
+  font-weight: 200;
+}
+.single-artist #participez #form-wrap form {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  vertical-align: top;
+}
+.single-artist #participez #form-wrap .formInnerWrap {
+  float: left;
+  width: 580px;
+  display: inline-block;
+}
+.single-artist #participez #form-wrap .formInnerWrap label {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 160px;
+  height: 30px;
+  font-size: 0.85em;
+}
+.single-artist #participez #form-wrap .formInnerWrap label[for="description"] {
+  vertical-align: top;
+}
+.single-artist #participez #form-wrap .formInnerWrap input:not([type="submit"]) {
+  border: none;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 350px;
+  background: rgba(255, 255, 255, 0.5);
+  margin-left: 0;
+}
+.single-artist #participez #form-wrap .formInnerWrap ul {
+  padding-left: 0px;
+}
+.single-artist #participez #form-wrap .formInnerWrap ul li {
+  padding-left: 0;
+  list-style-type: none;
+  display: inline-block;
+}
+.single-artist #participez #form-wrap .formInnerWrap ul li:first-child {
+  margin-right: 60px;
+}
+.single-artist #participez #form-wrap .formInnerWrap ul li input {
+  width: 100px !important;
+  margin: 0 20px;
+}
+.single-artist #participez #form-wrap input[type="submit"] {
+  border: none;
+  display: inline-block;
+  float: right;
+}
+.single-artist #participez #form-wrap #img-right {
+  width: 387px;
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+}
+.single-artist #participez #form-wrap div.submitFile {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 120px;
+  width: 120px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 0 10px 10px;
+  cursor: pointer ;
+}
+.single-artist #participez #form-wrap div.submitFile:first-child,
+.single-artist #participez #form-wrap div.submitFile:nth-child(4) {
+  margin-left: 0;
+}
+.single-artist #participez #form-wrap div.submitFile input {
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  opacity: 0;
+  cursor: pointer ;
+}
+.single-artist #participez #form-wrap div.submitFile:before {
+  content: "\f067";
+  font-family: 'FontAwesome';
+  font-size: 26px;
+  line-height: 26px;
+  display: block;
+  color: #f39c12;
+  position: absolute;
+  width: 22px;
+  height: 26px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+.single-artist .ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+
+  *text-indent: -9999px;
+}
+.single-artist .ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+.single-artist .hidden {
+  display: none !important;
+  visibility: hidden;
+}
+.single-artist .visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.single-artist .visuallyhidden.focusable:active,
+.single-artist .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+.single-artist .invisible {
+  visibility: hidden;
+}
+.single-artist .clearfix:before,
+.single-artist .clearfix:after {
   content: " ";
   /* 1 */
 
@@ -796,33 +979,32 @@ section#form #rightSide input[type="submit"]:hover {
   /* 2 */
 
 }
-.clearfix:after {
+.single-artist .clearfix:after {
   clear: both;
 }
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.clearfix {
+.single-artist .clearfix {
   *zoom: 1;
 }
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
 @media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+  .single-artist {
+    /* Style adjustments for viewports that meet the condition */
+  
+  }
 }
 @media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+  .single-artist {
+    /* Style adjustments for high resolution devices */
+  
+  }
 }
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
 @media print {
-  * {
+  .single-artist {
+    /*
+       * Don't show links for images, or javascript/internal links
+       */
+  
+  }
+  .single-artist * {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
@@ -830,52 +1012,49 @@ section#form #rightSide input[type="submit"]:hover {
     box-shadow: none !important;
     text-shadow: none !important;
   }
-  a,
-  a:visited {
+  .single-artist a,
+  .single-artist a:visited {
     text-decoration: underline;
   }
-  a[href]:after {
+  .single-artist a[href]:after {
     content: " (" attr(href) ")";
   }
-  abbr[title]:after {
+  .single-artist abbr[title]:after {
     content: " (" attr(title) ")";
   }
-  /*
-       * Don't show links for images, or javascript/internal links
-       */
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
+  .single-artist .ir a:after,
+  .single-artist a[href^="javascript:"]:after,
+  .single-artist a[href^="#"]:after {
     content: "";
   }
-  pre,
-  blockquote {
+  .single-artist pre,
+  .single-artist blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-  thead {
+  .single-artist thead {
     display: table-header-group;
     /* h5bp.com/t */
   
   }
-  tr,
-  img {
+  .single-artist tr,
+  .single-artist img {
     page-break-inside: avoid;
   }
-  img {
+  .single-artist img {
     max-width: 100% !important;
   }
   @page  {
     margin: 0.5cm;
   }
-  p,
-  h2,
-  h3 {
+  .single-artist p,
+  .single-artist h2,
+  .single-artist h3 {
     orphans: 3;
     widows: 3;
   }
-  h2,
-  h3 {
+  .single-artist h2,
+  .single-artist h3 {
     page-break-after: avoid;
   }
 }

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/less/main.css">
+
+        <link href="css/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href='css/less/iphone.css' media='screen and (min-width: 320px) and (max-width: 640px)'/>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+      <section id="participez">
+        <header style="opacity: 1; height:75px;">
+            <h1><a href="">&nbsp<!-- World Wide <span>Writters</span> --></a></h1>
+            <a href="">Artist of the week</a>
+        </header>
+        
+        <div class="info-wrap">
+            <section class="info">
+                <h1>Submit your art</h1>
+                <p>Faites ressurgir le passé qui vous marque aujourd’hui. 
+                    En moins de 140 secondes, remémorez-vous les belles choses, les mémoires tristes ou heureuses, les moments moteurs ou les impasses de ces passés dont la somme fait 
+                    votre présent. Pénibles, amusants, anecdotiques ou cruciaux, fantasmés ou documentés, ils vous reviennent sous la forme d’un film d’animation, d’une vidéo ou d’un film photo en HD. 
+                    Le souvenir : c’est une idée, une scène, un rêve d’une réalité lointaine, une simple odeur, une lumière, un son. Le souvenir est intime ou partagé dans la grande histoire. Avec 
+                    toujours le même mystère, cette mémoire est-elle fidèle à ce qu’il s’est vraiment produit ? Faut-il bien se souvenir ? Ou le souvenir gagne-t-il à s’oublier dans l’imprécision ? 
+                    A vos créations pour tenter de remporter un des prix de cette nouvelle édition du Nikon Film Festival. 
+                    Vous avez 140 secondes pour vous souvenir !
+                </p>
+                <a class="button" href="">Participate</a>
+            </section>
+        </div>
+        
+        
+
+
+        <div id="form-wrap">
+          <section class="form">
+          <h2>Upload your profil</h2>
+
+          <form action="" method="post">
+                <div class="formInnerWrap">
+                    <label for="eventName">Your name</label>
+                    <input type="text" id="eventName" name="eventName" required="required"><br/>
+                    
+                    <label for="description">Description</label>
+                    <input type="textarea" id="description" name="description" required="required"><br/>
+
+                    
+                    <ul>
+                        <li><p>Social network</p></li>
+                        <li>
+                            <a href=""><img src="images/participate/facebook.png"></a>
+                            <input type="text" name="url" placeholder="enter url here"> 
+                        </li>
+                        <li><a href=""><img src="images/participate/twitter.png"></a>
+                            <input type="text" name="url" placeholder="enter url here"> 
+                        </li>
+                        <li><a href=""><img src="images/participate/pinterest.png"></a>
+                            <input type="text" name="url" placeholder="enter url here"> 
+                        </li>
+                        <li><a href=""><img src="images/participate/flickr.png"></a>
+                            <input type="text" name="url" placeholder="enter url here"> 
+                        </li>
+                    </ul> 
+
+                </div>
+                <div id="img-right">  
+                    <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                    </div>
+                    <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                    </div>
+                    <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                    </div>
+                    <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                    </div>
+                    <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                    </div>
+                    <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                    </div>
+                </div>  
+
+                <input type="submit" value="send" class="button"/>
+          </form>
+          
+          </section>
+        </div>
+        
+        <section class="popularArtist">
+            <p>zsalutzefzefezcpeoz,</p>
+        </section>
+
+
+
+      </section>
+      
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        
+        <!--CDN link for the latest TweenMax-->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<!--        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script><-->
+        <script src="js/mainGS.js"></script>
+        <script type="text/javascript">
+        $( document ).ready(function() {
+            var input = $('#form-wrap').find('ul > li > input');
+            var socialIcon = $('#form-wrap').find('ul > li > a');
+            var trigger = $('.info a');
+            var form = $('#form-wrap');
+
+            input.addClass('hidden');
+            form.hide();
+
+            socialIcon.on("click", function(e) {
+                e.preventDefault();
+                var _this = $(this);
+                var thisParent = _this.parent('li');
+                var thisInput = thisParent.find('input');
+                thisInput.toggleClass('hidden');
+                return;
+            });
+
+            trigger.on("click", openForm);
+
+            function openForm(e) {
+                e.preventDefault();
+                form.slideToggle(250);
+            }
+        });
+            
+
+        </script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+        -->
+    </body>
+</html>
