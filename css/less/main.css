@@ -164,31 +164,39 @@ header > a {
   font-size: .8em;
   color: white;
 }
-/** SECTION SINGLE EVENT  **/section.single-event {
-  background: url('images/paris/events/event-1/flickr.jpg');
+/** SECTION SINGLE EVENT 
+section.single-event
+{
+  background:url('images/paris/events/event-1/flickr.jpg');
   color: blue;
   display: inline-block;
 }
-.titre_event {
-  margin-left: 7%;
-  color: #f39c12;
+.titre_event
+{
+    margin-left:7%;
+    color:#f39c12;
 }
-.description_event {
-  margin-left: 7%;
-  width: 50.7%;
-  height: 7.6%;
-  color: white;
+.description_event
+{
+
+    margin-left:7%;
+    width:50.7%;
+    height:7.6%;
+    color:white;
 }
-.Participez {
-  color: #f39c12;
+.Participez
+{
+    color:#f39c12;
 }
-.flickr {
-  margin-left: 63.3%;
-  margin-right: 11.7%;
-  display: inline-block;
-  height: 49.9%;
-  width: 29.6%;
-}
+.flickr
+{
+    margin-left: 63.3%;
+    margin-right: 11.7%;
+display: inline-block;
+height: 49.9%;
+width:29.6%;
+   
+} **/
 /** SECTION HOME **/
 div#home {
   width: 100%;
@@ -719,6 +727,113 @@ section#form #rightSide input[type="submit"]:hover {
 }
 .single-artist #gallery ul li img {
   width: 100%;
+  height: 100%;
+}
+/** Single Event **/
+.single-event {
+  background: url('../img/background_event.jpg') no-repeat;
+  background-color: #000000;
+  background-size: 100%;
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  padding-top: 75px;
+}
+.single-event article.event {
+  display: block;
+  width: 100%;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50%;
+  margin-top: -250px;
+}
+.single-event article.event section {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: auto;
+}
+.single-event article.event section h2 {
+  color: #f39c12;
+  font-weight: 200;
+  margin: 50px 0 40px;
+  display: inline-block;
+  width: 645px;
+  float: left;
+  font-size: 1.64em;
+  line-height: 1em;
+}
+.single-event article.event section p {
+  width: 645px;
+  font-size: .85em;
+  line-height: 1.5;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 50px;
+}
+.single-event article.event section .event-details {
+  width: 645px;
+  display: inline-block;
+  float: left;
+}
+.single-event article.event section .event-details ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  width: 350px;
+  overflow: auto;
+  display: inline-block;
+}
+.single-event article.event section .event-details ul li {
+  font-size: .85em;
+}
+.single-event article.event section .event-details ul li span {
+  color: #f39c12;
+  padding-right: 10px;
+}
+.single-event article.event section .event-details #social {
+  display: inline-block;
+  overflow: auto;
+}
+.single-event article.event section .event-details #social ul {
+  width: 290px;
+  display: block;
+}
+.single-event article.event section .event-details #social ul li {
+  display: inline-block;
+  float: left;
+  overflow: auto;
+  padding-right: 10px;
+}
+.single-event article.event section #gallery {
+  width: 354px;
+  height: 360px;
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 50px;
+}
+.single-event article.event section #gallery ul {
+  width: 354px;
+  height: 232px;
+  display: inline-block;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+.single-event article.event section #gallery ul li {
+  display: inline-block;
+  width: 118px;
+  height: 180px;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #f39c12;
+  overflow: hidden;
+}
+.single-event article.event section #gallery ul li img {
   height: 100%;
 }
 /* PARTICIPEZ */#participez {

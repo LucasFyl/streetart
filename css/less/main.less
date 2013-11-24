@@ -202,7 +202,7 @@ header {
     }
 
 }
-/** SECTION SINGLE EVENT  **/  
+/** SECTION SINGLE EVENT 
 section.single-event
 {
   background:url('images/paris/events/event-1/flickr.jpg');
@@ -234,7 +234,8 @@ display: inline-block;
 height: 49.9%;
 width:29.6%;
    
-}
+} **/
+
 /** SECTION HOME **/
 
 div#home {
@@ -790,6 +791,114 @@ section#form{
 
     }
 } // /.single-artist
+
+/** Single Event **/
+
+.single-event {
+    background: url('../img/background_event.jpg') no-repeat;
+    background-color: rgba(0,0,0,1);
+    background-size: 100%;
+    width: 100%; min-height: 100%;
+    position: fixed;
+    padding-top: 75px;
+
+    article.event {
+        display: block;
+        width: 100%;
+        height: 500px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 50%;
+        margin-top: -250px;
+
+        section {
+            width: 1000px;
+            margin: 0 auto;
+            overflow: auto;
+            h2 {
+                color: @yellow;
+                font-weight: 200;
+                margin: 50px 0 40px;
+                display: inline-block;
+                width: 645px;
+                float: left;
+                font-size: 1.64em;
+                line-height: 1em;
+            }
+            p {
+                width: 645px;
+                font-size: .85em;
+                line-height: 1.5;
+                float: left;
+                .box-sizing();
+                padding-right: 50px;
+            }
+            .event-details {
+                width: 645px;
+                display: inline-block;
+                float: left;
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding-left: 0;
+                    width: 350px;
+                    overflow: auto;
+                    display: inline-block;
+                    li {
+                        font-size: .85em;
+                        span {
+                            color: @yellow;
+                            padding-right: 10px;
+                        }
+                    }
+                }
+                #social {
+                    display: inline-block;
+                    overflow: auto;
+                    ul {   
+                        width: 290px;
+                        display: block;
+                        li {
+                            display: inline-block;
+                            float: left;
+                            overflow: auto;
+                            padding-right: 10px;
+                        }
+                    }
+                }
+            }
+            #gallery {
+                width: 354px;
+                height: 360px;
+                overflow: hidden;
+                display: inline-block;
+                margin-top: 50px;
+                ul {
+                    width: 354px;
+                    height: 232px;
+                    display: inline-block;
+                    list-style-type: none;
+                    padding-left: 0;
+                    margin: 0;
+                    li {
+                        display: inline-block;
+                        width: 118px;
+                        height: 180px;
+                        float: left;
+                        .box-sizing();
+                        border: 1px solid @yellow;
+                        overflow: hidden; 
+                        img {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        } // /section
+        
+    }
+} 
+
 
 
 /* PARTICIPEZ */ 

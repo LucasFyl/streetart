@@ -107,11 +107,11 @@ $( document ).ready(function() {
 		var eventSection = $('.eventSlider-wrap');
 		var sidebarBtn = $('#sidebarBtn');
 
-		TweenMax.fromTo(eventSection, 1, 
-			{y:400, ease:Power4.easeInOut}, 
+		TweenMax.fromTo(eventSection, 1.2, 
+			{y:600, ease:Power4.easeInOut}, 
 			{y:0, ease:Power4.easeOut, delay: 0.5});
-		TweenMax.fromTo(tabsBar, 1, 
-			{y:400, ease:Power4.easeInOut}, 
+		TweenMax.fromTo(tabsBar, 1.2, 
+			{y:600, ease:Power4.easeInOut}, 
 			{y:0, ease:Power4.easeOut, delay: 0.5});
 		TweenMax.fromTo(sidebarBtn, 1, 
 			{x:-100, ease:Power4.easeInOut}, 
