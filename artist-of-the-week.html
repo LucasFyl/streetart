@@ -1,0 +1,126 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<html lang ="en"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Artist</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/less/main.css">
+
+    <link href="css/css/font-awesome.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.1.css">
+</head>
+<body>
+
+    <header style="opacity: 1; height: 75px;">
+        <h1><a href=""></a></h1>
+        <a href="">Artist of the week</a>
+    </header>
+	<!--Winner of this week-->
+	<section id="artistWinner">
+		<div class="winner">
+			<h1>Winner of this week</h1>
+			<img src="images/artists/PP_Banksy.png" class="pp">
+			<h2>Banksy</h2>
+			<p>Banksy is the pseudonym of an artist known for his tags urban as well as a painter and filmmaker. Concealing his true identity , speculations are made based on images taken by surveillance cameras and is from near stoke the UK , was born in 19742 and is named ...</p>
+			<a href="#" class="seeMore">See more</a>
+		</div>
+		<div id="galleryWinner" class="gallery"><div>
+	</section>
+
+	<section id="artists-list">
+		<h2>Previous winners</h2>
+		<ul>
+			<li>
+				<a href="">
+					<img src="images/artists/artist_week.png">
+				</a>
+				<p class="name">MTO</p>
+				<p class="vue">250</p>
+				<p class="like">60</p>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/artists/artist_week.png">
+				</a>
+				<p class="name">MTO</p>
+				<p class="vue">250</p>
+				<p class="like">60</p>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/artists/artist_week.png">
+				</a>
+				<p class="name">MTO</p>
+				<p class="vue">250</p>
+				<p class="like">60</p>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/artists/artist_week.png">
+				</a>
+				<p class="name">MTO</p>
+				<p class="vue">250</p>
+				<p class="like">60</p>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/artists/artist_week.png">
+				</a>
+				<p class="name">MTO</p>
+				<p class="vue">250</p>
+				<p class="like">60</p>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/artists/artist_week.png">
+				</a>
+				<p class="name">MTO</p>
+				<p class="vue">250</p>
+				<p class="like">60</p>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/artists/artist_week.png">
+				</a>
+				<p class="name">MTO</p>
+				<p class="vue">250</p>
+				<p class="like">60</p>
+			</li>
+			<li>
+				<a href="">
+					<img src="images/artists/artist_week.png">
+				</a>
+				<p class="name">MTO</p>
+				<p class="vue">250</p>
+				<p class="like">60</p>
+			</li>
+		</ul>
+	</section>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<script type="text/javascript" src="js/jquery.fancybox-1.3.1.pack.js"></script>
+	
+<script type="text/javascript" src="js/jquery.fancy-photoset.min.js"></script>
+<!-- API FLICKR -->
+<script type="text/javascript" charset="utf-8">
+	$(function() {
+	  var gallery = {
+	    user_id: '106947505@N06',
+	    photosetId: '72157637976862006',
+	    apiKey: '811ec88d533eb1b1661b28e3b243caa4',
+	    captions: true,
+	  };
+	  $('#galleryWinner').fancyPhotoset(gallery);
+	});
+</script>
+</body>
+</html>

@@ -165,29 +165,32 @@ header {
     h1 {
         margin: 0;
         display: inline-block;
-        vertical-align: baseline;
-        text-align: left;  
-        font-size: 1em;
+        // vertical-align: baseline;
+        // text-align: left;  
+        // font-size: 1em;
         margin-left: 20px;
-        padding-top: 10px; 
+        // padding-top: 10px; 
         height: 75px;
-        padding-left: 50px;
-        background: url('../img/logo.png') no-repeat 0 12px;
+        width: 150px;
+        // padding-left: 50px;
+        background: url('../img/logo.png') no-repeat;
         position: relative;
 
         a {
             display: block;
-            font-family: 'Source Sans Pro', sans-serif;
-            color: white;
-            text-transform: uppercase;
-            text-decoration: none; 
-            letter-spacing: 1px;
+            height: 75px;
+            width: 150px;
+            // font-family: 'Source Sans Pro', sans-serif;
+            // color: white;
+            // text-transform: uppercase;
+            // text-decoration: none; 
+            // letter-spacing: 1px;
 
-            span {
-                display: block;
-                letter-spacing: 6px;
-                line-height: 15px; 
-            }
+            // span {
+            //     display: block;
+            //     letter-spacing: 6px;
+            //     line-height: 15px; 
+            // }
         }
     }
 
@@ -1079,13 +1082,128 @@ section#form{
     }
 }
 
+/* Artist of the week */
 
+#artistWinner {
+    background: url('../img/back_Banksy.png') no-repeat center top;
+    height: 600px;
+    width: 100%;
+    padding-top: 125px;
+    position: relative;
     
+    .winner {
+        width: 1000px;
+        margin: 0 auto;
+    }
+    h1, h2, h3 {
+        font-size: 1.6em;
+        font-weight: 200;
+    }
+    h2 {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-top: 0;
+        line-height: 1em;
+        padding-left: 245px;
+    }
+    img {
+    }   
+    img.pp {
+        float: left; 
+        border-radius: 100%;
+        border:4px solid #fff; 
+    }   
+    p {
+        font-size: .85em;
+        width: 650px;
+        line-height: 1.5;
+        padding-left: 245px;
+    }
+    .seeMore {
+      margin-top: 22px;
+      padding-left: 40px;
+      text-decoration: none;
+      color: @yellow;
+      font-size: 1em;
+    }
+    #galleryWinner {
+        display: block;
+        width: 600px;
+        height: 100px;
+        position: absolute;
+        bottom: 0; left: 50%;
+        margin-left: -300px;
 
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            width: 600px;
+            height: 100px;
+            display: block;
+            overflow: hidden;
+            margin: 0;
 
+            li {
+                float: left;
+                width: 100px; height: 100px;
+                display: inline-block;
+                overflow: hidden;
 
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+#artists-list {
+    width: 1000px;
+    margin: 0 auto;
 
+    h2 {
+        margin: 50px 0;
+        color: @black;
+        font-size: 1.6em;
+        font-weight: 200; 
+    }
+    ul {
+        width: 1000px;
+        margin: 0 auto;
+        padding: 0;
+        list-style-type: none;
 
+        li {
+            float: left;
+            width: 250px;
+            margin-left: 125px;
+            margin-bottom: 50px;
+            color: @black;
+            text-align: center;
+            &:first-child,
+            &:nth-child(4),
+            &:nth-child(7),
+            &:nth-child(10), {
+                margin-left: 0px;
+            }
+            img {
+                max-width: 250px;
+                border-radius: 100%;
+            }
+            .name {margin-bottom: 0;}
+            .vue, .like {
+              padding-left: 30px;
+              font-size: 0.85em; 
+              float: left; 
+            }
+            .vue{
+                background: url('../img/vue.png') no-repeat 0px 6px;
+                padding-right: 15px;
+                margin-left: 65px;
+            }
+            .like{background: url('../img/like.png') no-repeat 0px 4px;}
+        }
+    }
+}
 
 /* ==========================================================================
    Helper classes

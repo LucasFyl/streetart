@@ -133,28 +133,16 @@ header {
 header h1 {
   margin: 0;
   display: inline-block;
-  vertical-align: baseline;
-  text-align: left;
-  font-size: 1em;
   margin-left: 20px;
-  padding-top: 10px;
   height: 75px;
-  padding-left: 50px;
-  background: url('../img/logo.png') no-repeat 0 12px;
+  width: 150px;
+  background: url('../img/logo.png') no-repeat;
   position: relative;
 }
 header h1 a {
   display: block;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-header h1 a span {
-  display: block;
-  letter-spacing: 6px;
-  line-height: 15px;
+  height: 75px;
+  width: 150px;
 }
 header > a {
   float: right;
@@ -991,6 +979,128 @@ section#form #rightSide input[type="submit"]:hover {
   bottom: 0;
   right: 0;
   margin: auto;
+}
+/* Artist of the week */
+#artistWinner {
+  background: url('../img/back_Banksy.png') no-repeat center top;
+  height: 600px;
+  width: 100%;
+  padding-top: 125px;
+  position: relative;
+}
+#artistWinner .winner {
+  width: 1000px;
+  margin: 0 auto;
+}
+#artistWinner h1,
+#artistWinner h2,
+#artistWinner h3 {
+  font-size: 1.6em;
+  font-weight: 200;
+}
+#artistWinner h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 0;
+  line-height: 1em;
+  padding-left: 245px;
+}
+#artistWinner img.pp {
+  float: left;
+  border-radius: 100%;
+  border: 4px solid #fff;
+}
+#artistWinner p {
+  font-size: .85em;
+  width: 650px;
+  line-height: 1.5;
+  padding-left: 245px;
+}
+#artistWinner .seeMore {
+  margin-top: 22px;
+  padding-left: 40px;
+  text-decoration: none;
+  color: #f39c12;
+  font-size: 1em;
+}
+#artistWinner #galleryWinner {
+  display: block;
+  width: 600px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -300px;
+}
+#artistWinner #galleryWinner ul {
+  list-style-type: none;
+  padding-left: 0;
+  width: 600px;
+  height: 100px;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+}
+#artistWinner #galleryWinner ul li {
+  float: left;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  overflow: hidden;
+}
+#artistWinner #galleryWinner ul li img {
+  height: 100%;
+}
+#artists-list {
+  width: 1000px;
+  margin: 0 auto;
+}
+#artists-list h2 {
+  margin: 50px 0;
+  color: #000000;
+  font-size: 1.6em;
+  font-weight: 200;
+}
+#artists-list ul {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+#artists-list ul li {
+  float: left;
+  width: 250px;
+  margin-left: 125px;
+  margin-bottom: 50px;
+  color: #000000;
+  text-align: center;
+}
+#artists-list ul li:first-child,
+#artists-list ul li:nth-child(4),
+#artists-list ul li:nth-child(7),
+#artists-list ul li:nth-child(10) {
+  margin-left: 0px;
+}
+#artists-list ul li img {
+  max-width: 250px;
+  border-radius: 100%;
+}
+#artists-list ul li .name {
+  margin-bottom: 0;
+}
+#artists-list ul li .vue,
+#artists-list ul li .like {
+  padding-left: 30px;
+  font-size: 0.85em;
+  float: left;
+}
+#artists-list ul li .vue {
+  background: url('../img/vue.png') no-repeat 0px 6px;
+  padding-right: 15px;
+  margin-left: 65px;
+}
+#artists-list ul li .like {
+  background: url('../img/like.png') no-repeat 0px 4px;
 }
 /* ==========================================================================
    Helper classes
