@@ -17,10 +17,10 @@
         <link rel="stylesheet" href='../../css/less/iphone.css' media='screen and (min-width: 320px) and (max-width: 640px)'/>
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
 
-        <link rel="stylesheet" type="text/css" href="../css/jquery.fancybox-1.3.1.css">
-        <link rel="stylesheet" type="text/css" href="../css/jquery.fancyPhotoset.css">
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.fancybox-1.3.1.css">
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.fancyPhotoset.css">
 
-        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="../../js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -50,9 +50,9 @@
                         </ul>
                         <div id="social">
                             <ul>
-                                <li><span>Follow this event on :</span></li>
-                                <li><a href="#"><img src="../images/social/fbIcon.png" alt="facebook"></a></li>
-                                <li><a href="#"><img src="../images/social/twitterIcon.png" alt="twitter"></a></li>
+                                <li><span>Follow this event on:</span></li>
+                                <li><a href="#"><img src="../../images/social/fbIcon.png" alt="facebook"></a></li>
+                                <li><a href="#"><img src="../../images/social/twitterIcon.png" alt="twitter"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -65,17 +65,17 @@
         <!--CDN link for the latest TweenMax-->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="../js/mainGS.js"></script>
-        <script type="text/javascript" src="../js/jquery.fancybox-1.3.1.pack.js"></script>
-        <script type="text/javascript" src="../js/jquery.fancy-photoset.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../../js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="../../js/mainGS.js"></script>
+        <script type="text/javascript" src="../../js/jquery.fancybox-1.3.1.pack.js"></script>
+        <script type="text/javascript" src="../../js/jquery.fancy-photoset.min.js"></script>
 <!--        <script src="js/plugins.js"></script>
         <script src="js/main.js"></script><-->
         <script type="text/javascript">
             $( document ).ready(function() {
                 var windowH = $(window).height();
-                var eventSingle = $('.single-event');
-                TweenMax.set(eventSingle, {height:windowH});
+                var artist = $('.single-artist');
+                TweenMax.set(artist, {height:windowH});
 
                 $(function() {
 

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../../css/less/main.css">
+        <link rel="stylesheet" href='../../css/less/iphone.css' media='screen and (min-width: 320px) and (max-width: 640px)'/>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.fancybox-1.3.1.css">
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.fancyPhotoset.css">
+
+        <script src="../../js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    
+        <div class="single-event" style="overfow:none;">
+
+            <header style="opacity:1;height:75px;">
+                <h1><a href="">&nbsp<!-- World Wide <span>Writters</span> --></a></h1>
+                <a href="">Artist of the week</a>
+            </header>
+
+            <article class="event">
+                <section>
+                    <h2>Cope2</h2>
+                    <p>
+                        COPE2 est de retour à Paris avec « Perseverance », sa  troisième exposition à la galerie Mathgoth. Toujours très attendue, la légende newyorkaise va encore surprendre les amateurs de Graffiti…
+                        Après 35 ans de carrière, le dinosaure du street art new-yorkais est toujours là. Beaucoup de ses disciples de la première heure ont définitivement vidé leurs bombes et asséché leurs marqueurs, préférant une retraite anticipée que de souffrir la comparaison. Car il ne suffit pas d’avoir fait partie des balbutiements de la discipline pour être une référence. Ne devient pas une légende qui veut ! Si Cope2 en est une ce n’est pas un hasard. Son style reste reconnaissable entre mille, mais il a considérablement évolué. Surtout ces dernières années ! L’artiste a su prendre du recul, passer intelligemment le cap difficile qui consiste à quitter la rue pour l’atelier. Et aujourd’hui, il a encore des choses à dire. Beaucoup ! 
+                    </p>
+                    
+                    <div class="event-details">
+                        <ul>
+                            <li><span>Adresse :</span>34, rue Hélène Brion - 75013 Paris</li>
+                            <li><span>Site :</span>http://www.cope2.net/‎</li>
+                            <li><span>Accès :</span>22 novembre au 21 décembre 2013</li>
+                        </ul>
+                        <div id="social">
+                            <ul>
+                                <li><span>Follow this event on:</span></li>
+                                <li><a href="#"><img src="../../images/social/fbIcon.png" alt="facebook"></a></li>
+                                <li><a href="#"><img src="../../images/social/twitterIcon.png" alt="twitter"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                <div id="gallery"></div>
+                </section>
+
+            </article>
+        </div>
+
+        <!--CDN link for the latest TweenMax-->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../../js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="../../js/mainGS.js"></script>
+        <script type="text/javascript" src="../../js/jquery.fancybox-1.3.1.pack.js"></script>
+        <script type="text/javascript" src="../../js/jquery.fancy-photoset.min.js"></script>
+<!--        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script><-->
+        <script type="text/javascript">
+            $( document ).ready(function() {
+                var windowH = $(window).height();
+                var artist = $('.single-artist');
+                TweenMax.set(artist, {height:windowH});
+
+                $(function() {
+
+                  var options = {
+                    user_id: '106947505@N06',
+                    photosetId: '72157638004189575',
+                    apiKey: '811ec88d533eb1b1661b28e3b243caa4',
+                    captions: false,
+                    small: 'original',
+                    large: 'original'
+                  };
+
+                  $('#gallery').fancyPhotoset(options);
+                });
+            });
+
+        </script>
+    </body>
+</html>
