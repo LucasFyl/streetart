@@ -781,9 +781,10 @@ section#form{
                 display: block;
                 width: 120px; height: 120px;
                 float: left;
+                overflow: hidden;
                 
                 img {
-                    width: 100%;
+                    width: auto;
                     height: 100%;
                     
                 }
@@ -1083,10 +1084,9 @@ section#form{
 }
 
 /* Artist of the week */
-
 #artistWinner {
     background: url('../img/back_Banksy.png') no-repeat center top;
-    height: 600px;
+    height: 550px;
     width: 100%;
     padding-top: 125px;
     position: relative;
@@ -1128,16 +1128,16 @@ section#form{
     }
     #galleryWinner {
         display: block;
-        width: 600px;
+        width: 1000px;
         height: 100px;
         position: absolute;
         bottom: 0; left: 50%;
-        margin-left: -300px;
+        margin-left: -500px;
 
         ul {
             list-style-type: none;
             padding-left: 0;
-            width: 600px;
+            width: 1000px;
             height: 100px;
             display: block;
             overflow: hidden;

@@ -60,7 +60,7 @@
 
 
         <header>
-            <h1><a href="">&nbsp<!-- World Wide <span>Writters</span> --></a></h1>
+            <h1><a href="artist-of-the-week.html"><!-- World Wide <span>Writters</span> --></a></h1>
             <a href="">Artist of the week</a>
         </header>
     
