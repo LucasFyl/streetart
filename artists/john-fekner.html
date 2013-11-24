@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/less/main.css">
+        <link rel="stylesheet" href='../css/less/iphone.css' media='screen and (min-width: 320px) and (max-width: 640px)'/>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" type="text/css" href="../css/jquery.fancybox-1.3.1.css">
+        <link rel="stylesheet" type="text/css" href="../css/jquery.fancyPhotoset.css">
+
+        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    
+        <div class="single-artist" style="overfow:none;">
+
+            <header style="opacity:1;height:75px;">
+                <h1><a href="">&nbsp<!-- World Wide <span>Writters</span> --></a></h1>
+                <a href="">Artist of the week</a>
+            </header>
+
+            <article class="artist">
+            <h2>Artist presentation</h2>
+                <img src="../images/artists/john-fekner.jpg" alt="john-fekner" class="avatar">
+                <div class="artist-details">
+                    <h3>John Fekner </h3>
+                    <p class="description">John Fekner (born in New York City) is an innovative multidisciplinary artist who created hundreds of environmental and conceptual outdoor works consisting of stenciled words, symbols, dates and icons spray painted in New York, Sweden, Canada, England and Germany in the 1970s and 1980s. Fekner participated in recent urban art exhibitions such as Wooster Collective's 11 Spring StreetProject in 2006 and in "Art in the Streets" at The Museum of Contemporary Art, Los Angeles in 2011.
+                    </p>
+                    
+                    <div id="social">
+                        <span>Follow Fekner on:</span>
+                        <ul>
+                            <li><a href="#"><img src="../images/social/fbIcon.png" alt="facebook"></a></li>
+                            <li><a href="#"><img src="../images/social/flickrIcon.png" alt="flickr"></a></li>
+                            <li><a href="#"><img src="../images/social/twitterIcon.png" alt="twitter"></a></li>
+                            <li><a href="#"><img src="../images/social/pinterestIcon.png" alt="pinterest"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <div id="gallery"></div>
+        </div>
+
+        <!--CDN link for the latest TweenMax-->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="../js/mainGS.js"></script>
+        <script type="text/javascript" src="../js/jquery.fancybox-1.3.1.pack.js"></script>
+        <script type="text/javascript" src="../js/jquery.fancy-photoset.min.js"></script>
+<!--        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script><-->
+        <script type="text/javascript">
+            $( document ).ready(function() {
+                var windowH = $(window).height();
+                var artist = $('.single-artist');
+                TweenMax.set(artist, {height:windowH});
+
+                $(function() {
+
+                  var options = {
+                    user_id: '106947505@N06',
+                    photosetId: '72157638005108773',
+                    apiKey: '811ec88d533eb1b1661b28e3b243caa4',
+                    captions: false,
+                  };
+
+                  $('#gallery').fancyPhotoset(options);
+                });
+            });
+
+        </script>
+    </body>
+</html>
