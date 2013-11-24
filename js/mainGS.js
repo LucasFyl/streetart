@@ -13,7 +13,7 @@ $( document ).ready(function() {
 	// $(window).on('resize', giveSize());
 
 	// attach event on section when clicked
-	$(section).on('click', openCity);
+	section.on('click', openCity);
 
 	// Open / Close Sidebar
 	$('section.city').on('click', '#sidebarBtn', openSidebar);
@@ -26,6 +26,8 @@ $( document ).ready(function() {
 	$('section.city').on('click', "#create", openForm); 
 	$('section.city').on('click', "#closeForm ", openForm); 
 
+	// open single-event page 
+	$("section.city").on('click', ".onHover a", loadEvent);
 
 	// Give accurate size even when window is resized
 	$(window).on('resize', function () {
@@ -75,6 +77,22 @@ $( document ).ready(function() {
     			manageHover();
     			imgSize();
     			horizontalScroll();
+            }	
+        });
+	}
+	// to load each event html with ajax
+	function loadEvent(e) {
+		e.preventDefault();
+		var thisImg = $(this).parent('.onHover').siblings('img');
+		var thisEvent = thisImg.attr("alt") + '.html';
+		var theCity = $('body').find('section.active').attr('id');
+		var theFile = 'events/' + theCity + '/' + thisEvent;
+		// console.log(theCity);
+		// console.log(theFile);
+		$.ajax({
+            url: theFile,
+            success: function(data){
+                $('section.active').html(data);
             }	
         });
 	}

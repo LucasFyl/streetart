@@ -694,6 +694,9 @@ section#form #rightSide input[type="submit"]:hover {
   min-height: 100%;
   position: fixed;
   padding-top: 75px;
+  overfow: none;
+  z-index: 10000;
+  position: relative;
 }
 .single-event article.event {
   display: block;
@@ -701,7 +704,7 @@ section#form #rightSide input[type="submit"]:hover {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 50%;
-  margin-top: -250px;
+  margin-top: -233px;
 }
 .single-event article.event section {
   width: 1000px;

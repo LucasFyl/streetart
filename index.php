@@ -14,9 +14,10 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/less/main.css">
-
         <link href="css/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href='css/less/iphone.css' media='screen and (min-width: 320px) and (max-width: 640px)'/>
+        <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.1.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.fancyPhotoset.css">
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -85,8 +86,8 @@
         
         <!--CDN link for the latest TweenMax-->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-<!--        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script><-->
+        <script type="text/javascript" src="js/jquery.fancybox-1.3.1.pack.js"></script>
+        <script type="text/javascript" src="js/jquery.fancy-photoset.min.js"></script>
         <script src="js/jquery.mousewheel.js"></script>
         <script src="js/mainGS.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
