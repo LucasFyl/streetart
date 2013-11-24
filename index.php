@@ -61,8 +61,8 @@
 
 
         <header>
-            <h1><a href="artist-of-the-week.html"><!-- World Wide <span>Writters</span> --></a></h1>
-            <a href="">Artist of the week</a>
+            <h1><a href=""><!-- World Wide <span>Writters</span> --></a></h1>
+            <a href="artist-of-the-week.html">Artist of the week</a>
         </header>
     
         <div id="home">
