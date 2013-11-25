@@ -1,48 +1,49 @@
 <div class="single-event">
-        <article class="event">
-        <section>
-            <h2>The Final Edition</h2>
-            <p>
-                Dozens of new pieces surfaced this past weekend in “The Final Edition” at East Harlem’s Graffiti Hall of Fame on 106th Street & Park Avenue.
-            </p>
-            
-            <div class="event-details">
+  <a href="" class="close"></a>
+  <article class="event">
+    <section>
+        <h2>The Final Edition</h2>
+        <p>
+            Dozens of new pieces surfaced this past weekend in “The Final Edition” at East Harlem’s Graffiti Hall of Fame on 106th Street & Park Avenue.
+        </p>
+        
+        <div class="event-details">
+            <ul>
+                <li><span>Adresse :</span>Park Ave & E 106th St New York, NY 10029</li>
+                <li><span>Site :</span>Unknown</li>
+                <li><span>Accès :</span>24 to 25 august 2013</li>
+            </ul>
+            <div id="social">
                 <ul>
-                    <li><span>Adresse :</span>Park Ave & E 106th St New York, NY 10029</li>
-                    <li><span>Site :</span>Unknown</li>
-                    <li><span>Accès :</span>24 to 25 august 2013</li>
+                    <li><span>Follow this event on:</span></li>
+                    <li><a href="#"><img src="images/social/fbIcon.png" alt="facebook"></a></li>
+                    <li><a href="#"><img src="images/social/twitterIcon.png" alt="twitter"></a></li>
                 </ul>
-                <div id="social">
-                    <ul>
-                        <li><span>Follow this event on:</span></li>
-                        <li><a href="#"><img src="images/social/fbIcon.png" alt="facebook"></a></li>
-                        <li><a href="#"><img src="images/social/twitterIcon.png" alt="twitter"></a></li>
-                    </ul>
-                </div>
             </div>
-        <div id="gallery"></div>
-        </section>
-    </article>
+        </div>
+    <div id="gallery"></div>
+    </section>
+  </article>
+  
+  <script type="text/javascript">
+       $( document ).ready(function() {
+           var windowH = $(window).height();
+           var eventSingle = $('.single-event');
+           TweenMax.set(eventSingle, {height:windowH});
+
+          $(function() {
+
+              var options = {
+                user_id: '106947505@N06',
+                photosetId: '72157638018286135',
+                apiKey: '811ec88d533eb1b1661b28e3b243caa4',
+                captions: false,
+                small: 'original',
+                large: 'original'
+              };
+
+            $('#gallery').fancyPhotoset(options);
+          });
+      });
+  </script>
 </div>
-
-<script type="text/javascript">
-     $( document ).ready(function() {
-         var windowH = $(window).height();
-         var eventSingle = $('.single-event');
-         TweenMax.set(eventSingle, {height:windowH});
-
-        $(function() {
-
-            var options = {
-              user_id: '106947505@N06',
-              photosetId: '72157638018286135',
-              apiKey: '811ec88d533eb1b1661b28e3b243caa4',
-              captions: false,
-              small: 'original',
-              large: 'original'
-            };
-
-          $('#gallery').fancyPhotoset(options);
-        });
-    });
-</script>

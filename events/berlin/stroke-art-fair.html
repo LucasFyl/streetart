@@ -1,4 +1,5 @@
 <div class="single-event">
+    <a href="" class="close"></a>
     <article class="event">
         <section>
             <h2>Sroke Art Fair</h2>
@@ -23,26 +24,27 @@
             <div id="gallery"></div>
         </section>
     </article>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            var windowH = $(window).height();
+            var eventSingle = $('.single-event');
+            TweenMax.set(eventSingle, {height:windowH});
+
+            $(function() {
+
+                var options = {
+                    user_id: '106947505@N06',
+                    photosetId: '72157638013287534',
+                    apiKey: '811ec88d533eb1b1661b28e3b243caa4',
+                    captions: false,
+                    small: 'original',
+                    large: 'original'
+                };
+
+                $('#gallery').fancyPhotoset(options);
+            });
+        });
+    </script>
 </div>
 
-<script type="text/javascript">
-    $( document ).ready(function() {
-        var windowH = $(window).height();
-        var eventSingle = $('.single-event');
-        TweenMax.set(eventSingle, {height:windowH});
-
-        $(function() {
-
-            var options = {
-                user_id: '106947505@N06',
-                photosetId: '72157638013287534',
-                apiKey: '811ec88d533eb1b1661b28e3b243caa4',
-                captions: false,
-                small: 'original',
-                large: 'original'
-            };
-
-            $('#gallery').fancyPhotoset(options);
-        });
-    });
-</script>
+    

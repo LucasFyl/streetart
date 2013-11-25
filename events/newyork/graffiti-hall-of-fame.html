@@ -1,48 +1,50 @@
 <div class="single-event">
-    <article class="event">
-        <section>
-            <h2>The Graffiti Hall of Fame</h2>
-            <p>
-                A schoolyard that celebrates all sorts of taggers, this art gallery of the street was founded in 1980 by graffiti artist Ray Rodriguez (aka Sting Ray) and a group of community-minded supporters who saw the lasting value in an art that some politicians and business-owners tend to view as vandalism. You can visit the colorful murals at any time, though the actual Graffiti Hall of Fame event, which is when ‘writers’ come from all over the globe to add their art to the walls, is held in late June. For updates check the website Streets Are Saying Things (www.streetsaresayingthings.com), run by a Hall of Fame organizer and a good source of graffiti-related news.
-            </p>
-            
-            <div class="event-details">
-                <ul>
-                    <li><span>Adresse :</span>Park Ave & E 106th St New York, NY 10029</li>
-                    <li><span>Site :</span>https://www.facebook.com/grafhalloffame</li>
-                    <li><span>Accès :</span>24 to 25 august 2013</li>
-                </ul>
-                <div id="social">
-                    <ul>
-                        <li><span>Follow this event on:</span></li>
-                        <li><a href="#"><img src="images/social/fbIcon.png" alt="facebook"></a></li>
-                        <li><a href="#"><img src="images/social/twitterIcon.png" alt="twitter"></a></li>
-                    </ul>
-                </div>
-            </div>
-        <div id="gallery"></div>
-        </section>
-    </article>
+  <a href="" class="close"></a>
+  <article class="event">
+      <section>
+          <h2>The Graffiti Hall of Fame</h2>
+          <p>
+              A schoolyard that celebrates all sorts of taggers, this art gallery of the street was founded in 1980 by graffiti artist Ray Rodriguez (aka Sting Ray) and a group of community-minded supporters who saw the lasting value in an art that some politicians and business-owners tend to view as vandalism. You can visit the colorful murals at any time, though the actual Graffiti Hall of Fame event, which is when ‘writers’ come from all over the globe to add their art to the walls, is held in late June. For updates check the website Streets Are Saying Things (www.streetsaresayingthings.com), run by a Hall of Fame organizer and a good source of graffiti-related news.
+          </p>
+          
+          <div class="event-details">
+              <ul>
+                  <li><span>Adresse :</span>Park Ave & E 106th St New York, NY 10029</li>
+                  <li><span>Site :</span>https://www.facebook.com/grafhalloffame</li>
+                  <li><span>Accès :</span>24 to 25 august 2013</li>
+              </ul>
+              <div id="social">
+                  <ul>
+                      <li><span>Follow this event on:</span></li>
+                      <li><a href="#"><img src="images/social/fbIcon.png" alt="facebook"></a></li>
+                      <li><a href="#"><img src="images/social/twitterIcon.png" alt="twitter"></a></li>
+                  </ul>
+              </div>
+          </div>
+      <div id="gallery"></div>
+      </section>
+  </article>
+  <script type="text/javascript">
+   $( document ).ready(function() {
+       var windowH = $(window).height();
+       var eventSingle = $('.single-event');
+       TweenMax.set(eventSingle, {height:windowH});
+
+          $(function() {
+
+              var options = {
+                user_id: '106947505@N06',
+                photosetId: '72157638019376493',
+                apiKey: '811ec88d533eb1b1661b28e3b243caa4',
+                captions: false,
+                small: 'original',
+                large: 'original'
+              };
+
+            $('#gallery').fancyPhotoset(options);
+          });
+      });
+  </script>
 </div>
 
-<script type="text/javascript">
- $( document ).ready(function() {
-     var windowH = $(window).height();
-     var eventSingle = $('.single-event');
-     TweenMax.set(eventSingle, {height:windowH});
-
-        $(function() {
-
-            var options = {
-              user_id: '106947505@N06',
-              photosetId: '72157638019376493',
-              apiKey: '811ec88d533eb1b1661b28e3b243caa4',
-              captions: false,
-              small: 'original',
-              large: 'original'
-            };
-
-          $('#gallery').fancyPhotoset(options);
-        });
-    });
-</script>
+  
