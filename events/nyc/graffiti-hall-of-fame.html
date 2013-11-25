@@ -1,97 +1,48 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="single-event">
+    <article class="event">
+        <section>
+            <h2>The Graffiti Hall of Fame</h2>
+            <p>
+                A schoolyard that celebrates all sorts of taggers, this art gallery of the street was founded in 1980 by graffiti artist Ray Rodriguez (aka Sting Ray) and a group of community-minded supporters who saw the lasting value in an art that some politicians and business-owners tend to view as vandalism. You can visit the colorful murals at any time, though the actual Graffiti Hall of Fame event, which is when ‘writers’ come from all over the globe to add their art to the walls, is held in late June. For updates check the website Streets Are Saying Things (www.streetsaresayingthings.com), run by a Hall of Fame organizer and a good source of graffiti-related news.
+            </p>
+            
+            <div class="event-details">
+                <ul>
+                    <li><span>Adresse :</span>Park Ave & E 106th St New York, NY 10029</li>
+                    <li><span>Site :</span>https://www.facebook.com/grafhalloffame</li>
+                    <li><span>Accès :</span>24 to 25 august 2013</li>
+                </ul>
+                <div id="social">
+                    <ul>
+                        <li><span>Follow this event on:</span></li>
+                        <li><a href="#"><img src="../../images/social/fbIcon.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="../../images/social/twitterIcon.png" alt="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        <div id="gallery"></div>
+        </section>
+    </article>
+</div>
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<script type="text/javascript">
+ $( document ).ready(function() {
+     var windowH = $(window).height();
+     var eventSingle = $('.single-event');
+     TweenMax.set(eventSingle, {height:windowH});
 
-        <link rel="stylesheet" href="../../css/normalize.css">
-        <link rel="stylesheet" href="../../css/less/main.css">
-        <link rel="stylesheet" href='../../css/less/iphone.css' media='screen and (min-width: 320px) and (max-width: 640px)'/>
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
+        $(function() {
 
-        <link rel="stylesheet" type="text/css" href="../../css/jquery.fancybox-1.3.1.css">
-        <link rel="stylesheet" type="text/css" href="../../css/jquery.fancyPhotoset.css">
+            var options = {
+              user_id: '106947505@N06',
+              photosetId: '72157638019376493',
+              apiKey: '811ec88d533eb1b1661b28e3b243caa4',
+              captions: false,
+              small: 'original',
+              large: 'original'
+            };
 
-        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-    
-        <div class="single-event" style="overfow:none;">
-
-            <header style="opacity:1;height:75px;">
-                <h1><a href="">&nbsp<!-- World Wide <span>Writters</span> --></a></h1>
-                <a href="">Artist of the week</a>
-            </header>
-
-            <article class="event">
-                <section>
-                    <h2>The Graffiti Hall of Fame</h2>
-                    <p>
-                        A schoolyard that celebrates all sorts of taggers, this art gallery of the street was founded in 1980 by graffiti artist Ray Rodriguez (aka Sting Ray) and a group of community-minded supporters who saw the lasting value in an art that some politicians and business-owners tend to view as vandalism. You can visit the colorful murals at any time, though the actual Graffiti Hall of Fame event, which is when ‘writers’ come from all over the globe to add their art to the walls, is held in late June. For updates check the website Streets Are Saying Things (www.streetsaresayingthings.com), run by a Hall of Fame organizer and a good source of graffiti-related news.
-                    </p>
-                    
-                    <div class="event-details">
-                        <ul>
-                            <li><span>Adresse :</span>Park Ave & E 106th St New York, NY 10029</li>
-                            <li><span>Site :</span>https://www.facebook.com/grafhalloffame</li>
-                            <li><span>Accès :</span>24 to 25 august 2013</li>
-                        </ul>
-                        <div id="social">
-                            <ul>
-                                <li><span>Follow this event on:</span></li>
-                                <li><a href="#"><img src="../../images/social/fbIcon.png" alt="facebook"></a></li>
-                                <li><a href="#"><img src="../../images/social/twitterIcon.png" alt="twitter"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                <div id="gallery"></div>
-                </section>
-
-            </article>
-        </div>
-
-        <!--CDN link for the latest TweenMax-->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="../../js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="../../js/mainGS.js"></script>
-        <script type="text/javascript" src="../../js/jquery.fancybox-1.3.1.pack.js"></script>
-        <script type="text/javascript" src="../../js/jquery.fancy-photoset.min.js"></script>
-<!--        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script><-->
-        // <script type="text/javascript">
-            $( document ).ready(function() {
-                var windowH = $(window).height();
-                var artist = $('.single-artist');
-                TweenMax.set(artist, {height:windowH});
-
-                $(function() {
-
-                  var options = {
-                    user_id: '106947505@N06',
-                    photosetId: '72157638019376493',
-                    apiKey: '811ec88d533eb1b1661b28e3b243caa4',
-                    captions: false,
-                    small: 'original',
-                    large: 'original'
-                  };
-
-                  $('#gallery').fancyPhotoset(options);
-                });
-            });
-
-        </script>
-    </body>
-</html>
+          $('#gallery').fancyPhotoset(options);
+        });
+    });
+</script>

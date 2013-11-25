@@ -1,101 +1,50 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-        <link rel="stylesheet" href="../../css/normalize.css">
-        <link rel="stylesheet" href="../../css/less/main.css">
-        <link rel="stylesheet" href='../../css/less/iphone.css' media='screen and (min-width: 320px) and (max-width: 640px)'/>
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
-
-        <link rel="stylesheet" type="text/css" href="../../css/jquery.fancybox-1.3.1.css">
-        <link rel="stylesheet" type="text/css" href="../../css/jquery.fancyPhotoset.css">
-
-        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-    
-        <div class="single-event" style="overfow:none;">
-
-            <header style="opacity:1;height:75px;">
-                <h1><a href="">&nbsp<!-- World Wide <span>Writters</span> --></a></h1>
-                <a href="">Artist of the week</a>
-            </header>
-
-            <article class="event">
-                <section>
-                    <h2>Mein Lieber Prost Party</h2>
-                    <p>
-                        Armed with aerosol cans, paintbrushes and marker pens, nine streets artists will battle live in front of the Retramp Gallery Saturday 15th June.
-
-                        In conjunction with 48-Stunden-Neukoelln festivities the battle invites all audiences to witness the formation of street art and create a positive change of perspective.
-
-                        The first heat of artists will splash their paint skills at 06:00p.m and the final battle will kick off at 09:30p.m. 
-                    </p>
+<div class="single-event">
+    <article class="event">
+        <section>
+            <h2>Mein Lieber Prost Party</h2>
+            <p>
+                Armed with aerosol cans, paintbrushes and marker pens, nine streets artists will battle live in front of the Retramp Gallery Saturday 15th June.
+                In conjunction with 48-Stunden-Neukoelln festivities the battle invites all audiences to witness the formation of street art and create a positive change of perspective.
+                The first heat of artists will splash their paint skills at 06:00p.m and the final battle will kick off at 09:30p.m. 
+            </p>
                     
-                    <div class="event-details">
-                        <ul>
-                            <li><span>Adresse :</span>michaelkirchstrasse 22, 10179 Berlin, Germany</li>
-                            <li><span>Site :</span>http://www.katerholzig.de/‎</li>
-                            <li><span>Accès :</span>13 December 2012</li>
-                        </ul>
-                        <div id="social">
-                            <ul>
-                                <li><span>Follow this event on:</span></li>
-                                <li><a href="#"><img src="../../images/social/fbIcon.png" alt="facebook"></a></li>
-                                <li><a href="#"><img src="../../images/social/twitterIcon.png" alt="twitter"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                <div id="gallery"></div>
-                </section>
+            <div class="event-details">
+                <ul>
+                    <li><span>Adresse :</span>michaelkirchstrasse 22, 10179 Berlin, Germany</li>
+                    <li><span>Site :</span>http://www.katerholzig.de/‎</li>
+                    <li><span>Accès :</span>13 December 2012</li>
+                </ul>
+                <div id="social">
+                    <ul>
+                        <li><span>Follow this event on:</span></li>
+                        <li><a href="#"><img src="../../images/social/fbIcon.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="../../images/social/twitterIcon.png" alt="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        <div id="gallery"></div>
+        </section>
+    </article>
+</div>
 
-            </article>
-        </div>
+<script type="text/javascript">
+    $( document ).ready(function() {
+        var windowH = $(window).height();
+        var eventSingle = $('.single-event');
+        TweenMax.set(eventSingle, {height:windowH});
 
-        <!--CDN link for the latest TweenMax-->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="../../js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="../../js/mainGS.js"></script>
-        <script type="text/javascript" src="../../js/jquery.fancybox-1.3.1.pack.js"></script>
-        <script type="text/javascript" src="../../js/jquery.fancy-photoset.min.js"></script>
-<!--        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script><-->
-        <script type="text/javascript">
-            $( document ).ready(function() {
-                var windowH = $(window).height();
-                var artist = $('.single-artist');
-                TweenMax.set(artist, {height:windowH});
+        $(function() {
 
-                $(function() {
+            var options = {
+              user_id: '106947505@N06',
+              photosetId: '72157638014015074',
+              apiKey: '811ec88d533eb1b1661b28e3b243caa4',
+              captions: false,
+              small: 'original',
+              large: 'original'
+            };
 
-                  var options = {
-                    user_id: '106947505@N06',
-                    photosetId: '72157638014015074',
-                    apiKey: '811ec88d533eb1b1661b28e3b243caa4',
-                    captions: false,
-                    small: 'original',
-                    large: 'original'
-                  };
-
-                  $('#gallery').fancyPhotoset(options);
-                });
-            });
-
-        </script>
-    </body>
-</html>
+            $('#gallery').fancyPhotoset(options);
+        });
+    });
+</script>
