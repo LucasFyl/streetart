@@ -87,7 +87,7 @@
                 <section class="city" id="berlin" >
                     <a href="#">berlin</a> 
                 </section>
-                <section class="city" id="newyork" >
+                <section class="city" id="new-york" >
                     <a href="#">new-york</a>
                  </section>
                 <section class="city" id="london" >

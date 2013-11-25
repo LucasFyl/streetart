@@ -243,6 +243,7 @@ div#home {
     padding: 0; margin: 0;
     position: fixed;
     overflow: none;
+    background-color: @black;
 }
 
 section#paris {
@@ -258,15 +259,15 @@ section#berlin {
     border-left: 1px solid @yellow;
     border-bottom: 1px solid @yellow;
 }
-section#newyork {
+section#new-york {
     background: url('../img/ny.jpg') no-repeat;
-    bottom: 0; left: 0;
+    bottom: 0;left: 0;
     border-right: 1px solid @yellow;
     border-top: 1px solid @yellow;
 }
 section#london {
     background: url('../img/london.jpg') no-repeat center bottom;
-    bottom: 0; right: 0;
+    bottom: 0;right: 0;
     border-left: 1px solid @yellow;
     border-top: 1px solid @yellow;
 }    
@@ -349,6 +350,7 @@ section.city.active {
     section.cityIntro {
         position: relative;
         margin-top: 75px;
+        position: relative;
         .box-sizing();
 
         h2 {
@@ -358,16 +360,19 @@ section.city.active {
             font-size: 1.875em;
             color: @yellow;
             text-align: center;
-            padding-top: 80px;
-            position: relative;
+            padding-top: 75px;
+            position: absolute;
+            top: 0;left: 0;right: 0;bottom: 0;
+            margin: auto;
             
-            &:after {
-                content: " ";
+            span {
                 width: 250px; height: 2px;
                 background-color: white;
                 display: block;
                 position: absolute;
-                top: 109%; left: 50%; margin-left: -125px;
+                top: 0; left: 0;right: 0;bottom: 0;
+                margin: auto;
+                //top: 109%; left: -125px; margin-left: 50%;
             }
         }
     }
@@ -441,10 +446,11 @@ section.city.active {
 
                     img {
                         display: block;
-                        width: auto;
-                        position: absolute;
-                        top: 0; left:0; right: 0; bottom:0;
-                        margin: auto;
+                        // width: auto;
+                        // position: absolute;
+                        // top: 0; left:0; right: 0; bottom:0;
+                        // margin: auto;
+                        margin: 0 auto;
                         z-index: 98;
                     }
                     .height {
@@ -468,7 +474,7 @@ section.city.active {
                             text-transform: uppercase;
                             text-align: center;
                             font-size: 1.380em;
-                            margin-bottom: 0;
+                            margin-bottom: 10px;
                         }
                         p.date {
                             font-family: 'Source Sans Pro', sans-serif;

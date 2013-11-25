@@ -158,7 +158,9 @@ $( document ).ready(function() {
 		var content = $('#sidebar p');
 		var title = $('section.cityIntro h2');
 		var eventSlider = $('section.event');
-		if( $(sidebar).width() == 0 ) {
+							 
+
+		if( sidebar.width() == 0 ) {
 		    TweenLite.to(sidebar, 0.25, {width:'350px', ease:Power2.easeIn});
 		    TweenLite.to(content, 0, {css:{display:'block'}, ease:Power2.easeIn, delay:0.15});
 		}
@@ -168,13 +170,13 @@ $( document ).ready(function() {
 		}
 
 		// if statements séparés en deux pour la fluidité de l'animation
-		if( $(sidebar).width() == 0 ) {
-		    TweenLite.to(title, 0.25, {left:"+=350px", ease:Power2.easeIn});
-		    TweenLite.to(eventSlider, 0.25, {left:"+=350px", ease:Power2.easeIn});
+		if( sidebar.width() == 0 ) {
+		    TweenLite.to(title, 0.25, {x:+350, ease:Power2.easeIn});
+			TweenLite.to(eventSlider, 0.25, {x:+350, ease:Power2.easeIn});
 		}
 		else {
-		    TweenLite.to(title, 0.25, {left:"-=350px", ease:Power2.easeIn});
-		    TweenLite.to(eventSlider, 0.25, {left:"-=350px", ease:Power2.easeIn});
+			TweenLite.to(title, 0.25, {x:0, ease:Power2.easeIn});
+			TweenLite.to(eventSlider, 0.25, {x:0, ease:Power2.easeIn});
 		}
 	}	
 
