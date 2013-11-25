@@ -81,7 +81,43 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/**** Helper class ****/
+/**  Preloader style  **/
+body {
+  overflow: hidden;
+}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  /* change if the mask should have another color then white */
+
+  z-index: 99;
+  /* makes sure it stays on top */
+
+}
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+
+  background-image: url(../img/status.gif);
+  /* path to your loading animation */
+
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
+
+}
+/****  Helper class  ****/
 .transition {
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
@@ -98,6 +134,23 @@ textarea {
   visibility: hidden;
   display: none;
   opacity: 0;
+}
+.close {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  text-decoration: none;
+}
+.close:before {
+  width: 30px;
+  content: "\f00d";
+  font-family: 'FontAwesome';
+  color: white;
+  display: block;
+  font-size: 1.3em;
+  text-align: center;
+  line-height: 30px;
 }
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -291,7 +344,6 @@ section.city.active section.cityIntro h2:after {
 }
 section.city.active section.event {
   display: block;
-  width: 0px;
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -351,7 +403,6 @@ section.city.active section.event div.eventSlider-wrap div.eventSlider {
 }
 section.city.active section.event div.eventSlider-wrap div.eventSlider article {
   width: 360px;
-  height: 100%;
   display: inline-block;
   vertical-align: top;
   float: left;
@@ -365,7 +416,8 @@ section.city.active section.event div.eventSlider-wrap div.eventSlider article i
   top: 0;
   left: 0;
   right: 0;
-  margin: 0 auto;
+  bottom: 0;
+  margin: auto;
   z-index: 98;
 }
 section.city.active section.event div.eventSlider-wrap div.eventSlider article .height {
@@ -484,12 +536,7 @@ section#form h2 {
   margin-left: 50px;
 }
 section#form .close {
-  width: 30px;
-  height: 30px;
-  display: block;
-  position: absolute;
   right: 50px;
-  text-decoration: none;
 }
 section#form .close:before {
   width: 30px;
@@ -698,6 +745,11 @@ section#form #rightSide input[type="submit"]:hover {
   z-index: 10000;
   position: relative;
 }
+.single-event a.close {
+  left: 50%;
+  margin-left: -15px;
+  top: 100px;
+}
 .single-event article.event {
   display: block;
   width: 100%;
@@ -849,7 +901,7 @@ section#form #rightSide input[type="submit"]:hover {
 #participez #form-wrap .form {
   width: 1000px;
   margin: 0 auto;
-  overflow: auto;
+  overflow: hidden;
 }
 #participez #form-wrap .form h2 {
   padding-top: 50px;

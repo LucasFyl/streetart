@@ -29,6 +29,12 @@ $( document ).ready(function() {
 	// open single-event page 
 	$("section.city").on('click', ".onHover a", loadEvent);
 
+	// Close event and return to city
+	$("section.city").on('click', '.single-event a.close', closeEvent);
+
+
+	
+
 	// Give accurate size even when window is resized
 	$(window).on('resize', function () {
 		var section = $('section.active');
@@ -80,22 +86,6 @@ $( document ).ready(function() {
             }	
         });
 	}
-	// to load each event html with ajax
-	function loadEvent(e) {
-		e.preventDefault();
-		var thisImg = $(this).parent('.onHover').siblings('img');
-		var thisEvent = thisImg.attr("alt") + '.html';
-		var theCity = $('body').find('section.active').attr('id');
-		var theFile = 'events/' + theCity + '/' + thisEvent;
-		// console.log(theCity);
-		// console.log(theFile);
-		$.ajax({
-            url: theFile,
-            success: function(data){
-                $('section.active').html(data);
-            }	
-        });
-	}
 
 	// to darken city.active background
 	function darken() {
@@ -115,7 +105,7 @@ $( document ).ready(function() {
     	var windowW = $(window).width();
 
 	    TweenLite.to(introSection, 0, {width:windowW, height:newWindowH});
-	    TweenLite.to(eventSection, 0, {width:windowW, height:newWindowH});
+	    //TweenLite.to(eventSection, 0, {width:windowW, height:newWindowH});
 	    TweenLite.to(tabBar, 0, {width:windowW});
 	    TweenLite.to(article, 0, {height:newWindowH});
 	}
@@ -125,11 +115,11 @@ $( document ).ready(function() {
 		var eventSection = $('.eventSlider-wrap');
 		var sidebarBtn = $('#sidebarBtn');
 
-		TweenMax.fromTo(eventSection, 1.2, 
-			{y:600, ease:Power4.easeInOut}, 
+		TweenMax.fromTo(eventSection, 1, 
+			{y:500, ease:Power4.easeInOut}, 
 			{y:0, ease:Power4.easeOut, delay: 0.5});
-		TweenMax.fromTo(tabsBar, 1.2, 
-			{y:600, ease:Power4.easeInOut}, 
+		TweenMax.fromTo(tabsBar, 1, 
+			{y:500, ease:Power4.easeInOut}, 
 			{y:0, ease:Power4.easeOut, delay: 0.5});
 		TweenMax.fromTo(sidebarBtn, 1, 
 			{x:-100, ease:Power4.easeInOut}, 
@@ -161,22 +151,6 @@ $( document ).ready(function() {
 		var section = $('section.city');
 	    TweenLite.to(section, 0, {width:halfW, height:halfH});
 	}
-
-	// Give half of the height without header to each section inside active city
-	function childSectionSize(){
-		var newWindowH = ($(window).height() - '75') / 2 + 'px'
-		var introSection = $('.cityIntro');
-		var eventSection = $('.eventSlider-wrap');
-		var article = $('.eventSlider-wrap article');
-		var tabBar = $('section.event ul');
-    	var windowW = $(window).width();
-
-	    TweenLite.to(introSection, 0, {width:windowW, height:newWindowH});
-	    TweenLite.to(eventSection, 0, {width:windowW, height:newWindowH});
-	    TweenLite.to(tabBar, 0, {width:windowW});
-	    TweenLite.to(article, 0, {height:newWindowH});
-	}
-
 
 	// to open the sidebar
 	function openSidebar() {
@@ -240,6 +214,45 @@ $( document ).ready(function() {
 		});
 	}
 
+	// to load each event html with ajax
+	function loadEvent(e) {
+		e.preventDefault();
+
+		var thisImg = $(this).parent('.onHover').siblings('img');
+		var thisEvent = thisImg.attr("alt") + '.html';
+
+		var theCity = $('body').find('section.active').attr('id');
+		var theFile = 'events/' + theCity + '/' + thisEvent;
+
+		$.ajax({
+            url: theFile,
+            success: function(data){
+                $('section.active').html(data);
+            }	
+        });
+	}
+
+	// to close single-event and load back the current city
+	function closeEvent(e) {
+		e.preventDefault();
+		var theEvent = $('.single-event');
+		var theCity = $('body').find('section.active').attr('id') + '.html';
+		theEvent.remove();
+		$.ajax({
+            url: theCity,
+            success: function(data){
+                $('section.active').html(data);
+                darken();
+    			childSectionSize();
+    			makeitAppear();
+    			manageHover();
+    			imgSize();
+    			horizontalScroll();
+            }	
+        });
+	}
+
+
 	// to open the submit form
 	function openForm(e) {
 		e.preventDefault();
@@ -274,8 +287,8 @@ $( document ).ready(function() {
 				    description: description,
 				    location: location,
 				    date: date,                        
-				    start_time: startTime, // Example Start Date
-				    end_time: endTime // Example End Date
+				    start_time: startTime, 
+				    end_time: endTime 
 				};
 
 				FB.api('/122302261207062/events', 'post', event, function (result) {
@@ -288,13 +301,10 @@ $( document ).ready(function() {
         return false; // j'empêche le navigateur de soumettre lui-même le formulaire
     });
 
-	function horizontalScroll() {
+	function horizontalScroll(event) {
 		$(".eventSlider-wrap").mousewheel(function(event, delta) {
-
 	      this.scrollLeft -= (delta * 2);
-	    
 	      event.preventDefault();
-
 	    });
 	}
 
