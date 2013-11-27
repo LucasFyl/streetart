@@ -294,8 +294,10 @@ $( document ).ready(function() {
 				};
 
 				FB.api('/122302261207062/events', 'post', event, function (result) {
-						alert("We have successfully created a Facebook event with ID: "+response.id);
-				});            }
+				    alert("We have successfully created a Facebook event with ID: " + result.id + "you can access it through this link : <a href='http://facebook.com/"+result.id+"'></a>");						
+				});
+                // alert(html); j'affiche cette réponse
+            }
         });
 
         return false; // j'empêche le navigateur de soumettre lui-même le formulaire
