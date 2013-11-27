@@ -136,21 +136,12 @@ body {
   opacity: 0;
 }
 .close {
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   display: block;
   position: absolute;
   text-decoration: none;
-}
-.close:before {
-  width: 30px;
-  content: "\f00d";
-  font-family: 'FontAwesome';
-  color: white;
-  display: block;
-  font-size: 1.3em;
-  text-align: center;
-  line-height: 30px;
+  background: url('../img/close.png') no-repeat;
 }
 .black {
   position: absolute;
@@ -549,17 +540,8 @@ section#form h2 {
   margin-left: 50px;
 }
 section#form .close {
-  right: 50px;
-}
-section#form .close:before {
-  width: 30px;
-  content: "\f00d";
-  font-family: 'FontAwesome';
-  color: white;
-  display: block;
-  font-size: 1.3em;
-  text-align: center;
-  line-height: 30px;
+  top: 90px;
+  right: 20px;
 }
 section#form #leftSide {
   display: inline-block;
