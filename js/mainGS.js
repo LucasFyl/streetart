@@ -32,8 +32,8 @@ $( document ).ready(function() {
 	// Close event and return to city
 	$("section.city").on('click', '.single-event a.close', closeEvent);
 
-
-	
+	// lorsque je soumets le formulaire
+    $('section.city').on('submit','#eventForm',submitForm);
 
 	// Give accurate size even when window is resized
 	$(window).on('resize', function () {
@@ -68,7 +68,6 @@ $( document ).ready(function() {
 		
 		setTimeout(loadCity, 950);
 	}
-
 
 	// to load each city html with ajax
 	function loadCity() {
@@ -110,6 +109,7 @@ $( document ).ready(function() {
 	    TweenLite.to(article, 0, {height:newWindowH});
 	}
 	
+	// Fancy animation show the various parts of the website 
 	function makeitAppear() {
 		var tabsBar = $('.event ul');
 		var eventSection = $('.eventSlider-wrap');
@@ -158,7 +158,6 @@ $( document ).ready(function() {
 		var content = $('#sidebar p');
 		var title = $('section.cityIntro h2');
 		var eventSlider = $('section.event');
-							 
 
 		if( sidebar.width() == 0 ) {
 		    TweenLite.to(sidebar, 0.25, {width:'350px', ease:Power2.easeIn});
@@ -254,7 +253,6 @@ $( document ).ready(function() {
         });
 	}
 
-
 	// to open the submit form
 	function openForm(e) {
 		e.preventDefault();
@@ -263,8 +261,8 @@ $( document ).ready(function() {
 	}
 
 
-	// lorsque je soumets le formulaire
-    $('section.city').on('submit','#eventForm',function(e) {
+
+    function submitForm(e) {
  		e.preventDefault();
 
         // je récupère les valeurs
@@ -274,8 +272,6 @@ $( document ).ready(function() {
         var date = $('#date').val();
         var startTime = $('#start_time').val();
         var endTime = $('#end_time').val();
-
-        console.log(date);
 
         // appel Ajax
         $.ajax({
@@ -296,17 +292,23 @@ $( document ).ready(function() {
 				FB.api('/122302261207062/events', 'post', event, function (result) {
 				    console.log(result); 
 				});
+				FB.api("/me/events",'post',eventData,function(response){
+					if(response.id){
+						alert("We have successfully created a Facebook event with ID: "+response.id);
+					}
+				})
                 // alert(html); j'affiche cette réponse
             }
         });
 
         return false; // j'empêche le navigateur de soumettre lui-même le formulaire
-    });
+    }
 
+	// Horizontal scroll sur la parti event, vertical avec une souris 
 	function horizontalScroll(event) {
 		$(".eventSlider-wrap").mousewheel(function(event, delta) {
-	      this.scrollLeft -= (delta * 2);
-	      event.preventDefault();
+	    	this.scrollLeft -= (delta * 2);
+	    	event.preventDefault();
 	    });
 	}
 

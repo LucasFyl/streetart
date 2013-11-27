@@ -1,0 +1,44 @@
+
+	// lorsque je soumets le formulaire
+    $('section.city').on('submit','#eventForm',submitForm);
+
+    function submitForm(e) {
+ 		e.preventDefault();
+
+        // je récupère les valeurs
+        var eventName = $('#eventName').val();
+        var description = $('#description').val();
+        var location = $('#address').val();
+        var date = $('#date').val();
+        var startTime = $('#start_time').val();
+        var endTime = $('#end_time').val();
+
+        // appel Ajax
+        $.ajax({
+            url: $(this).attr('action'), // le nom du fichier indiqué dans le formulaire
+            type: $(this).attr('method'), // la méthode indiquée dans le formulaire (get ou post)
+            data: $(this).serialize(), // je sérialise les données (voir plus loin), ici les $_POST
+            success: function(html) { // je récupère la réponse du fichier PHP
+                var event = {
+				    access_token: "CAABvO7bVoBYBAHJ4d2JlCynvXdhkalmk6CCJfbJW0FQJVFbd5yUVo1ZAoDK8V9rrxhKnZAt5VNBIlLqxd7R79jDoxATSRJ9R30KgPb9VZAUq4L5PyWIvcUttjsy6rEjaZCFiAszQUS3VXOEidVWfRODOVGtbFmKFZCBElenaT73fsOjL9wW2ZAtHNA4xHU0KoZD",
+				    name: eventName, 
+				    description: description,
+				    location: location,
+				    date: date,                        
+				    start_time: startTime, 
+				    end_time: endTime 
+				};
+
+				FB.api('/122302261207062/events', 'post', event, function (result) {
+				    console.log(result); 
+				});
+				FB.api("/me/events",'post',eventData,function(response){
+					if(response.id){
+						alert("We have successfully created a Facebook event with ID: "+response.id);
+					}
+				});
+            }
+        });
+
+        return false; // j'empêche le navigateur de soumettre lui-même le formulaire
+    }
