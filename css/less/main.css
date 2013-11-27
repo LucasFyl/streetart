@@ -277,6 +277,19 @@ section.city > a {
   bottom: 0;
   margin: auto;
 }
+.audiojs {
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  right: 0;
+  top: 80px;
+  z-index: 999;
+  background: none;
+}
+.audiojs .scrubber,
+.audiojs .time {
+  display: none;
+}
 section.city.active {
   z-index: 99;
   background-size: 100% !important;

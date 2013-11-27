@@ -79,6 +79,10 @@ $( document ).ready(function() {
                 darken();
     			childSectionSize();
     			makeitAppear();
+
+    			audiojs.events.ready(function() {
+				  var as = audiojs.createAll();
+				});
     			manageHover();
     			imgSize();
     			horizontalScroll();
@@ -290,15 +294,8 @@ $( document ).ready(function() {
 				};
 
 				FB.api('/122302261207062/events', 'post', event, function (result) {
-				    console.log(result); 
-				});
-				FB.api("/me/events",'post',eventData,function(response){
-					if(response.id){
 						alert("We have successfully created a Facebook event with ID: "+response.id);
-					}
-				})
-                // alert(html); j'affiche cette réponse
-            }
+				});            }
         });
 
         return false; // j'empêche le navigateur de soumettre lui-même le formulaire

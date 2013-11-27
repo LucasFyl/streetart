@@ -105,7 +105,11 @@
       <script type="text/javascript" src="js/jquery.fancy-photoset.min.js"></script>
       <!-- Mousewheel prends en charge le scroll dans la section event -->
       <script src="js/jquery.mousewheel.js"></script>
+      <!-- audiojs for  cross browser compatibility -->
+      <script src="js/audiojs/audio.js"></script>
       <!-- fichier JS principal -->
       <script src="js/mainGS.js"></script>
+
+
   </body>
 </html>
