@@ -20,7 +20,7 @@ $( document ).ready(function() {
 	
 	// Open / Close Video
 	$('section.city').on('click', '#sidebar h3', openVideo);
-	$('section.city').on('click', "#fancybox-overlay a.close", closeVideo);
+	$('#fancybox-overlay').on('click', "a.close", closeVideo);
 
 
 
@@ -85,7 +85,6 @@ $( document ).ready(function() {
                 darken();
     			childSectionSize();
     			makeitAppear();
-
     			audiojs.events.ready(function() {
 				  var as = audiojs.createAll();
 				});
@@ -318,6 +317,7 @@ $( document ).ready(function() {
 	}
 
 	function initializeYtApi() {
+		console.log('hey');
 		// Load the IFrame Player API code asynchronously.
 		var tag = document.createElement('script');
 		tag.src = "https://www.youtube.com/player_api";
@@ -335,25 +335,31 @@ $( document ).ready(function() {
 			});
 		}	
 	}
+	
+	// to be able to remove dom elements
+	Element.prototype.remove = function() {
+	    this.parentElement.removeChild(this);
+	}
+	NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+	    for(var i = 0, len = this.length; i < len; i++) {
+	        if(this[i] && this[i].parentElement) {
+	            this[i].parentElement.removeChild(this[i]);
+	        }
+	    }
+	}
 
+	// Open and Close video overlay
 	function openVideo() {
-
-		var overlay = $('body').find("#fancybox-overlay");
-
-		overlay.html('<a class="close" href="#"></a><div id="ytplayer"></div>');
-
 		initializeYtApi();
-
+		var overlay = $('body').find("#fancybox-overlay");
+		overlay.html('<a class="close" href="#"></a><div id="ytplayer"></div>');
 		overlay.fadeIn();
 	}
-	
 	function closeVideo(e) {
 		e.preventDefault();
-		var overlay = $('body').find("#fancybox-overlay");
-
-		overlay.remove();
-
-		$('body').html('<div id="#fancybox-overlay"></div>');
+		var _this = $(this);
+		var parent = _this.parent('div');
+		parent.empty().fadeOut();
 	}
 
 });
