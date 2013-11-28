@@ -315,6 +315,12 @@ section.city {
     }
 }
 
+#fancybox-overlay  a.close {
+    z-index: 99999;
+    top: 80px; right: 10px;
+    // cursor: pointer;
+}
+
 section.city.active {
     z-index: 99;
     background-size: 100% !important;
@@ -355,14 +361,61 @@ section.city.active {
                 margin: 0;
             }
         }
-
-        p {
-            padding: 5%;
-            width: 85%;
+        span {
             display: none;
-            color: lightgray;
-            font-size: .9em;
+
+            p {
+                padding: 5%;
+                width: 85%;
+                color: lightgray;
+                font-size: .9em;
+            }
+
+            h3 {
+                font-weight: 200;
+                letter-spacing: 1px;
+                color: @yellow;
+                width: 200px;
+                border: 1px solid @yellow;
+                line-height: 50px;
+                text-align: center;
+                border-radius: 3px;
+                margin: 0 auto;
+                cursor: pointer;
+                .transition();  
+
+                &:hover {
+                    background: @yellow;
+                    color: black;
+                    font-weight: 400;
+                    .transition();
+                }
+            }
         }
+        
+
+        // a.playYoutube {
+        //     width: 30px; height: 30px;
+        //     text-decoration: none;
+        //     border-radius: 100%;
+        //     border: 2px solid @yellow;
+        //     display: block;
+        //     margin-left: 5%;
+        //     // top: 0; left: 0; right: 0; bottom: 0;
+        //     // margin: auto; margin-top: 150px;
+
+        //     &:after {
+        //         width: 30px;
+        //         content: "\f04b";
+        //         font-family:'FontAwesome';
+        //         color: @yellow;
+        //         display: block;
+        //         font-size: 1em;
+        //         text-align: center;
+        //         line-height: 2em;
+        //         padding-left: 1px;
+        //     }
+        // }
     }
     
 
@@ -379,38 +432,18 @@ section.city.active {
             font-size: 1.75em;
             color: @yellow;
             text-align: center;
-            padding-top: 25px;
+            padding-top: 75px;
             position: absolute;
             top: 0;left: 0;right: 0;bottom: 0;
             margin: auto;
             
             span {
-                width: 250px; height: 50px;
+                width: 220px; height: 43px;
                 display: block;
                 position: absolute;
                 top: 0; left: 0; right: 0;bottom: 0;
                 margin: auto;   
-                border-top: 1px solid white;
-            }
-        }
-
-        a.playYoutube {
-            width: 30px; height: 30px;
-            position: absolute;
-            text-decoration: none;
-            border-radius: 100%;
-            border: 2px solid @yellow;
-
-            &:after {
-                width: 30px;
-                content: "\f04b";
-                font-family:'FontAwesome';
-                color: @yellow;
-                display: block;
-                font-size: 1em;
-                text-align: center;
-                line-height: 30px;
-                padding-left: 1px;
+                border-bottom: 1px solid white;
             }
         }
     }
@@ -484,10 +517,6 @@ section.city.active {
 
                     img {
                         display: block;
-                        // width: auto;
-                        // position: absolute;
-                        // top: 0; left:0; right: 0; bottom:0;
-                        // margin: auto;
                         margin: 0 auto;
                         z-index: 98;
                     }

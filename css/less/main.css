@@ -281,6 +281,11 @@ section.city > a {
 .audiojs .time {
   display: none;
 }
+#fancybox-overlay a.close {
+  z-index: 99999;
+  top: 80px;
+  right: 10px;
+}
 section.city.active {
   z-index: 99;
   background-size: 100% !important;
@@ -320,12 +325,41 @@ section.city.active div#sidebar div#sidebarBtn img {
   display: block;
   margin: 0;
 }
-section.city.active div#sidebar p {
+section.city.active div#sidebar span {
+  display: none;
+}
+section.city.active div#sidebar span p {
   padding: 5%;
   width: 85%;
-  display: none;
   color: lightgray;
   font-size: .9em;
+}
+section.city.active div#sidebar span h3 {
+  font-weight: 200;
+  letter-spacing: 1px;
+  color: #f39c12;
+  width: 200px;
+  border: 1px solid #f39c12;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 3px;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+section.city.active div#sidebar span h3:hover {
+  background: #f39c12;
+  color: black;
+  font-weight: 400;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
 }
 section.city.active section.cityIntro {
   margin-top: 75px;
@@ -341,7 +375,7 @@ section.city.active section.cityIntro h2 {
   font-size: 1.75em;
   color: #f39c12;
   text-align: center;
-  padding-top: 25px;
+  padding-top: 75px;
   position: absolute;
   top: 0;
   left: 0;
@@ -350,8 +384,8 @@ section.city.active section.cityIntro h2 {
   margin: auto;
 }
 section.city.active section.cityIntro h2 span {
-  width: 250px;
-  height: 50px;
+  width: 220px;
+  height: 43px;
   display: block;
   position: absolute;
   top: 0;
@@ -359,26 +393,7 @@ section.city.active section.cityIntro h2 span {
   right: 0;
   bottom: 0;
   margin: auto;
-  border-top: 1px solid white;
-}
-section.city.active section.cityIntro a.playYoutube {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  text-decoration: none;
-  border-radius: 100%;
-  border: 2px solid #f39c12;
-}
-section.city.active section.cityIntro a.playYoutube:after {
-  width: 30px;
-  content: "\f04b";
-  font-family: 'FontAwesome';
-  color: #f39c12;
-  display: block;
-  font-size: 1em;
-  text-align: center;
-  line-height: 30px;
-  padding-left: 1px;
+  border-bottom: 1px solid white;
 }
 section.city.active section.event {
   display: block;

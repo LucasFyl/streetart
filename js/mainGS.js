@@ -17,6 +17,12 @@ $( document ).ready(function() {
 
 	// Open / Close Sidebar
 	$('section.city').on('click', '#sidebarBtn', openSidebar);
+	
+	// Open / Close Video
+	$('section.city').on('click', '#sidebar h3', openVideo);
+	$('section.city').on('click', "#fancybox-overlay a.close", closeVideo);
+
+
 
 	// tabs on main page
 	$('section.city').on('click', '#main', mainFirst);
@@ -159,7 +165,7 @@ $( document ).ready(function() {
 	// to open the sidebar
 	function openSidebar() {
 		var sidebar = $('#sidebar');
-		var content = $('#sidebar p');
+		var content = $('#sidebar span'); 
 		var title = $('section.cityIntro h2');
 		var eventSlider = $('section.event');
 
@@ -309,6 +315,45 @@ $( document ).ready(function() {
 	    	this.scrollLeft -= (delta * 2);
 	    	event.preventDefault();
 	    });
+	}
+
+	function initializeYtApi() {
+		// Load the IFrame Player API code asynchronously.
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/player_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		// Replace the 'ytplayer' element with an <iframe> and
+		// YouTube player after the API code downloads.
+		var player;
+		function onYouTubePlayerAPIReady() {
+			player = new YT.Player('ytplayer', {
+			  height: '390',
+			  width: '640',
+			  videoId: 'zCixN0s3f5A'
+			});
+		}	
+	}
+
+	function openVideo() {
+
+		var overlay = $('body').find("#fancybox-overlay");
+
+		overlay.html('<a class="close" href="#"></a><div id="ytplayer"></div>');
+
+		initializeYtApi();
+
+		overlay.fadeIn();
+	}
+	
+	function closeVideo(e) {
+		e.preventDefault();
+		var overlay = $('body').find("#fancybox-overlay");
+
+		overlay.remove();
+
+		$('body').html('<div id="#fancybox-overlay"></div>');
 	}
 
 });
