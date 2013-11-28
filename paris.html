@@ -1,22 +1,15 @@
-        <audio src="mp3/paris-sous-les-bombes.mp3" preload="none"/>
+        <audio src="mp3/Daydream.mp3" preload="auto" autoplay="true" />
 
         <div id="sidebar">
             <div id="sidebarBtn">
                 <img src="images/paris/parisIcon.png" alt="#">
-                </div>
-                <p>Paris, ville du croissant et du béret tricolore ! </br> 
-                    Depuis les années 60, les grapheurs y exercent leurs talents jusqu’à l’aurore. </br> 
-                    Parfois humoristique, parfois poétique, les œuvres sont toujours accrocheuses et souvent à double sens!</br> 
-                    Début 1980, le street-art, de par son aspect illégal et clandestin intéresse les artistes à outrance.</br> 
-                    Aujourd’hui, le mouvement n’émet aucun signe de fatigue et n’a toujours pas faibli. </br> 
-                    A Paris,  le street-art a de beau jour devant lui ! 
-    </p>
+            </div>
+            <p>ertzgfarzgfreaetra cursus tortor vel mollis. Integer sit amet sodales sem. Ut molestie eu nisi quis dictum. Fusce hendrerit urna sed sem blandit mattis. Fusce tempus laoreet venenatis. Vestibulum rutrum vitae mauris et tincidunt. Cras odio mi, ultrices ut molestie vitae, varius rutrum dui. Etiam elementum nisi in metus ullamcorper, eu gravida massa mattis. Donec sem felis, eleifend a viverra vitae, eleifend in ante. Mauris ornare cursus ligula, nec hendrerit metus sagittis ac.</p>
         </div>
         
         <section id='form' class="hidden">
             <a href="#" class="close" id="closeForm"></a>
             <h2>Add new event</h2>
-            <div id="leftSide">
                 <form id="eventForm" action="submit.php" method="post">
                     <label for="eventName">Name of the event:</label>
                     <input type="text" id="eventName" name="eventName" required="required"><br/>
@@ -28,36 +21,38 @@
                     <input type="text" id="address" name="location" required="required"><br/>
                     
                     <label for="date">Date:</label>
-                    <input type="date" max="2014-12-31" min="2013-01-01" id="date" name="date" required="required" val="<?php echo date('Y-m-d H:i:s'); ?>"><br/>
+                    <input type="date" max="2014-12-31" min="2013-01-01" id="date" name="date" required="required" val="<?php echo date('Y-m-d'); ?>"><br/>
                     
                     <label for="">Start Time</label>
                     <input type="time" name="start_time" id="start_time" value="<?php echo date('Y-m-d H:i:s'); ?>" /><br/>
                     <label for="end_time">End Time</label>
                     <input type="time" name="end_time" id="end_time" value="<?php echo date('Y-m-d H:i:s'); ?>" /><br/>
                     <input type="submit" value="send" />
-                </form>
-            </div>
 
-            <div id="rightSide">
-
-                <h3>Gallerie photo:</h3>
+                <h3 id="title">Gallerie photo:</h3>
                 
-                <div class="submitFile">
-                    <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
-                </div>
-                <div class="submitFile">
-                    <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
-                </div>
-                <div class="submitFile">
-                    <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
-                </div>
-                
-            </div>
+                <ul id="submitFile">
+                    <li>
+                        <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                        </div>
+                    </li>
+            </form>
         </section>
 
         <section class="cityIntro">
             <h2>your events, in your city, </br> with your friends<span></span></h2>
-            <a href="#" class="playYoutube"></a>
+            
         </section>
         
 

@@ -268,7 +268,7 @@ $( document ).ready(function() {
 
     function submitForm(e) {
  		e.preventDefault();
- 		
+
         // je récupère les valeurs
         var eventName = $('#eventName').val();
         var description = $('#description').val();
@@ -294,7 +294,7 @@ $( document ).ready(function() {
 				};
 
 				FB.api('/122302261207062/events', 'post', event, function (result) {
-				    alert("We have successfully created a Facebook event with ID: " + result.id + "you can access it through this link : http://facebook.com/"+result.id+"'></a>");						
+				    alert("We have successfully created a Facebook event with ID: " + result.id + "you can access it through this link : <a href='http://facebook.com/"+result.id+"'></a>");						
 				});
                 // alert(html); j'affiche cette réponse
             }
