@@ -22,8 +22,6 @@ $( document ).ready(function() {
 	$('section.city').on('click', '#sidebar h3', openVideo);
 	$('#fancybox-overlay').on('click', "a.close", closeVideo);
 
-
-
 	// tabs on main page
 	$('section.city').on('click', '#main', mainFirst);
 	$('section.city').on('click', '#friends', friendsFirst);
@@ -40,6 +38,9 @@ $( document ).ready(function() {
 
 	// lorsque je soumets le formulaire
     $('section.city').on('submit','#eventForm',submitForm);
+
+	// page Artists of the week
+    $('.list h2').click(tabsOnWeek);
 
 	// Give accurate size even when window is resized
 	$(window).on('resize', function () {
@@ -316,25 +317,15 @@ $( document ).ready(function() {
 	    });
 	}
 
-	function initializeYtApi() {
-		console.log('hey');
-		// Load the IFrame Player API code asynchronously.
-		var tag = document.createElement('script');
-		tag.src = "https://www.youtube.com/player_api";
-		var firstScriptTag = document.getElementsByTagName('script')[0];
-		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-		// Replace the 'ytplayer' element with an <iframe> and
-		// YouTube player after the API code downloads.
-		var player;
-		function onYouTubePlayerAPIReady() {
-			player = new YT.Player('ytplayer', {
-			  height: '390',
-			  width: '640',
-			  videoId: 'zCixN0s3f5A'
-			});
-		}	
-	}
+	function onYouTubePlayerAPIReady() {
+		console.log('heyyyy');
+		player = new YT.Player('ytplayer', {
+		  height: '390',
+		  width: '640',
+		  videoId: 'zCixN0s3f5A'
+		});
+	}	
 	
 	// to be able to remove dom elements
 	Element.prototype.remove = function() {
@@ -354,12 +345,26 @@ $( document ).ready(function() {
 		var overlay = $('body').find("#fancybox-overlay");
 		overlay.html('<a class="close" href="#"></a><div id="ytplayer"></div>');
 		overlay.fadeIn();
+		onYouTubePlayerAPIReady();
 	}
 	function closeVideo(e) {
 		e.preventDefault();
 		var _this = $(this);
 		var parent = _this.parent('div');
 		parent.empty().fadeOut();
+	}
+
+	function tabsOnWeek() {
+		console.log('heyy');
+		$('.list h2').removeClass('active');
+		$(this).addClass('active');
+
+		var previous = $('#artists-list');
+		var challengers = $('#artists-list');
+	
+		// function previousArtists() {
+
+		// }
 	}
 
 });

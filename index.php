@@ -31,6 +31,19 @@
                   $('#preloader').delay(350).fadeOut('slow'); 
                   $('body').delay(350).css({'overflow':'visible'});
               })
+
+                function initializeYtApi() {
+                  console.log('hey');
+                  // Load the IFrame Player API code asynchronously.
+                  var tag = document.createElement('script');
+                  tag.src = "https://www.youtube.com/player_api";
+                  var firstScriptTag = document.getElementsByTagName('script')[0];
+                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                  // Replace the 'ytplayer' element with an <iframe> and
+                  // YouTube player after the API code downloads.
+                  var player;
+                }
           //]]>
       </script>
   </head>
@@ -95,8 +108,6 @@
                   <a href="#">london</a> 
               </section>
       </div>
-      
-
       
       <!--CDN link for the latest TweenMax-->
       <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>

@@ -1110,23 +1110,31 @@ section#form input[type="submit"]:hover {
 #artistWinner #galleryWinner ul li img {
   height: 100%;
 }
-#artists-list {
+.list {
   width: 1000px;
   margin: 0 auto;
 }
-#artists-list h2 {
+.list h2 {
   margin: 50px 0;
   color: #000000;
-  font-size: 1.6em;
+  font-size: 1.5em;
   font-weight: 200;
+  display: inline-block;
+  cursor: pointer;
 }
-#artists-list ul {
+.list > h2 {
+  margin-right: 25px;
+}
+.list h2.selected {
+  color: #f39c12;
+}
+.list ul {
   width: 1000px;
   margin: 0 auto;
   padding: 0;
   list-style-type: none;
 }
-#artists-list ul li {
+.list ul li {
   float: left;
   width: 250px;
   margin-left: 125px;
@@ -1134,31 +1142,31 @@ section#form input[type="submit"]:hover {
   color: #000000;
   text-align: center;
 }
-#artists-list ul li:first-child,
-#artists-list ul li:nth-child(4),
-#artists-list ul li:nth-child(7),
-#artists-list ul li:nth-child(10) {
+.list ul li:first-child,
+.list ul li:nth-child(4),
+.list ul li:nth-child(7),
+.list ul li:nth-child(10) {
   margin-left: 0px;
 }
-#artists-list ul li img {
+.list ul li img {
   max-width: 250px;
   border-radius: 100%;
 }
-#artists-list ul li .name {
+.list ul li .name {
   margin-bottom: 0;
 }
-#artists-list ul li .vue,
-#artists-list ul li .like {
+.list ul li .vue,
+.list ul li .like {
   padding-left: 30px;
   font-size: 0.85em;
   float: left;
 }
-#artists-list ul li .vue {
+.list ul li .vue {
   background: url('../img/vue.png') no-repeat 0px 6px;
   padding-right: 15px;
   margin-left: 65px;
 }
-#artists-list ul li .like {
+.list ul li .like {
   background: url('../img/like.png') no-repeat 0px 4px;
 }
 /* ==========================================================================

@@ -628,7 +628,7 @@ section.city.active {
 }
 
 /** SUBMIT-EVENT **/
-    section#form{
+section#form{
     width: 100% !important;
     height: 100%;
     padding-top: 75px;
@@ -1230,15 +1230,23 @@ section.city.active {
         }
     }
 }
-#artists-list {
+.list {
     width: 1000px;
     margin: 0 auto;
 
     h2 {
         margin: 50px 0;
         color: @black;
-        font-size: 1.6em;
+        font-size: 1.5em;
         font-weight: 200; 
+        display: inline-block;
+        cursor: pointer;
+    }
+    > h2 {
+        margin-right: 25px;
+    }
+    h2.selected {
+        color: @yellow;
     }
     ul {
         width: 1000px;
