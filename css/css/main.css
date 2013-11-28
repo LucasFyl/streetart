@@ -281,6 +281,11 @@ section.city > a {
 .audiojs .time {
   display: none;
 }
+#fancybox-overlay a.close {
+  z-index: 99999;
+  top: 80px;
+  right: 10px;
+}
 section.city.active {
   z-index: 99;
   background-size: 100% !important;
@@ -320,12 +325,41 @@ section.city.active div#sidebar div#sidebarBtn img {
   display: block;
   margin: 0;
 }
-section.city.active div#sidebar p {
+section.city.active div#sidebar span {
+  display: none;
+}
+section.city.active div#sidebar span p {
   padding: 5%;
   width: 85%;
-  display: none;
   color: lightgray;
   font-size: .9em;
+}
+section.city.active div#sidebar span h3 {
+  font-weight: 200;
+  letter-spacing: 1px;
+  color: #f39c12;
+  width: 200px;
+  border: 1px solid #f39c12;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 3px;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+section.city.active div#sidebar span h3:hover {
+  background: #f39c12;
+  color: black;
+  font-weight: 400;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
 }
 section.city.active section.cityIntro {
   margin-top: 75px;
@@ -350,8 +384,8 @@ section.city.active section.cityIntro h2 {
   margin: auto;
 }
 section.city.active section.cityIntro h2 span {
-  width: 250px;
-  height: 2px;
+  width: 220px;
+  height: 43px;
   display: block;
   position: absolute;
   top: 0;
@@ -359,7 +393,6 @@ section.city.active section.cityIntro h2 span {
   right: 0;
   bottom: 0;
   margin: auto;
-  padding-top: 56px;
   border-bottom: 1px solid white;
 }
 section.city.active section.event {
@@ -1299,25 +1332,39 @@ section#form #galleryForm {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 640px) {
-  #home {
-    background: red !important;
-  }
   section#paris {
-    background-size: 100% 100% !important;
+    float: left;
   }
-  section.city.active {
+  section#paris .cityIntro {
     background: url('../img/paris.jpg') no-repeat;
+  }
+  section#new-york {
+    float: left;
+  }
+  section#new-york .cityIntro {
+    background: url('../img/NY.jpg') no-repeat;
+  }
+  section#berlin {
+    float: left;
+  }
+  section#berlin .cityIntro {
+    background: url('../img/berlin.jpg') no-repeat;
+  }
+  section#london {
+    float: left;
+  }
+  section#london .cityIntro {
+    background: url('../img/london.jpg') no-repeat;
   }
   div#sidebarBtn {
     margin-top: -105px !important;
-    background: red;
   }
   section.event ul {
     width: 100% !important;
     min-width: 640px !important;
   }
   section.event ul li #create {
-    right: 0;
+    float: none;
   }
   .main .eventSlider {
     display: inline-block;
