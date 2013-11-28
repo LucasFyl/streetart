@@ -572,7 +572,8 @@ section#form {
   background-size: cover;
 }
 section#form h2 {
-  font-weight: 300px;
+  font-weight: 200;
+  text-transform: uppercase;
   font-size: 26px;
   margin-left: 50px;
 }
@@ -581,13 +582,12 @@ section#form .close {
   right: 20px;
 }
 section#form form {
-  margin-left: 65px;
+  margin-left: 45px;
   overflow: auto;
   display: inline-block;
   vertical-align: top;
 }
 section#form form #title {
-  position: absolute;
   top: 100px;
   left: 690px;
   width: 130px;
@@ -621,7 +621,7 @@ section#form ul#submitFile {
   list-style: none;
   position: absolute;
   float: left;
-  top: 130px;
+  top: 95px;
   left: 640px;
 }
 section#form ul#submitFile li {
@@ -681,6 +681,14 @@ section#form input[type="submit"]:hover {
   -ms-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
+}
+section#form #fromWrap {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+section#form #galleryForm {
+  float: right;
 }
 .single-artist {
   background: url('../img/back_artist.jpg') no-repeat;
@@ -786,7 +794,7 @@ section#form input[type="submit"]:hover {
 .single-event a.close {
   left: 50%;
   margin-left: -15px;
-  top: 100px;
+  top: 10px;
 }
 .single-event article.event {
   display: block;
@@ -1333,24 +1341,41 @@ section#form input[type="submit"]:hover {
 }
 @media screen and (min-width: 320px) and (max-width: 640px) {
   #home {
-    background: red !important;
+    position: none;
   }
   section#paris {
-    background-size: 100% 100% !important;
+    float: left;
   }
-  section.city.active {
+  section#paris .cityIntro {
     background: url('../img/paris.jpg') no-repeat;
+  }
+  section#new-york {
+    float: left;
+  }
+  section#new-york .cityIntro {
+    background: url('../img/NY.jpg') no-repeat;
+  }
+  section#berlin {
+    float: left;
+  }
+  section#berlin .cityIntro {
+    background: url('../img/berlin.jpg') no-repeat;
+  }
+  section#london {
+    float: left;
+  }
+  section#london .cityIntro {
+    background: url('../img/london.jpg') no-repeat;
   }
   div#sidebarBtn {
     margin-top: -105px !important;
-    background: red;
   }
   section.event ul {
     width: 100% !important;
     min-width: 640px !important;
   }
   section.event ul li #create {
-    right: 0;
+    float: none;
   }
   .main .eventSlider {
     display: inline-block;
@@ -1363,5 +1388,26 @@ section#form input[type="submit"]:hover {
   }
   div.eventSlider {
     width: auto !important;
+  }
+  .single-event a.close {
+    left: 50%;
+    margin-left: -15px;
+    top: 10px;
+  }
+  .single-event article.event {
+    display: block;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    margin-top: -233px;
+  }
+  .single-event article.event section {
+    width: 1000px;
+    margin: 0 auto 50px;
+    overflow: auto;
+  }
+  .single-event article.event section p {
+    width: 100%;
   }
 }

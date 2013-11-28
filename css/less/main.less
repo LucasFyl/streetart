@@ -641,7 +641,8 @@ section#form{
             background-size: cover;
     
     h2{
-        font-weight: 300px;
+        font-weight: 200;
+        text-transform: uppercase;
         font-size: 26px;
         margin-left: 50px;
     }
@@ -652,13 +653,12 @@ section#form{
     }
         
     form{
-        margin-left: 65px;
+        margin-left: 45px;
         overflow: auto;
         display: inline-block;
         vertical-align: top;
 
         #title{
-            position: absolute;
             top: 100px;
             left: 690px;
             width: 130px;
@@ -696,7 +696,7 @@ section#form{
         list-style: none;
         position: absolute;
         float: left;
-        top: 130px;
+        top: 95px;
         left: 640px;
 
         li{
@@ -754,6 +754,15 @@ section#form{
             background: rgba(255, 255, 255, .5);
             .transition();
         }
+    }
+
+    #fromWrap{
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+    }
+    #galleryForm{
+        float: right;
     }
 }
 
@@ -874,7 +883,7 @@ section#form{
     a.close {
         left: 50%;
         margin-left: -15px;
-        top: 100px;
+        top: 10px;
 
     }
 
@@ -1481,24 +1490,44 @@ section#form{
 // ***** MEDIA QUERIES ***** //
 @media screen and (min-width: 320px) and (max-width: 640px) {
   #home {
-    background: red !important;
+    position: none;
   }
-  section#paris {
-    background-size: 100% 100% !important;
+  section#paris{
+    float: left;
+    .cityIntro{
+        background: url('../img/paris.jpg') no-repeat;
+    }
+  }
+    section#new-york{
+    float: left;
+    .cityIntro{
+        background: url('../img/NY.jpg') no-repeat;
+    }
+  }
+    section#berlin{
+    float: left;
+    .cityIntro{
+        background: url('../img/berlin.jpg') no-repeat;
+    }
+  }
+    section#london{
+    float: left;
+    .cityIntro{
+        background: url('../img/london.jpg') no-repeat;
+    }
   }
   section.city.active {
-    background: url('../img/paris.jpg') no-repeat;
+    
   }
   div#sidebarBtn {
     margin-top: -105px !important;
-    background: red;
   }
   section.event ul {
     width: 100% !important;
     min-width: 640px !important;
   }
   section.event ul li #create {
-    right: 0;
+    float: none;
   }
   .main .eventSlider {
     display: inline-block;
@@ -1512,4 +1541,31 @@ section#form{
   div.eventSlider {
     width: auto !important;
   }
+
+    .single-event {
+        a.close {
+            left: 50%;
+            margin-left: -15px;
+            top: 10px;
+        }
+
+        article.event {
+            display: block;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 50%;
+            margin-top: -233px;
+
+            section {
+                width: 1000px;
+                margin: 0 auto 50px;
+                overflow: auto;
+
+                p {
+                    width: 100%;
+                }
+            }
+        } 
+    }
 }
