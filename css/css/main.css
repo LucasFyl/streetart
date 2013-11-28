@@ -1332,6 +1332,9 @@ section#form #galleryForm {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 640px) {
+  #home {
+    position: none;
+  }
   section#paris {
     float: left;
   }
@@ -1377,5 +1380,26 @@ section#form #galleryForm {
   }
   div.eventSlider {
     width: auto !important;
+  }
+  .single-event a.close {
+    left: 50%;
+    margin-left: -15px;
+    top: 10px;
+  }
+  .single-event article.event {
+    display: block;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    margin-top: -233px;
+  }
+  .single-event article.event section {
+    width: 1000px;
+    margin: 0 auto 50px;
+    overflow: auto;
+  }
+  .single-event article.event section p {
+    width: 100%;
   }
 }

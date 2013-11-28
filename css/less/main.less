@@ -1482,6 +1482,7 @@ section.city.active {
 // ***** MEDIA QUERIES ***** //
 @media screen and (min-width: 320px) and (max-width: 640px) {
   #home {
+    position: none;
   }
   section#paris{
     float: left;
@@ -1532,4 +1533,31 @@ section.city.active {
   div.eventSlider {
     width: auto !important;
   }
+
+    .single-event {
+        a.close {
+            left: 50%;
+            margin-left: -15px;
+            top: 10px;
+        }
+
+        article.event {
+            display: block;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 50%;
+            margin-top: -233px;
+
+            section {
+                width: 1000px;
+                margin: 0 auto 50px;
+                overflow: auto;
+
+                p {
+                    width: 100%;
+                }
+            }
+        } 
+    }
 }
