@@ -338,10 +338,10 @@ section.city.active section.cityIntro h2 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 1.875em;
+  font-size: 1.75em;
   color: #f39c12;
   text-align: center;
-  padding-top: 75px;
+  padding-top: 25px;
   position: absolute;
   top: 0;
   left: 0;
@@ -351,7 +351,7 @@ section.city.active section.cityIntro h2 {
 }
 section.city.active section.cityIntro h2 span {
   width: 250px;
-  height: 2px;
+  height: 50px;
   display: block;
   position: absolute;
   top: 0;
@@ -359,8 +359,26 @@ section.city.active section.cityIntro h2 span {
   right: 0;
   bottom: 0;
   margin: auto;
-  padding-top: 56px;
-  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+section.city.active section.cityIntro a.playYoutube {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  text-decoration: none;
+  border-radius: 100%;
+  border: 2px solid #f39c12;
+}
+section.city.active section.cityIntro a.playYoutube:after {
+  width: 30px;
+  content: "\f04b";
+  font-family: 'FontAwesome';
+  color: #f39c12;
+  display: block;
+  font-size: 1em;
+  text-align: center;
+  line-height: 30px;
+  padding-left: 1px;
 }
 section.city.active section.event {
   display: block;
