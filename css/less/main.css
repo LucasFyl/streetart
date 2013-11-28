@@ -572,7 +572,8 @@ section#form {
   background-size: cover;
 }
 section#form h2 {
-  font-weight: 300px;
+  font-weight: 200;
+  text-transform: uppercase;
   font-size: 26px;
   margin-left: 50px;
 }
@@ -581,16 +582,16 @@ section#form .close {
   right: 20px;
 }
 section#form form {
-  margin-left: 65px;
+  margin-left: 45px;
   overflow: auto;
   display: inline-block;
   vertical-align: top;
 }
 section#form form #title {
-  position: absolute;
   top: 100px;
   left: 690px;
   width: 130px;
+  position: absolute;
 }
 section#form form label {
   float: left;
@@ -682,6 +683,15 @@ section#form input[type="submit"]:hover {
   -o-transition: all .5s ease;
   transition: all .5s ease;
 }
+section#form #fromWrap {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+section#form #galleryForm {
+  float: right;
+}
+/***  Page Single-artist  ***/
 .single-artist {
   background: url('../img/back_artist.jpg') no-repeat;
   background-color: #000000;
@@ -1119,14 +1129,6 @@ section#form input[type="submit"]:hover {
   color: #000000;
   font-size: 1.5em;
   font-weight: 200;
-  display: inline-block;
-  cursor: pointer;
-}
-.list > h2 {
-  margin-right: 25px;
-}
-.list h2.selected {
-  color: #f39c12;
 }
 .list ul {
   width: 1000px;

@@ -39,8 +39,6 @@ $( document ).ready(function() {
 	// lorsque je soumets le formulaire
     $('section.city').on('submit','#eventForm',submitForm);
 
-	// page Artists of the week
-    $('.list h2').click(tabsOnWeek);
 
 	// Give accurate size even when window is resized
 	$(window).on('resize', function () {
@@ -354,18 +352,7 @@ $( document ).ready(function() {
 		parent.empty().fadeOut();
 	}
 
-	function tabsOnWeek() {
-		console.log('heyy');
-		$('.list h2').removeClass('active');
-		$(this).addClass('active');
 
-		var previous = $('#artists-list');
-		var challengers = $('#artists-list');
-	
-		// function previousArtists() {
-
-		// }
-	}
 
 });
 
