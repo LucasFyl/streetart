@@ -1298,3 +1298,37 @@ section#form #galleryForm {
     page-break-after: avoid;
   }
 }
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  #home {
+    background: red !important;
+  }
+  section#paris {
+    background-size: 100% 100% !important;
+  }
+  section.city.active {
+    background: url('../img/paris.jpg') no-repeat;
+  }
+  div#sidebarBtn {
+    margin-top: -105px !important;
+    background: red;
+  }
+  section.event ul {
+    width: 100% !important;
+    min-width: 640px !important;
+  }
+  section.event ul li #create {
+    right: 0;
+  }
+  .main .eventSlider {
+    display: inline-block;
+  }
+  .main .eventSlider article {
+    clear: left;
+  }
+  .friends .eventSlider article {
+    clear: left;
+  }
+  div.eventSlider {
+    width: auto !important;
+  }
+}
