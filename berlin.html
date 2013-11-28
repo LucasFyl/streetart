@@ -3,13 +3,59 @@
             <div id="sidebarBtn">
                 <img src="images/berlin/berlinIcon.png" alt="#">
             </div>
-            <p>Ist es notwendig, Berlin zu präsentieren. In gut 23 Jahren hat sich die deutsche Hauptstadt einen Ruf als Hauptstadt der Straßenkunst gebaut. Wenn es um über dieser Bewegung kommt, benötigt Berlin ein wenig offensichtlich. Speaking in Berlin auf chronische Street-Art wird auch in eine Grube sinken, so gibt es viel zu sagen und was nicht zu vergessen. Ohne zu übertreiben, das ist nur aus dem Flughafen wir beginnen, den Kopf hinhalten.
-Anfang der 80er Jahre, wird die Wand ein Kommunikationsmedium mit Graffiti aller Art geworden. Heute ist das Reststück der Mauer hat sich zu einem Open-Air-Galerie.
-.</p>
+            <span>
+                <p> Ist es notwendig, Berlin zu präsentieren. In gut 23 Jahren hat sich die deutsche Hauptstadt einen Ruf als Hauptstadt der Straßenkunst gebaut. Wenn es um über dieser Bewegung kommt, benötigt Berlin ein wenig offensichtlich. Speaking in Berlin auf chronische Street-Art wird auch in eine Grube sinken, so gibt es viel zu sagen und was nicht zu vergessen. Ohne zu übertreiben, das ist nur aus dem Flughafen wir beginnen, den Kopf hinhalten.
+                Anfang der 80er Jahre, wird die Wand ein Kommunikationsmedium mit Graffiti aller Art geworden. Heute ist das Reststück der Mauer hat sich zu einem Open-Air-Galerie.
+                </p>
+                <h3>WATCH A TRAILER</h3>
+            </span>
         </div>
+ 
+        <section id='form' class="hidden">
+            <a href="#" class="close" id="closeForm"></a>
+            <h2>Add new event</h2>
+                <form id="eventForm" action="submit.php" method="post">
+                    <label for="eventName">Name of the event:</label>
+                    <input type="text" id="eventName" name="eventName" required="required"><br/>
+                    
+                    <label for="description">Description:</label>
+                    <input type="textarea" id="description" name="description" required="required"><br/>
+                    
+                    <label for="location">Adress:</label>
+                    <input type="text" id="address" name="location" required="required"><br/>
+                    
+                    <label for="date">Date:</label>
+                    <input type="date" max="2014-12-31" min="2013-01-01" id="date" name="date" required="required" val="<?php echo date('Y-m-d'); ?>"><br/>
+                    
+                    <label for="">Start Time</label>
+                    <input type="time" name="start_time" id="start_time" value="<?php echo date('Y-m-d H:i:s'); ?>" /><br/>
+                    <label for="end_time">End Time</label>
+                    <input type="time" name="end_time" id="end_time" value="<?php echo date('Y-m-d H:i:s'); ?>" /><br/>
+                    <input type="submit" value="send" />
 
+                <h3 id="title">Gallerie photo:</h3>
+                
+                <ul id="submitFile">
+                    <li>
+                        <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                        </div>
+                    </li>
+            </form>
+        </section>
+        
         <section class="cityIntro">
-            <h2>your events, in your city, </br> with your friends</h2>
+            <h2>Deine Events, in deiner Stadt,</br>mit deinen Freunden<span></span></h2>
         </section>
 
 
@@ -24,48 +70,107 @@ Anfang der 80er Jahre, wird die Wand ein Kommunikationsmedium mit Graffiti aller
             <div class="eventSlider-wrap">
                 <div class="eventSlider">
                     <article class="event1">
-                        <img src="images/berlin/events/01-yaam.jpg" alt="Street Art Meeting at YAAM">
+                        <img src="images/berlin/events/01-yaam.jpg" alt="Street-Art-Meeting-at-YAAM">
                          <div class="onHover">
                             <h3>Street Art Meeting at YAAM</h3>
                             <p class="date">10th - 13th Oct</p>
                             <p class="infos">This Event is a absolut must for everyone who is interested in Street Art: “The Street Art Meeting 2013“! An incredible line up of Street Artist working live !</p>
+                            <a href="#"></a>
                         </div>
                     </article>
                     <article class="event2">
-                        <img src="images/berlin/events/02-strokeart.jpg" alt="Stroke Art Fair">
+                        <img src="images/berlin/events/02-strokeart.jpg" alt="Stroke-Art-Fair">
                          <div class="onHover">
                             <h3>Stroke Art Fair</h3>
                             <p class="date">3rd - 6th Oct</p>
                             <p class="infos">The Stroke Art Fair is back in Berlin! In case you joined the Stroke last year or just read about it on our Blog, you know that there is no way for us to get around this massive art event.</p>
+                            <a href="#"></a>
                         </div>
                     </article>
                     <article class="event3">
-                        <img src="images/berlin/events/03-mymo.jpg" alt="Street Art Attack">
+                        <img src="images/berlin/events/03-mymo.jpg" alt="Street-Art-Attack">
                          <div class="onHover">
                             <h3>Street Art Attack</h3>
                             <p class="date">12th - 14th Oct</p>
                             <p class="infos">After Jimmy C and Bosso Fataka, it was time for the Berlin based Street Artist MYMO to show the people in Essen (and the rest of the world) what she and her art is all about.</p>
+                            <a href="#"></a>
                     </article>
                     <article class="event4">
-                        <img src="images/berlin/events/04-streetbattle.jpg" alt="Epic Street Art Battle">
+                        <img src="images/berlin/events/04-streetbattle.jpg" alt="Epic-Street-Art-Battle">
                          <div class="onHover">
                             <h3>Epic Street Art Battle</h3>
                             <p class="date">15th June</p>
                             <p class="infos">In conjunction with 48-Stunden-Neukoelln festivities the battle invites all audiences to witness the formation of street art and create a positive change of perspective.</p>
+                            <a href="#"></a>
                     </article>
                     <article class="event5">
-                        <img src="images/berlin/events/05-lieber.png" alt="Mein Lieber Prost Party">
+                        <img src="images/berlin/events/05-lieber.png" alt="Mein-Lieber-Prost-Party">
                          <div class="onHover">
                             <h3>Mein Lieber Prost Party</h3>
                             <p class="date">13th Dec</p>
                             <p class="infos">In conjunction with 48-Stunden-Neukoelln festivities the battle invites all audiences to witness the formation of street art and create a positive change of perspective.</p>
+                            <a href="#"></a>
                     </article>
                     <article class="event6">
-                        <img src="images/berlin/events/06-strokeaffair.jpg" alt="Stroke Urban Artfair">
+                        <img src="images/berlin/events/06-strokeaffair.jpg" alt="Stroke-Urban-Artfair">
                          <div class="onHover">
                             <h3>Stroke Urban Artfair</h3>
                             <p class="date">13th - 19th Sep</p>
                             <p class="infos">Like the name „Urban Art Art Fair“ is already telling, the Stroke isn’t dedicated to pure Street Art, but puts a lot of weight in it. It is possible to find an oil painting right next to an Graffiti Wild Style Installation, which is standing right next to an Stencil Artwork which hangs right next to an Anime illustration.</p>
+                            <a href="#"></a>
+                    </article>
+                </div>
+            </div>
+
+            <div class="eventSlider-wrap friends onBottom">
+                <div class="eventSlider">
+                    <article class="event1">
+                        <img src="images/berlin/friendsevents/event1.jpg" alt="">
+                        <div class="onHover">
+                            <h3>Local meetup in Ostkreuz</h3>
+                            <p class="date">10 november</p>
+                            <p class="infos">I'm doing this event in order to meet local artists (wich I am). It will be free for anyone. Nothing is prepared, this event will go where you want it to go !</p>
+                        </div>
+                    </article>
+                    <article class="event2">
+                        <img src="images/berlin/friendsevents/event2.jpg" alt="">
+                        <div class="onHover">
+                            <h3>Hallowen contest</h3>
+                            <p class="date">31 october</p>
+                            <p class="infos">No need to find another party for halloween's night. In this unique place we prepared for you, you'll find multiples rooms for multiples shows. Many styles will be performed live. DJs will also be here to keep you going all night long.</p>
+                        </div>
+                    </article>
+                    <article class="event3">
+                        <img src="images/berlin/friendsevents/event3.jpg" alt="">
+                        <div class="onHover">
+                            <h3>Neukölln Secret Meetup</h3>
+                            <p class="date">5 october</p>
+                            <p class="infos">This meetup is only for recognize artists. You'll be free to graph a whole place (not reveiled at the moment). Ths event will give you the opportunity to extend your network and learn new technics !</p>
+                        </div>
+                    </article>
+                    <article class="event4">
+                        <img src="images/berlin/friendsevents/event4.jpg" alt="free for all">
+                        <div class="onHover">
+                            <h3>Free For All</h3>
+                            <p class="date">21 semtember</p>
+                            <p class="infos">No need to explain, youngest to oldest, artists or enthusiasts, we'll provide you food, drinks, and everything else you'll need to let your creativity come to light.</p>
+                        </div>
+                    </article>
+                    <article class="event5">
+                        <img src="images/berlin/friendsevents/event5.jpg" alt="klaus contest">
+                        <div class="onHover">
+                            <h3>Klaus's Contest</h3>
+                            <p class="date">13 september - 15 semtember</p>
+                            <p class="infos">I'm launching this contest in order to promote young artist and offer them to work with me and my friends. Everyone is welcome and any style too. Get creative and enjoy the place.</p>
+                        </div>
+                    </article>
+                    <article class="event6">
+                        <img src="images/berlin/friendsevents/event6.jpg" alt="stay free kollektiv">
+                        <div class="onHover">
+                            <h3>Stay Free Kollektiv</h3>
+                            <p class="date">02 september</p>
+                            <p class="infos">Come with your friends to watch or participate to our graph event where anyone can do anything. Bring your own food, beverages, and anything you need to create !</p>
+                        </div>
                     </article>
                 </div>
             </div>

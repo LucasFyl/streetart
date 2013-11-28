@@ -1,0 +1,47 @@
+<script>
+        
+    var page = $('.single-event');
+    page.hide();
+
+    page.fadeIn("slow");
+
+</script>
+
+<div class="black"></div>
+<div class="single-event">
+    <a href="" class="close"></a>
+    <article class="event">
+        <section>
+            <h2>Krubix</h2>
+            <p>
+               Graffiti contest on outdoor canvas (appointment Central Park castle at 03 a.m). We will go in Central Park and will try to make the most beautiful Canvas (1mx2m) in 45 minutes! All in a festive athmosphere thanks to the pure sound by DJ koupix .
+            </p>
+                    
+            <div class="event-details">
+                <ul>
+                    <li><span>Adresse :</span>49 Rody Street,New York,NY. </li>
+                    <li><span>Date :</span>March 17th</li>
+                   
+                </ul>
+                <div id="social">
+                    <ul>
+                        <li><span>Follow this event on:</span></li>
+                        <li><a href="#"><img src="images/social/fbIcon.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="images/social/twitterIcon.png" alt="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        <div id="gallery"></div>
+        </section>
+    </article>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+        var windowH = $(window).height();
+        var eventSingle = $('.single-event');
+        TweenMax.set(eventSingle, {height:windowH});
+
+    
+    });
+</script>
+</div>
+

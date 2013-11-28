@@ -3,17 +3,63 @@
             <div id="sidebarBtn">
                 <img src="images/london/londonIcon.png" alt="#">
             </div>
-            <p>London with Big-ben, Hyde Park, Buckingham Palace, the parliamentary and so many things to see! 
-Yes, but all this stuff is so famous. With the street-art, they are other place less famous. 
-Like many other European countries, we can see that the United Kingdom at first made parts heavily 
-influenced by the New York school, however in 1983, a large community of graffiti artists was formed 
-particularly in Bristol and London
-However, it quickly became difficult graffer in the capital since it is extremely secure and absolutely consistently. 
-</p>
+            <span>
+                <p> London with Big-ben, Hyde Park, Buckingham Palace, the parliamentary and so many things to see! 
+                Yes, but all this stuff is so famous. With the street-art, they are other place less famous. 
+                Like many other European countries, we can see that the United Kingdom at first made parts heavily 
+                influenced by the New York school, however in 1983, a large community of graffiti artists was formed 
+                particularly in Bristol and London
+                However, it quickly became difficult graffer in the capital since it is extremely secure and absolutely consistently.
+                </p>
+                <h3>WATCH A TRAILER</h3>
+            </span>
         </div>
+         
+        <section id='form' class="hidden">
+            <a href="#" class="close" id="closeForm"></a>
+            <h2>Add new event</h2>
+                <form id="eventForm" action="submit.php" method="post">
+                    <label for="eventName">Name of the event:</label>
+                    <input type="text" id="eventName" name="eventName" required="required"><br/>
+                    
+                    <label for="description">Description:</label>
+                    <input type="textarea" id="description" name="description" required="required"><br/>
+                    
+                    <label for="location">Adress:</label>
+                    <input type="text" id="address" name="location" required="required"><br/>
+                    
+                    <label for="date">Date:</label>
+                    <input type="date" max="2014-12-31" min="2013-01-01" id="date" name="date" required="required" val="<?php echo date('Y-m-d'); ?>"><br/>
+                    
+                    <label for="">Start Time</label>
+                    <input type="time" name="start_time" id="start_time" value="<?php echo date('Y-m-d H:i:s'); ?>" /><br/>
+                    <label for="end_time">End Time</label>
+                    <input type="time" name="end_time" id="end_time" value="<?php echo date('Y-m-d H:i:s'); ?>" /><br/>
+                    <input type="submit" value="send" />
+
+                <h3 id="title">Gallerie photo:</h3>
+                
+                <ul id="submitFile">
+                    <li>
+                        <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                        </div>
+                    </li>
+            </form>
+        </section>
         
         <section class="cityIntro">
-            <h2>your events, in your city, </br> with your friends</h2>
+            <h2>your events, in your city, </br> with your friends <span></span> </h2>
         </section>
         
 
@@ -26,51 +72,57 @@ However, it quickly became difficult graffer in the capital since it is extremel
             <div class="eventSlider-wrap">
                 <div class="eventSlider">
                     <article class="event1">
-                        <img src="images/london/events/01-dulwich.jpg" alt="Dulwich Street Art Festival ">
+                        <img src="images/london/events/01-dulwich.jpg" alt="Dulwich-Street-Art-Festival ">
                          <div class="onHover">
                             <h3>Dulwich Street Art Festival </h3>
                             <p class="date">10 - 19 May</p>
                             <p class="infos">The nine day long festival explores the position of street art, huge new global art movement that it is, in the continuum of art history and will see over 20 of the current masters of the street reinterpret and remix the works of the masters of old.</p>
+                            <a href="#"></a>
                         </div>
                     </article>
                     <article class="event2">
-                        <img src="images/london/events/02-ohMyDays.jpg" alt="Oh my days">
+                        <img src="images/london/events/02-ohMyDays.jpg" alt="Oh-my-days">
                          <div class="onHover">
                             <h3>Oh my days</h3>
                             <p class="date">5th April</p>
                             <p class="infos">Kid Acne become the latest artist to participate in Street Art London and Village Underground’s Wall Project with one of his signature slogans – OH MY DAYS.  Acne’s piece cements Sheffield’s early domination of the Wall since he follows fellow Sheffield based artist Phlegm onto the wall.</p>
+                            <a href="#"></a>
                         </div>
                     </article>
                     <article class="event3">
-                        <img src="images/london/events/03-chichester.jpg" alt="Chichester festival">
+                        <img src="images/london/events/03-chichester.jpg" alt="Chichester-festival">
                          <div class="onHover">
                             <h3>Chichester festival</h3>
                             <p class="date">8th May</p>
                             <p class="infos">Street Art London staged a large scale street art festival in May. The following artists were brought together in Chichester by Street Art London: Christiaan Nagel, Cityzen Kane, Dscreet, Hitnes, Liqen, NUNCA, Phlegm, ROA, RUN, Thierry Noir and The Rolling People. This is what we got up to.</p>
+                            <a href="#"></a>
                         </div>
                     </article>
                     <article class="event4">
-                        <img src="images/london/events/04-starWars.jpg" alt="Star Wars and Stuff">
+                        <img src="images/london/events/04-starWars.jpg" alt="Star-Wars-and-Stuff">
                          <div class="onHover">
                             <h3>Star Wars and Stuff</h3>
                             <p class="date">7th Nov - 1st Dec</p>
                             <p class="infos">Benjamin has never been precious about his work, painting over old canvases with new work; he believes that paintings should ‘live their life’ whether its for a few days in the street or years on a canvas – nothing lasts forever.</p>
+                            <a href="#"></a>
                         </div>
                     </article>
                     <article class="event5">
-                        <img src="images/london/events/05-bullet.png" alt="Bullets Straight From The Heart">
+                        <img src="images/london/events/05-bullet.png" alt="Bullets-Straight-From-The-heart">
                          <div class="onHover">
                             <h3>Bullets Straight From The Heart</h3>
                             <p class="date">7th - 19th Nov</p>
                             <p class="infos">Is heisting a piece of art a work of art in itself? Those are the blurred lines prankster, mischief maker, artist, jumpsuited nutter and all round shadowy doer of mayhem AK 47 is out to cross, then reverse and cross over again.</p>
+                            <a href="#"></a>
                         </div>
                     </article>
                     <article class="event6">
-                        <img src="images/london/events/06-rollingPeople.jpg" alt="The Rolling People">
+                        <img src="images/london/events/06-rollingPeople.jpg" alt="The-Rolling-People">
                          <div class="onHover">
                             <h3>The Rolling People</h3>
                             <p class="date">10th December 2012</p>
                             <p class="infos">The Rolling People collaboration on Hassard Street, just off Hackney Road is surely a contender for one of the best pieces of the year in London. We talk to The Rolling People who are SCARCE, SEKS, CEPT, BRK, SNOE, EGOE and AZIS.</p>
+                            <a href="#"></a>
                         </div>
                     </article>
 
@@ -78,35 +130,34 @@ However, it quickly became difficult graffer in the capital since it is extremel
             </div>
              <div class="eventSlider-wrap friends onBottom">
                 <div class="eventSlider">
-                   
-                     <article class="event1">
+                    <article class="event1">
                         <img src="images/london/friendsevents/event1.jpg" alt="Barney-contest">
                         <div class="onHover">
                             <h3>Teddyx</h3>
-                            <p class="date"> February 09th</p>
+                            <p class="date">February 9th</p>
                             <p class="infos"> Street artist ? How I Met Your Mother's fan ? Barney Stinson Contest ! 3 hours to make the more funny Neil patrick harris's portrait.
                              I'll wait you at Hyde park subway station with a green shirt and a green hat. 
                              It gonna be Legen.......wait for it ... Dary !! Legendary! </p>
                         </div>
                     </article>
-                     <article class="event2">
+                    <article class="event2">
                         <img src="images/london/friendsevents/event2.jpg" alt="london-train-station">
                         <div class="onHover">
                             <h3>Bioul</h3>
-                            <p class="date">December 07th  -  08th 2014 </p>
+                            <p class="date">07th - 8th Dec 2014 </p>
                             <p class="infos">Come with me and graff an old london train station!! Pickup: 02 pm everyday , 80 Abey Road St, London  </p>
                         </div>
                     </article>
-                     <article class="event3">
+                    <article class="event3">
                         <img src="images/london/friendsevents/event3.jpg" alt="london-sticking">
                         <div class="onHover">
                             <h3>Gugutte</h3>
-                            <p class="date">  March 14th  -  16th 2014</p>
+                            <p class="date"> March 14th  -  16th 2014</p>
                             <p class="infos"> Like all the year since 2005, Gugutte organize the "London STICKING CONTEST 2014". 09 am , 44 Mackey London.
                             Do you think you are the best in sticking? Prove it !   </p>
                         </div>
                     </article>
-                      <article class="event4">
+                    <article class="event4">
                         <img src="images/london/friendsevents/event4.jpg" alt="hyde-park">
                         <div class="onHover">
                             <h3>Bracrew</h3>
@@ -119,7 +170,7 @@ However, it quickly became difficult graffer in the capital since it is extremel
                         <div class="onHover">
                             <h3>Zazour Hyum </h3>
                             <p class="date">  December 22th-24th</p>
-                            <p class="infos"> OP ! Need street artist for my next video: "Thanks to save my live." You will be filmed in the process of achieving your work on black walls. Two days : December 22th and 24th , 2 pm , 82 roberound street,London.  </p>
+                            <p class="infos"> OP ! Need street artist for my next video: "Thanks to save my live." You will be filmed in the process of achieving your work on black walls. 2 pm , 82 roberound street,London.  </p>
                         </div>
                     </article>
                     <article class="event6">
@@ -131,7 +182,6 @@ However, it quickly became difficult graffer in the capital since it is extremel
                                 contact:moudjane-bay@gmail.com.</p>
                         </div>
                     </article>
-                    
                 </div>
             </div>
         </section>

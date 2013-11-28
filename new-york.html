@@ -3,14 +3,60 @@
             <div id="sidebarBtn">
                 <img src="images/nyc/nycIcon.png" alt="#">
             </div>
-            <p>New-York: Big apple, the best city in the world! If you already go to NYC, you may have seen that the street art movement was spectacular in the subway. In a few years, these «tags" have become real fonts. The goal of the North American Graffiti was initially to get the fame, the recognition of other graffiti taggers or their meaning by this that they exist. 
-In 1973, New York Magazine launches the first competition finest graffiti subway.
-A few years later the graffiti was severely repressed in the New York subway and began to spread on the walls for our best pleasure! 
-</p>
+            <span>
+                <p> New-York: Big apple, the best city in the world! If you already go to NYC, you may have seen that the street art movement was spectacular in the subway. In a few years, these «tags" have become real fonts. The goal of the North American Graffiti was initially to get the fame, the recognition of other graffiti taggers or their meaning by this that they exist. 
+                In 1973, New York Magazine launches the first competition finest graffiti subway.
+                A few years later the graffiti was severely repressed in the New York subway and began to spread on the walls for our best pleasure!
+                </p>
+                <h3>WATCH A TRAILER</h3>
+            </span>
         </div>
+         
+        <section id='form' class="hidden">
+            <a href="#" class="close" id="closeForm"></a>
+            <h2>Add new event</h2>
+                <form id="eventForm" action="submit.php" method="post">
+                    <label for="eventName">Name of the event:</label>
+                    <input type="text" id="eventName" name="eventName" required="required"><br/>
+                    
+                    <label for="description">Description:</label>
+                    <input type="textarea" id="description" name="description" required="required"><br/>
+                    
+                    <label for="location">Adress:</label>
+                    <input type="text" id="address" name="location" required="required"><br/>
+                    
+                    <label for="date">Date:</label>
+                    <input type="date" max="2014-12-31" min="2013-01-01" id="date" name="date" required="required" val="<?php echo date('Y-m-d'); ?>"><br/>
+                    
+                    <label for="">Start Time</label>
+                    <input type="time" name="start_time" id="start_time" value="<?php echo date('Y-m-d H:i:s'); ?>" /><br/>
+                    <label for="end_time">End Time</label>
+                    <input type="time" name="end_time" id="end_time" value="<?php echo date('Y-m-d H:i:s'); ?>" /><br/>
+                    <input type="submit" value="send" />
+
+                <h3 id="title">Gallerie photo:</h3>
+                
+                <ul id="submitFile">
+                    <li>
+                        <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                        </div>
+                    </li>
+            </form>
+        </section>
         
         <section class="cityIntro">
-            <h2>your events, in your city, </br> with your friends</h2>
+            <h2>your events, in your city, </br> with your friends <span></span> </h2>
         </section>
         
 
@@ -23,51 +69,57 @@ A few years later the graffiti was severely repressed in the New York subway and
             <div class="eventSlider-wrap">
                 <div class="eventSlider">
                     <article class="event1">
-                        <img src="images/nyc/events/01-mtz.jpg" alt="Dariel MTZ on Bushwick’s Gallery">
+                        <img src="images/nyc/events/01-mtz.jpg" alt="Dariel-MTZ">
                          <div class="onHover">
                             <h3>Dariel MTZ</h3>
                             <p class="date">15th Nov</p>
                             <p class="infos">The founder of New York Street Gallery, a collective of international artists working together in NYC, Dariel MTZ is committed to providing outdoor canvases to a global network of street art and graffiti artists at the Bushwick’s Gallery.</p>
+                            <a href="#"></a>
                         </div>
                     </article>
                     <article class="event2">
-                        <img src="images/nyc/events/02-calligraffiti.jpg" alt="Calligraffiti: 1984-2013">
+                        <img src="images/nyc/events/02-calligraffiti.jpg" alt="Calligraffiti">
                          <div class="onHover">
                             <h3>Calligraffiti: 1984-2013</h3>
                             <p class="date">5th Sept</p>
                             <p class="infos">East meets West, and calligraphy meets graffiti at the Leila Heller Gallery in Calligraffiti: 1984-2013. An intimate glimpse into the disparate worlds that initially converged in a gallery setting in the exhibit that Ms. Heller and Jeffrey Deitch curated 30 years ago.</p>
+                            <a href="#"></a>
                         </div>
                     </article>
                     <article class="event3">
-                        <img src="images/nyc/events/03-hablan.jpg" alt="Los Muros Hablan NYC">
+                        <img src="images/nyc/events/03-hablan.jpg" alt="Los-Muros">
                          <div class="onHover">
                             <h3>Los Muros Hablan NYC</h3>
                             <p class="date">19th – 25th Aug</p>
                             <p class="infos">From August 19 – August 25, Los Muros Hablan, an international urban arts festival, gave a voice to silent, empty walls in East Harlem and the South Bronx. Presented by La Repuesta, a leading Puerto Rican cultural space, Los Muros Hablan NYC, featured a wonderfully eclectic group of global artists. </p>
+                            <a href="#"></a>
                         </div>
                     </article>
                     <article class="event4">
-                        <img src="images/nyc/events/04-finalEdition.jpg" alt="The Final Edition">
+                        <img src="images/nyc/events/04-finalEdition.jpg" alt="The-Final-Edition">
                          <div class="onHover">
                             <h3>The Final Edition</h3>
                             <p class="date">24th - 25th Aug</p>
                             <p class="infos">Dozens of new pieces surfaced this past weekend in “The Final Edition” at East Harlem’s Graffiti Hall of Fame on 106th Street & Park Avenue.</p>
+                            <a href="#"></a>
                         </div>
                     </article>
                     <article class="event5">
-                        <img src="images/nyc/events/05-hallOfFame.jpg" alt="The Graffiti Hall of Fame 2013">
+                        <img src="images/nyc/events/05-hallOfFame.jpg" alt="Graffiti-Hall-of-Fame">
                          <div class="onHover">
                             <h3>The Graffiti Hall of Fame</h3>
                             <p class="date">13 - 14 July</p>
                             <p class="infos">For over 30 years East Harlem’s Graffiti Hall of Fame has been home to hundreds of stylish masterpieces.  This past weekend, generations of fans and writers came together — once again — at 106th and Park to celebrate the extraordinary art movement that began here and continues to impact the world.</p>
+                            <a href="#"></a>
                         </div>
                     </article>
                     <article class="event6">
-                        <img src="images/nyc/events/06-pierPress.jpg" alt="Pier Pressure">
+                        <img src="images/nyc/events/06-pierPress.jpg" alt="Pier-Pressure">
                          <div class="onHover">
                             <h3>Pier Pressure</h3>
                             <p class="date">29th June</p>
                             <p class="infos">Armed with spray paint, paintbrushes, markers, pencils and assorted implements, a diverse group of artists have transformed the ground level of the Marina at Pier 57 into a mesmerizing medley of styles, shapes, colors and concepts.</p>
+                            <a href="#"></a>
                         </div>
                     </article>
                 </div>
@@ -104,7 +156,7 @@ A few years later the graffiti was severely repressed in the New York subway and
                         <img src="images/nyc/friendsevents/event4.jpg" alt="Graffiti-canvas-central-park">
                         <div class="onHover">
                             <h3>Krubix</h3>
-                            <p class="date">  March 17th</p>
+                            <p class="date">March 17th</p>
                             <p class="infos"> Graffiti contest on outdoor canvas (appointment Central Park castle at 03 a.m). We will go in Central Park and will try to make the most beautiful Canvas (1mx2m) in 45 minutes! All in a festive athmosphere thanks to the pure sound by DJ koupix .  </p>
                         </div>
                     </article>

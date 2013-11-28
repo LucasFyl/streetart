@@ -1,0 +1,45 @@
+<script>
+        
+    var page = $('.single-event');
+    page.hide();
+
+    page.fadeIn("slow");
+
+</script>
+
+<div class="black"></div>
+<div class="single-event">
+    <a href="" class="close"></a>
+    <article class="event">
+        <section>
+            <h2>Los pollos hermanos</h2>
+            <p>
+                Gros gros programme ce 4 janvier !! Vous etes un génie du street-art ? Vous aimez le PSG?! Cette évènement est fait pour vous! Objectif : Suite à la demande du club , le but sera de réaliser une fresque reprenant les dates clés du club mythique de la capitale.On va Zlataner la fresque ! 
+            </p>
+                    
+            <div class="event-details">
+                <ul>
+                    <li><span>Adresse :</span>Centre d'entrainement du PSG</li>
+                    <li><span>Date :</span>4 Janvier 2014</li>
+                </ul>
+                <div id="social">
+                    <ul>
+                        <li><span>Follow this event on:</span></li>
+                        <li><a href="#"><img src="images/social/fbIcon.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="images/social/twitterIcon.png" alt="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        <div id="gallery"></div>
+        </section>
+    </article>
+
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            var windowH = $(window).height();
+            var eventSingle = $('.single-event');
+            TweenMax.set(eventSingle, {height:windowH});
+        });
+    </script>
+    
+</div>

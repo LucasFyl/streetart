@@ -1,0 +1,56 @@
+<script>
+        
+    var page = $('.single-event');
+    page.hide();
+
+    page.fadeIn("slow");
+
+</script>
+
+<div class="black"></div>
+<div class="single-event">
+    <a href="" class="close"></a>
+    <article class="event">
+        <section>
+            <h2>Youngy Sweaky</h2>
+            <p> OP ! Need street artist for my next video: "Man don't need money to survive ." You will be filmed in the process of achieving your work on white walls. Two days : December 17th and 18th , 1 pm. 
+            </p>
+                    
+            <div class="event-details">
+                <ul>
+                    <li><span>Adresse :</span>75 downtown street,NYC,NY.</li>
+                    <li><span>Date :</span>December 17th-18th</li>
+                </ul>
+                <div id="social">
+                    <ul>
+                        <li><span>Follow this event on:</span></li>
+                        <li><a href="#"><img src="images/social/fbIcon.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="images/social/twitterIcon.png" alt="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        <div id="gallery"></div>
+        </section>
+    </article>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            var windowH = $(window).height();
+            var eventSingle = $('.single-event');
+            TweenMax.set(eventSingle, {height:windowH});
+
+            $(function() {
+
+                var options = {
+                  user_id: '106947505@N06',
+                  photosetId: '72157638015049996',
+                  apiKey: '811ec88d533eb1b1661b28e3b243caa4',
+                  captions: false,
+                  small: 'original',
+                  large: 'original'
+                };
+
+              $('#gallery').fancyPhotoset(options);
+            });
+        });
+    </script>
+</div>

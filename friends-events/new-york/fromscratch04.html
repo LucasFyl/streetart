@@ -1,0 +1,47 @@
+<script>
+        
+    var page = $('.single-event');
+    page.hide();
+
+    page.fadeIn("slow");
+
+</script>
+
+<div class="black"></div>
+<div class="single-event">
+    <a href="" class="close"></a>
+    <article class="event">
+        <section>
+            <h2>FromScratch04</h2>
+            <p>
+               Like all the year since 2005, FromScratch04 organize the "NYC STICKING CONTEST 2014". 09 am. Do you think you are the best in sticking? Prove it !  
+            </p>
+                    
+            <div class="event-details">
+                <ul>
+                    <li><span>Adresse :</span>44 Mackey Street,New York,NY. </li>
+                    <li><span>Date :</span>March 11th  -  13th 2014</li>
+                   
+                </ul>
+                <div id="social">
+                    <ul>
+                        <li><span>Follow this event on:</span></li>
+                        <li><a href="#"><img src="images/social/fbIcon.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="images/social/twitterIcon.png" alt="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        <div id="gallery"></div>
+        </section>
+    </article>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+        var windowH = $(window).height();
+        var eventSingle = $('.single-event');
+        TweenMax.set(eventSingle, {height:windowH});
+
+    
+    });
+</script>
+</div>
+

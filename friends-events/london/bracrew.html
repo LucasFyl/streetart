@@ -1,0 +1,47 @@
+<script>
+        
+    var page = $('.single-event');
+    page.hide();
+
+    page.fadeIn("slow");
+
+</script>
+
+<div class="black"></div>
+<div class="single-event">
+    <a href="" class="close"></a>
+    <article class="event">
+        <section>
+            <h2>Bracrew</h2>
+            <p>
+              Graffiti contest on outdoor canvas (appointment at 03 a.m). We will go in Hyde Park and will try to make the most beautiful Beattles's tribute Canvas (2mx4m) in 2 hours ! May the force of John Lennon be with you.
+            </p>
+                    
+            <div class="event-details">
+                <ul>
+                    <li><span>Adresse :</span>Hyde Park corner</li>
+                    <li><span>Date :</span>March 25th</li>
+                   
+                </ul>
+                <div id="social">
+                    <ul>
+                        <li><span>Follow this event on:</span></li>
+                        <li><a href="#"><img src="images/social/fbIcon.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="images/social/twitterIcon.png" alt="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        <div id="gallery"></div>
+        </section>
+    </article>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+        var windowH = $(window).height();
+        var eventSingle = $('.single-event');
+        TweenMax.set(eventSingle, {height:windowH});
+
+    
+    });
+</script>
+</div>
+
