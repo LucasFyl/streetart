@@ -1333,6 +1333,7 @@ section#form #galleryForm {
 }
 @media screen and (min-width: 320px) and (max-width: 640px) {
   #home {
+<<<<<<< HEAD
     position: none;
   }
   section#paris {
@@ -1361,13 +1362,30 @@ section#form #galleryForm {
   }
   div#sidebarBtn {
     margin-top: -105px !important;
+=======
+    background: red !important;
+  }
+  section#paris {
+    background-size: 100% 100% !important;
+  }
+  section.city.active {
+    background: url('../img/paris.jpg') no-repeat;
+  }
+  div#sidebarBtn {
+    margin-top: -105px !important;
+    background: red;
+>>>>>>> martin
   }
   section.event ul {
     width: 100% !important;
     min-width: 640px !important;
   }
   section.event ul li #create {
+<<<<<<< HEAD
     float: none;
+=======
+    right: 0;
+>>>>>>> martin
   }
   .main .eventSlider {
     display: inline-block;
@@ -1381,6 +1399,7 @@ section#form #galleryForm {
   div.eventSlider {
     width: auto !important;
   }
+<<<<<<< HEAD
   .single-event a.close {
     left: 50%;
     margin-left: -15px;
@@ -1402,4 +1421,6 @@ section#form #galleryForm {
   .single-event article.event section p {
     width: 100%;
   }
+=======
+>>>>>>> martin
 }
