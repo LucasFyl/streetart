@@ -1,4 +1,4 @@
-        <audio src="mp3/paris-sous-les-bombes.mp3" preload="none"/>
+        <audio src="mp3/Daydream.mp3" preload="auto" autoplay="true" />
 
         <div id="sidebar">
             <div id="sidebarBtn">
@@ -13,16 +13,12 @@
                     A Paris,  le street-art a de beau jour devant lui !
                 </p>
                 <h3>WATCH A TRAILER</h3>
-            </span>
-            <!-- <a href="#" class="playYoutube"></a> -->
         </div>
         
-    <div id="ytplayer"></div>
         
         <section id='form' class="hidden">
             <a href="#" class="close" id="closeForm"></a>
             <h2>Add new event</h2>
-            <div id="leftSide">
                 <form id="eventForm" action="submit.php" method="post">
                     <label for="eventName">Name of the event:</label>
                     <input type="text" id="eventName" name="eventName" required="required"><br/>
@@ -34,35 +30,41 @@
                     <input type="text" id="address" name="location" required="required"><br/>
                     
                     <label for="date">Date:</label>
-                    <input type="date" max="2014-12-31" min="2013-01-01" id="date" name="date" required="required" val="<?php echo date('Y-m-d H:i:s'); ?>"><br/>
+                    <input type="date" max="2014-12-31" min="2013-01-01" id="date" name="date" required="required" val="<?php echo date('Y-m-d'); ?>"><br/>
                     
                     <label for="">Start Time</label>
                     <input type="time" name="start_time" id="start_time" value="<?php echo date('Y-m-d H:i:s'); ?>" /><br/>
                     <label for="end_time">End Time</label>
                     <input type="time" name="end_time" id="end_time" value="<?php echo date('Y-m-d H:i:s'); ?>" /><br/>
                     <input type="submit" value="send" />
-                </form>
-            </div>
 
-            <div id="rightSide">
-
-                <h3>Gallerie photo:</h3>
+                <h3 id="title">Gallerie photo:</h3>
                 
-                <div class="submitFile">
-                    <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
-                </div>
-                <div class="submitFile">
-                    <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
-                </div>
-                <div class="submitFile">
-                    <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
-                </div>
-                
-            </div>
+                <ul id="submitFile">
+                    <li>
+                        <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="submitFile">
+                        <input type="file" name="picture" size="0" accept="image/jpeg" placeholder="" />
+                        </div>
+                    </li>
+            </form>
         </section>
 
         <section class="cityIntro">
             <h2>your events, in your city, </br> with your friends<span></span></h2>
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 7c7704c4b6be104ff90c237a36de593de37b0011
         </section>
         
 
