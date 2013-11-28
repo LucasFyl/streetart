@@ -549,7 +549,7 @@ section#form .close {
   right: 20px;
 }
 section#form form {
-  margin-left: 65px;
+  margin-left: 45px;
   overflow: auto;
   display: inline-block;
   vertical-align: top;
@@ -586,8 +586,9 @@ section#form form input[type=date]::-webkit-inner-spin-button {
 }
 section#form ul#submitFile {
   list-style: none;
+  position: absolute;
   float: left;
-  top: 130px;
+  top: 95px;
   left: 640px;
 }
 section#form ul#submitFile li {
@@ -649,9 +650,11 @@ section#form input[type="submit"]:hover {
   transition: all .5s ease;
 }
 section#form #fromWrap {
-  text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
 }
-section#form #gallery {
+section#form #galleryForm {
   float: right;
 }
 .single-artist {
@@ -758,7 +761,7 @@ section#form #gallery {
 .single-event a.close {
   left: 50%;
   margin-left: -15px;
-  top: 100px;
+  top: 10px;
 }
 .single-event article.event {
   display: block;
