@@ -341,9 +341,9 @@ $( document ).ready(function() {
 	function openVideo() {
 		initializeYtApi();
 		var overlay = $('body').find("#fancybox-overlay");
-		overlay.html('<a class="close" href="#"></a><div id="ytplayer"><video src="http://www.youtube.com/v/VIDEO_ID?version=3&enablejsapi=1" autoplay="true"/></div>');
+		overlay.html('<a class="close" href="#"></a><div id="ytplayer"><video controls src="vhttp://www.youtube.com/v/zCixN0s3f5A?version=3&enablejsapi=1">Ici la description alternative</video></div>');
 		overlay.fadeIn();
-		onYouTubePlayerAPIReady();
+		//onYouTubePlayerAPIReady();
 	}
 	function closeVideo(e) {
 		e.preventDefault();
