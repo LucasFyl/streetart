@@ -67,6 +67,7 @@ $( document ).ready(function() {
 		var header = $('header');
 		$(section).addClass('active');
 		$('section.active a').fadeOut(0.35);
+		$('#artist-week').fadeOut(0.35);
 		$('#home').addClass('opened');
 
 	    TweenLite.to(section, 0.35, {width:windowW, ease:Power2.easeInOut});
