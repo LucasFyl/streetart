@@ -94,6 +94,7 @@
       <a href="participate.html" style="color:#f39c12;">Participez</a>
       </header>
   
+      <a href="artist-of-the-week.html" id="artist-week"></a>
       <div id="home">
               <section class="city" id="paris" >
                   <a href="#">paris</a> 

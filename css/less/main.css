@@ -204,6 +204,47 @@ header > a {
   font-size: .8em;
   color: white;
 }
+#artist-week {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10;
+  display: block;
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  border: 5px solid white;
+  background: url('../img/back_week.jpg') no-repeat;
+  text-decoration: none;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+#artist-week:hover {
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+#artist-week:hover:before {
+  display: block;
+  content: "Artist of the week";
+  background: rgba(0, 0, 0, 0.5);
+  line-height: 180px;
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
 /** SECTION HOME **/
 div#home {
   width: 100%;
