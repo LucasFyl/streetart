@@ -1333,29 +1333,35 @@ section#form #galleryForm {
   #home {
     position: none;
   }
+  section.city {
+    background-size: 300% !important;
+  }
   section#paris {
     float: left;
-  }
-  section#paris .cityIntro {
     background: url('../img/paris.jpg') no-repeat;
+  }
+  section#paris section.cityIntro {
+    background: url('../img/paris.jpg') no-repeat !important;
   }
   section#new-york {
     float: left;
-  }
-  section#new-york .cityIntro {
     background: url('../img/NY.jpg') no-repeat;
+  }
+  section#new-york section.cityIntro {
+    background: url('../img/NY.jpg') no-repeat !important;
   }
   section#berlin {
     float: left;
   }
-  section#berlin .cityIntro {
-    background: url('../img/berlin.jpg') no-repeat;
+  section#berlin section.cityIntro {
+    background: url('../img/berlin.jpg') no-repeat !important;
   }
   section#london {
     float: left;
-  }
-  section#london .cityIntro {
     background: url('../img/london.jpg') no-repeat;
+  }
+  section#london section.cityIntro {
+    background: url('../img/london.jpg') no-repeat !important;
   }
   div#sidebarBtn {
     margin-top: -105px !important;

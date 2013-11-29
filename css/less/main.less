@@ -1479,58 +1479,79 @@ section.city.active {
 
 // ***** MEDIA QUERIES ***** //
 @media screen and (min-width: 320px) and (max-width: 640px) {
-  #home {
-    position: none;
-  }
-  section#paris{
-    float: left;
-    .cityIntro{
+
+    #home {
+        position: none;
+    }
+
+    section.city{
+        background-size: 300% !important;
+    }
+
+    section#paris{
+        float: left;
         background: url('../img/paris.jpg') no-repeat;
+
+        section.cityIntro{
+            background: url('../img/paris.jpg') no-repeat !important;
+        }
     }
-  }
+  
     section#new-york{
-    float: left;
-    .cityIntro{
+        float: left;
         background: url('../img/NY.jpg') no-repeat;
+
+        section.cityIntro{
+            background: url('../img/NY.jpg') no-repeat !important;
+        }
     }
-  }
+
     section#berlin{
-    float: left;
-    .cityIntro{
-        background: url('../img/berlin.jpg') no-repeat;
+        float: left;
+
+
+        section.cityIntro{
+            background: url('../img/berlin.jpg') no-repeat !important;
+        }
     }
-  }
-    section#london{
-    float: left;
-    .cityIntro{
-        background: url('../img/london.jpg') no-repeat;
-    }
-  }
-  section.city.active {
     
-  }
-  div#sidebarBtn {
-    margin-top: -105px !important;
-  }
-  section.event ul {
-    width: 100% !important;
-    min-width: 640px !important;
-  }
-  section.event ul li #create {
-    float: none;
-  }
-  .main .eventSlider {
-    display: inline-block;
-  }
-  .main .eventSlider article {
-    clear: left;
-  }
-  .friends .eventSlider article {
-    clear: left;
-  }
-  div.eventSlider {
-    width: auto !important;
-  }
+    section#london{
+        float: left;
+        background: url('../img/london.jpg') no-repeat;
+
+        section.cityIntro{
+            background: url('../img/london.jpg') no-repeat !important;
+        }
+    }
+
+    div#sidebarBtn {
+        margin-top: -105px !important;
+    }
+
+    section.event ul {
+        width: 100% !important;
+        min-width: 640px !important;
+    }
+
+    section.event ul li #create {
+        float: none;
+    }
+
+    .main .eventSlider {
+        display: inline-block;
+    }
+  
+    .main .eventSlider article {
+        clear: left;
+    }
+
+    .friends .eventSlider article {
+        clear: left;
+    }
+
+    div.eventSlider {
+        width: auto !important;
+    }
 
     .single-event {
         a.close {
