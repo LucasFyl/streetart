@@ -1,0 +1,48 @@
+<script>
+        
+    var page = $('.single-event');
+    page.hide();
+
+    page.fadeIn("slow");
+
+</script>
+
+<div class="black"></div>
+
+<div class="single-event">
+    <a href="" class="close"></a>
+    <article class="event">
+        <section>
+            <h2>NastyCrew</h2>
+            <p>
+               We are a Crew of danse and we shoot music video on this date and we would like to have in background some street artist doing their great work! Pickup : 09 am. Peace and Quéviva NYC ! 
+            </p>
+                    
+            <div class="event-details">
+                <ul>
+                    <li><span>Adresse :</span> 25 Hullington Street,New York,NYC</li>
+                    <li><span>Date :</span>February 09th</li>
+                
+                </ul>
+                <div id="social">
+                    <ul>
+                        <li><span>Follow this event on:</span></li>
+                        <li><a href="#"><img src="images/social/fbIcon.png" alt="facebook"></a></li>
+                      
+                    </ul>
+                </div>
+            </div>
+        <div id="gallery"></div>
+        </section>
+    </article>
+
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            var windowH = $(window).height();
+            var eventSingle = $('.single-event');
+            TweenMax.set(eventSingle, {height:windowH});
+
+        });
+    </script>
+    
+</div>

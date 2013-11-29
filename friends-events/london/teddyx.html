@@ -1,0 +1,46 @@
+<script>
+        
+    var page = $('.single-event');
+    page.hide();
+
+    page.fadeIn("slow");
+
+</script>
+
+<div class="black"></div>
+<div class="single-event">
+    <a href="" class="close"></a>
+    <article class="event">
+        <section>
+            <h2>Teddyx</h2>
+            <p>  Street artist ? How I Met Your Mother's fan ? Barney Stinson Contest ! 3 hours to make the more funny Neil patrick harris's portrait.
+                             I'll wait you at Hyde park subway station with a green shirt and a green hat. 
+                             It gonna be Legen.......wait for it ... Dary !! Legendary!
+            </p>
+                    
+            <div class="event-details">
+                <ul>
+                    <li><span>Adresse :</span>Hyde park subway station.</li>
+                    <li><span>Date :</span>February 9th</li>
+                </ul>
+                <div id="social">
+                    <ul>
+                        <li><span>Follow this event on:</span></li>
+                        <li><a href="#"><img src="images/social/fbIcon.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="images/social/twitterIcon.png" alt="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        <div id="gallery"></div>
+        </section>
+    </article>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            var windowH = $(window).height();
+            var eventSingle = $('.single-event');
+            TweenMax.set(eventSingle, {height:windowH});
+
+            
+        });
+    </script>
+</div>

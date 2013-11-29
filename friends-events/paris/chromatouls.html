@@ -1,0 +1,47 @@
+<script>
+        
+    var page = $('.single-event');
+    page.hide();
+
+    page.fadeIn("slow");
+
+</script>
+
+<div class="black"></div>
+
+<div class="single-event">
+    <a href="" class="close"></a>
+    <article class="event">
+        <section>
+            <h2>Chromatouls</h2>
+            <p>
+               Concours de Graffiti sur toile en plein air (rdv chateau de Vincennes à 15h). Nous irons dans le parc de Vincennes et essairons de réaliser la plus belle toile(1mx2m) en 45 minutes chrono! Le tout dans une ambiance festive grâce au pur son by DJ zkrels.   
+            </p>
+                    
+            <div class="event-details">
+                <ul>
+                    <li><span>Adresse :</span>8 rue marguerites - 75008 Paris</li>
+                    <li><span>Date :</span>16 Decembre 2013/‎</li>
+             
+                </ul>
+                <div id="social">
+                    <ul>
+                        <li><span>Follow this event on:</span></li>
+                        <li><a href="#"><img src="images/social/fbIcon.png" alt="facebook"></a></li>
+                      
+                    </ul>
+                </div>
+            </div>
+        <div id="gallery"></div>
+        </section>
+    </article>
+
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            var windowH = $(window).height();
+            var eventSingle = $('.single-event');
+            TweenMax.set(eventSingle, {height:windowH});
+        });
+    </script>
+    
+</div>

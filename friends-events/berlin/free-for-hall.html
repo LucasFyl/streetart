@@ -1,0 +1,59 @@
+<script>
+        
+    var page = $('.single-event');
+    page.hide();
+
+    page.fadeIn("slow");
+
+</script>
+
+<div class="black"></div>
+<div class="single-event">
+    <a href="" class="close"></a>
+    <article class="event">
+        <section>
+            <h2>Free For All</h2>
+            <p>
+               No need to explain, youngest to oldest, artists or enthusiasts, we'll provide you food, drinks, and everything else you'll need to let your creativity come to light.
+            </p>
+                    
+            <div class="event-details">
+                <ul>
+                    <li><span>Adresse :</span>78 Fourzek mojen, Berlin</li>
+                    <li><span>Date :</span>21 semtember</li>
+                   
+                </ul>
+                <div id="social">
+                    <ul>
+                        <li><span>Follow this event on:</span></li>
+                        <li><a href="#"><img src="images/social/fbIcon.png" alt="facebook"></a></li>
+                        <li><a href="#"><img src="images/social/twitterIcon.png" alt="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        <div id="gallery"></div>
+        </section>
+    </article>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+        var windowH = $(window).height();
+        var eventSingle = $('.single-event');
+        TweenMax.set(eventSingle, {height:windowH});
+
+        $(function() {
+
+            var options = {
+              user_id: '106947505@N06',
+              photosetId: '72157638016029664',
+              apiKey: '811ec88d533eb1b1661b28e3b243caa4',
+              captions: false,
+              small: 'original',
+              large: 'original'
+            };
+
+          $('#gallery').fancyPhotoset(options);
+        });
+    });
+</script>
+</div>
+
