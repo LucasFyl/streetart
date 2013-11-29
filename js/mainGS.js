@@ -335,14 +335,49 @@ $( document ).ready(function() {
 	    });
 	}
 
-
+	// Fonction to define which video to show and loads it 
 	function onYouTubePlayerAPIReady() {
-		console.log('heyyyy');
-		player = new YT.Player('ytplayer', {
-		  height: '390',
-		  width: '640',
-		  videoId: 'zCixN0s3f5A'
-		});
+		setTimeout(function(){
+			var activeCity = $('body').find('.city.active');
+			var thisId = activeCity.attr("id");
+
+			if ( thisId == 'paris') {
+				setTimeout(function(){
+					player = new YT.Player('ytplayer', {
+					  height: '490',
+					  width: '740',
+					  videoId: 'wOQzndDPWLU'
+					});
+				}, 500); 
+			}
+			if ( thisId == 'london') {
+				setTimeout(function(){
+					player = new YT.Player('ytplayer', {
+					  height: '490',
+					  width: '740',
+					  videoId: 'lbD0PVNO_wI'
+					});
+				}, 500); 
+			}
+			if ( thisId == 'berlin') {
+				setTimeout(function(){
+					player = new YT.Player('ytplayer', {
+					  height: '490',
+					  width: '740',
+					  videoId: 'DCEfWHm6m08'
+					});
+				}, 500); 
+			}
+			if ( thisId == 'new-york') {
+				setTimeout(function(){
+					player = new YT.Player('ytplayer', {
+					  height: '490',
+					  width: '740',
+					  videoId: 'xah8gX6-2uA'
+					});
+				}, 500); 
+			}
+		}, 200); 
 	}	
 	
 	// to be able to remove dom elements
@@ -359,11 +394,12 @@ $( document ).ready(function() {
 
 	// Open and Close video overlay
 	function openVideo() {
-		initializeYtApi();
+
 		var overlay = $('body').find("#fancybox-overlay");
-		overlay.html('<a class="close" href="#"></a><div id="ytplayer"><iframe width="100%" height="690" src="//www.youtube.com/embed/DCEfWHm6m08" frameborder="0" allowfullscreen></iframe></div>');
+		overlay.html('<a class="close" href="#"></a><div id="ytplayer"></div>');
+		initializeYtApi();
 		overlay.fadeIn();
-		//onYouTubePlayerAPIReady();
+		onYouTubePlayerAPIReady();
 	}
 	function closeVideo(e) {
 		e.preventDefault();

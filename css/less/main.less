@@ -347,10 +347,18 @@ section.city {
     }
 }
 
-#fancybox-overlay  a.close {
-    z-index: 99999;
-    top: 80px; right: 10px;
-    // cursor: pointer;
+#fancybox-overlay  {
+    position: relative;
+    a.close {
+        z-index: 99999;
+        top: 80px; right: 10px;
+        // cursor: pointer;
+    }
+    iframe {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        margin: auto;
+    }
 }
 
 section.city.active {

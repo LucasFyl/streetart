@@ -322,10 +322,21 @@ section.city > a {
 .audiojs .time {
   display: none;
 }
+#fancybox-overlay {
+  position: relative;
+}
 #fancybox-overlay a.close {
   z-index: 99999;
   top: 80px;
   right: 10px;
+}
+#fancybox-overlay iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 section.city.active {
   z-index: 99;
