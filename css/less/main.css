@@ -796,7 +796,7 @@ section#form #galleryForm {
 .single-event a.close {
   left: 50%;
   margin-left: -15px;
-  top: 10px;
+  top: 90px;
 }
 .single-event article.event {
   display: block;

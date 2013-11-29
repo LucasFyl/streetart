@@ -33,6 +33,9 @@ $( document ).ready(function() {
 	// open single-event page 
 	$("section.city").on('click', ".onHover a", loadEvent);
 
+	// open single-event page 
+	$("section.cit ").on('click', "eventSlider-wrap.friends .onHover a", loadFriendEvent);
+
 	// Close event and return to city
 	$("section.city").on('click', '.single-event a.close', closeEvent);
 
@@ -240,6 +243,22 @@ $( document ).ready(function() {
             }	
         });
 	}
+	function loadFriendEvent(e) {
+		e.preventDefault();
+
+		var thisImg = $(this).parent('.onHover').siblings('img');
+		var thisEvent = thisImg.attr("alt") + '.html';
+
+		var theCity = $('body').find('section.active').attr('id');
+		var theFile = 'friends-events/' + theCity + '/' + thisEvent;
+
+		$.ajax({
+            url: theFile,
+            success: function(data){
+                $('section.active').html(data);
+            }	
+        });
+	}
 
 	// to close single-event and load back the current city
 	function closeEvent(e) {
@@ -341,7 +360,7 @@ $( document ).ready(function() {
 	function openVideo() {
 		initializeYtApi();
 		var overlay = $('body').find("#fancybox-overlay");
-		overlay.html('<a class="close" href="#"></a><div id="ytplayer"><video controls src="vhttp://www.youtube.com/v/zCixN0s3f5A?version=3&enablejsapi=1">Ici la description alternative</video></div>');
+		overlay.html('<a class="close" href="#"></a><div id="ytplayer"><iframe width="100%" height="690" src="//www.youtube.com/embed/DCEfWHm6m08" frameborder="0" allowfullscreen></iframe></div>');
 		overlay.fadeIn();
 		//onYouTubePlayerAPIReady();
 	}
