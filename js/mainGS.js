@@ -31,10 +31,10 @@ $( document ).ready(function() {
 	$('section.city').on('click', "#closeForm ", openForm); 
 
 	// open single-event page 
-	$("section.city").on('click', ".onHover a", loadEvent);
+	$("section.city").on('click', ".eventSlider-wrap.main .onHover a", loadEvent);
 
 	// open single-event page 
-	$("section.cit ").on('click', "eventSlider-wrap.friends .onHover a", loadFriendEvent);
+	$("section.city").on('click', ".eventSlider-wrap.friends .onHover a", loadFriendEvent);
 
 	// Close event and return to city
 	$("section.city").on('click', '.single-event a.close', closeEvent);
